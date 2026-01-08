@@ -1,0 +1,13 @@
+main article {
+    display: none;
+}
+
+main article.active{
+    display: block;
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}

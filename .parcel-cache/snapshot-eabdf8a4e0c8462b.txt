@@ -1,0 +1,15 @@
+14
+72C:\Users\Mikae\repos\side_projects\portfolio\dist\portfolio.b2625c6b.css134123715660694259 0
+60C:\Users\Mikae\repos\side_projects\portfolio\dist\index.html134123715659935691 0
+57C:\Users\Mikae\repos\side_projects\portfolio\js\script.js134123711598591665 0
+47C:\Users\Mikae\repos\side_projects\portfolio\js134123701082085385 1
+58C:\Users\Mikae\repos\side_projects\portfolio\css\style.css134123692529010679 0
+48C:\Users\Mikae\repos\side_projects\portfolio\css134123697588827972 1
+71C:\Users\Mikae\repos\side_projects\portfolio\dist\portfolio.5489bde0.js134123715660243601 0
+66C:\Users\Mikae\repos\side_projects\portfolio\js\page-navigation.js134123714673748484 0
+75C:\Users\Mikae\repos\side_projects\portfolio\dist\portfolio.5489bde0.js.map134123715660299984 0
+49C:\Users\Mikae\repos\side_projects\portfolio\dist134123715660743650 1
+55C:\Users\Mikae\repos\side_projects\portfolio\index.html134123713164247780 0
+76C:\Users\Mikae\repos\side_projects\portfolio\dist\portfolio.b2625c6b.css.map134123715660728561 0
+64C:\Users\Mikae\repos\side_projects\portfolio\css\boxing-size.css134123692335539507 0
+68C:\Users\Mikae\repos\side_projects\portfolio\css\page-navigation.css134123715394679312 0
