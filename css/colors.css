@@ -1,0 +1,15 @@
+body{
+    background-color: antiquewhite;
+    color: black;
+}
+header{
+    background-color: rgb(48, 48, 48);
+    color: antiquewhite;
+    a{
+        color: antiquewhite;
+    }
+}
+footer{
+    background-color: rgb(48, 48, 48);
+    color: antiquewhite;
+}
