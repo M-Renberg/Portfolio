@@ -1,0 +1,16 @@
+# Editor-specifika filer
+.vscode/
+.vs/
+*.suo
+*.user
+
+# OS-filer
+.DS_Store
+Thumbs.db
+
+# Om du börjar använda npm senare
+node_modules/
+dist/
+
+.parcel-cache/
+dist/
