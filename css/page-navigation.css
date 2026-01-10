@@ -1,5 +1,12 @@
 header{
-    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    padding: 0rem 0rem 0rem 2rem ;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    border: 1px solid black;
+
+    
 }
 
 main article {
@@ -17,7 +24,7 @@ main article.active{
 }
 
 #main-header {
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    transition: opacity 0.3s ease, transform 0.4s ease;
     /* Här kan du ha din vanliga styling för headern */
 }
 
@@ -31,16 +38,8 @@ nav{
     a{
         display: block;
         text-decoration: none;
-        padding: 0 20px;
+        padding: 30px 50px 0 0px;
         float: left;
-
-        &:first-child{
-            padding-left: 0;
-        }
-
-        &:last-child{
-            padding-right: 0;
-        }
 
         &:hover{
             color: rgb(153, 217, 226);

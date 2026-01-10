@@ -2,6 +2,7 @@ main{
 
     width: min(900px, 100%);
     margin: 0 auto;
+    padding-top: 80px;
     
 
     h1{
@@ -15,7 +16,6 @@ main{
             align-items: center;
             justify-content: center;
             text-align: center;
-        
 
         .logo{
             margin-top: 2rem;
@@ -54,32 +54,83 @@ main{
         }
     }
 
-    .selfieimage{
-            display: block;
-            margin: auto;
-            max-width: 300px;
-            height: auto;
-            border: 1px solid black;
+    #aboutme.active{
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        gap: 30px;
+        align-items: start;
+        margin-top: 5rem;
+
+        .selfieimage{
+                display: block;
+                margin: 0;
+                width: 100%;
+                max-width: 300px;
+                height: auto;
+                border: 2px solid black;
+                border-radius: 7px;
+                background-color: rgb(22, 19, 38);
+
+        }
+    
+        .aboutme{
+            margin: 0;
+            background-color: rgb(22, 19, 38);
+            padding: 2rem;
+            border: 2px solid black;
             border-radius: 7px;
+            height: 100%;
+            box-sizing: border-box;
+        }
+        
+        .techstackstyling{
+        grid-column: 1/ span 2;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        background-color: rgb(22, 19, 38);
+        padding: 2rem;
+        border: 2px solid black;
+        border-radius: 7px;
+        box-sizing: border-box;
     }
 
-    .aboutme{
-        margin: 5rem auto;
+    .techstacktitle{
+        display: grid;
+        grid-column: 1 / span 2;
     }
-
+    .techstacktitle h2{
+        text-align: center;
+        margin-bottom: 2rem;
+        font-size: 28px;
+    }
+    
     .techstack{
-        margin: 0 auto;
+        grid-column: 1 / span 2;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+        margin-bottom: 2rem;
     }
 
-        /*
-        #start.active a[id$="-effect"] {
-            display: flex;
-            flex-direction: column;
-            text-decoration: none;
-            margin: 2rem 0;
-            width: fit-content;
-            padding: 0.5rem;
-            border: 2px solid transparent;
-
-        }*/
+    .stack-category{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;    
+    }
+    
+    .stack-category h3 {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        font-size: 20px;
+    }
+    
+    .stack-category ul {
+        list-style: disc;
+        padding-left: 1.2rem;
+        margin: 0;
+        
+    }
+    }
 }
