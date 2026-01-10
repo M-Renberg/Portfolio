@@ -1,15 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Funnel+Display:wght@300..800&family=Quintessential&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Funnel+Display:wght@300..800&family=Quintessential&family=Rock+Salt&display=swap');
 
 body{
     font-family: 'Funnel Display';
 }
 
 .logo {
-    font-family: 'Quintessential';
+    font-family: 'Rock Salt';
     font-size: 36px;
 }
 
-h1, h2,h3,h4,h5,h6{
+h1{
     font-family: 'DM Serif Text';
-    font-size: 24px;
+    font-size: 28px;
+    line-height: 100%;
+}
+
+h2,h3,h4, h5, h6 {
+    font-family: 'DM Serif Text';
+    font-size: 20px;
+    line-height: 100%;
+}
+p{
+    font-size: 18px;
 }

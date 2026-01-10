@@ -1,6 +1,6 @@
 body{
-    background-color: antiquewhite;
-    color: black;
+    background-color: rgb(3, 3, 19);
+    color: antiquewhite;
 }
 header{
     background-color: rgb(48, 48, 48);
@@ -12,4 +12,13 @@ header{
 footer{
     background-color: rgb(48, 48, 48);
     color: antiquewhite;
+}
+
+
+
+#start{
+    color: antiquewhite;
+    a {
+            color: antiquewhite;
+    }
 }

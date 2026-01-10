@@ -16,6 +16,17 @@ main article.active{
     to{opacity: 1;}
 }
 
+#main-header {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    /* Här kan du ha din vanliga styling för headern */
+}
+
+#main-header.hidden {
+    display: none;
+    /* Eller om du vill ha en mjuk övergång: */
+    /* opacity: 0; pointer-events: none; transform: translateY(-20px); */
+}
+
 nav{
     a{
         display: block;
@@ -32,7 +43,7 @@ nav{
         }
 
         &:hover{
-            color: rgb(182, 226, 232);
+            color: rgb(153, 217, 226);
         }
     }
 }

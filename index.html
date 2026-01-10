@@ -8,19 +8,58 @@
     <title>Portfolio</title>
 </head>
 <body>
-    <header>
+    <header id="main-header">
         <div class="logo">Mikael Renberg</div>
         <nav>
             <a href="#start">Start</a>
             <a href="#my-projects">My Projects</a>
+            <a href="#aboutme">About Me</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
     <main>
         <article id="start">
-            <h1>Welcome!</h1>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. 
-                Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+            <div class="logo">Mikael Renberg</div>
+            <div class="openingtext">
+                <p>text</p>
+            </div>
+            <a id="my-projects-effect" href="#my-projects" data-hover="Personal project, and school work.">>My Projects</a>
+            <a id="about-me-effect" href="#aboutme" data-hover="Get to know me, and my tech stack.">>About Me</a>
+            <a id="contact-effect" href="#contact" data-hover="All the ways to get in contact with me.">>Contact</a>
+        </article>
+        <article id="aboutme">
+            <img class="selfieimage" src="Images/Snapchat-1375536355.webp" alt="Selfie of myself. Blonde male with tattoos">
+            <section class="aboutme">
+                <p>Hey, I'm Mikael, and I a software development student from Sweden</p>
+                <p>I'm currently studying at NBI-Handelsakademin where I'm majoring in AI development</p>
+                <p>I'm right now in my first year of studying and alot of the thing I upload here on Github is school projects and side
+                projects that I'm working on.</p>
+            </section>
+            <section class="techstack">
+                <h2>Tech Stack:</h2>
+                <h3>Core languages & logic</h3>
+                <ul>
+                    <li>C#</li>
+                    <li>JavaScript / TypeScript</li>
+                    <li>SQL</li>
+                    <li>Python</li>
+                </ul>
+                <h3>Frontend & Web</h3>
+                <ul>
+                    <li>HTML5 & CSS3</li>
+                    <li>XML</li>
+                </ul>
+                <h3>Frameworks:</h3>
+                <ul>
+                    <li>.NET / .MAUI</li>
+                    <li>React</li>
+                </ul>
+                <h3>Tools & Enviornment</h3>
+                <ul>
+                    <li>Version Control: Git & Github</li>
+                    <li>IDE: Visual Studio, VS Code, Rider</li>
+                </ul>
+            </section>
         </article>
         <article id="my-projects">
             <h1>My projects</h1>
