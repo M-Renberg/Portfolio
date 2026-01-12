@@ -7,8 +7,10 @@ export function initLinkEffects() {
     el.addEventListener("mouseenter", () => {
       const oldInfo = el.querySelector(".hover-info");
       if (oldInfo) oldInfo.remove();
-      
+
       el.style.border = "2px solid dimgray";
+      el.style.borderRadius = "7px"
+      el.style.padding = "0.3em 0.5em 0.6em 0.5em"
 
       const customText = el.dataset.hover;
       const infoText = document.createElement("span");

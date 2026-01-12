@@ -9,6 +9,10 @@ main {
     flex: 1;
 }
 
+.hidden {
+    display: none;
+}
+
 footer {
 
     padding: 1rem 2rem 1rem 2rem;
