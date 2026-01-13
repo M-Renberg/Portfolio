@@ -8,6 +8,8 @@ export function initLinkEffects() {
       const oldInfo = el.querySelector(".hover-info");
       if (oldInfo) oldInfo.remove();
 
+      el.classList.add("active-shadow");
+
       el.style.border = "2px solid dimgray";
       el.style.borderRadius = "7px"
       el.style.padding = "0.3em 0.5em 0.6em 0.5em"
@@ -24,6 +26,7 @@ export function initLinkEffects() {
     });
 
     el.addEventListener("mouseleave", () => {
+      el.classList.remove("active-shadow");
       el.style.border = "2px solid transparent";
       const info = el.querySelector(".hover-info");
       if (info) info.remove();

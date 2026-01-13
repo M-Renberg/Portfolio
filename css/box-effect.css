@@ -1,0 +1,19 @@
+@keyframes shadowPulse {
+    0% {
+        box-shadow: 0 0 5px rgba(182, 226, 232, 0.2);
+    }
+
+    50% {
+        box-shadow: 0 0 20px rgba(182, 226, 232, 0.2);
+    }
+
+    100% {
+        box-shadow: 0 0 5px rgba(182, 226, 232, 0.2);
+    }
+}
+
+.active-shadow {
+    animation: shadowPulse 2s infinite ease-in-out;
+    /* Vi lägger till en mjuk övergång för själva skuggan också */
+    transition: box-shadow 0.3s ease;
+}
