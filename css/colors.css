@@ -1,24 +1,35 @@
-body{
-    background-color: rgb(3, 3, 19);
+body {
+    background-color: rgb(5, 5, 30);
     color: antiquewhite;
 }
-header{
-    background-color: rgb(22, 19, 38);
+
+header {
+    background-color: var(--main-box-background-color);
     color: antiquewhite;
-    a{
+
+    a {
         color: antiquewhite;
     }
 }
-footer{
-    background-color: rgb(22, 19, 38);
+
+footer {
+    background-color: var(--main-box-background-color);
     color: antiquewhite;
 }
 
 
 
-#start{
+#start {
     color: antiquewhite;
+
     a {
-            color: antiquewhite;
+        color: antiquewhite;
     }
+}
+
+:root {
+
+    --main-box-background-color: rgb(22, 19, 38);
+
+    --main-border-color: rgb(63, 63, 63);
 }
