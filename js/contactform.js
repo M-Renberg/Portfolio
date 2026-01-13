@@ -5,9 +5,9 @@ export function initContactForm() {
   if (!form) return;
 
   form.addEventListener('submit', async (e) => {
-    e.preventDefault(); // Hindra sidan från att laddas om
+    e.preventDefault();
 
-    statusDiv.textContent = "Skickar...";
+    statusDiv.textContent = "Sending...";
 
     const formData = {
       name: document.getElementById('name').value,
@@ -16,8 +16,7 @@ export function initContactForm() {
     };
 
     try {
-      // Kontrollera att porten matchar din dotnet run (t.ex. 5000 eller 5200)
-      const response = await fetch('portfoliobackend-production-27b4.up.railway.app', {
+      const response = await fetch('portfoliobackend-production-27b4.up.railway.app/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -26,14 +25,14 @@ export function initContactForm() {
       });
 
       if (response.ok) {
-        statusDiv.textContent = "Tack! Ditt meddelande har skickats.";
-        form.reset(); // Töm formuläret
+        statusDiv.textContent = "Thank you. You're message has been sent";
+        form.reset();
       } else {
-        statusDiv.textContent = "Något gick fel. Försök igen senare.";
+        statusDiv.textContent = "Something went wrong. Please try again";
       }
     } catch (error) {
       console.error("Error:", error);
-      statusDiv.textContent = "Kunde inte nå servern. Är backenden igång?";
+      statusDiv.textContent = "Error: Server is down.";
     }
   });
 }

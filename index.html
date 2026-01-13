@@ -183,16 +183,21 @@
             <div class="contact-container">
                 <form id="contact-form" class="contact-form">
                     <div class="form-group">
-                        <input type="text" id="name" name="name" placeholder="Ditt namn" required>
+                        <label name="name">Name:
+                            <input type="text" id="name" name="name" required>
+                        </label>
                     </div>
                     <div class="form-group">
-                        <input type="email" id="email" name="email" placeholder="Din e-post" required>
+                        <label name="email">Email:
+                            <input type="email" id="email" name="email" required>
+                        </label>
                     </div>
                     <div class="form-group">
-                        <textarea id="message" name="message" rows="5" placeholder="Ditt meddelande..."
-                            required></textarea>
+                        <label name="message">Message;
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </label>
                     </div>
-                    <button type="submit" id="submit-effect" data-hover="Skicka mailet!">Skicka</button>
+                    <button type="submit" id="send-effects">Send</button>
                 </form>
                 <div id="form-status"></div>
             </div>
