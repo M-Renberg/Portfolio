@@ -14,6 +14,5 @@
 
 .active-shadow {
     animation: shadowPulse 2s infinite ease-in-out;
-    /* Vi lägger till en mjuk övergång för själva skuggan också */
     transition: box-shadow 0.3s ease;
 }

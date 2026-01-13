@@ -18,7 +18,7 @@ main {
         text-align: center;
 
         .logo {
-            margin-top: 2rem;
+            margin-top: 3rem;
             font-size: 50px;
             margin-bottom: 3rem;
         }
@@ -201,13 +201,14 @@ main {
 
         h2 {
             font-size: 28px;
-            color: rgb(55, 207, 227);
+            color: rgb(66, 184, 199);
             font-family: Abril Fatface;
+            text-shadow: 1px 1px 2px rgb(0, 0, 0);
         }
 
         a {
             text-decoration: none;
-            color: rgb(179, 167, 152);
+            color: rgb(180, 180, 138);
             font-family: Abril Fatface;
 
             &:hover {
@@ -235,6 +236,18 @@ main {
                 inset 0 -1em 1em rgba(49, 69, 79, 0.3),
                 0 0 0 2px rgb(137, 137, 136),
                 0.3em 0.3em 1em rgba(146, 146, 146, 0.6);
+
+            h1 {
+                color: rgb(180, 180, 138);
+            }
+
+            p {
+                margin: 0;
+
+                &:last-child {
+                    margin-top: 0.7rem;
+                }
+            }
         }
 
         .mp-myprojects {

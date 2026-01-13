@@ -1,0 +1,61 @@
+.stack-category li {
+    display: flex;
+    align-items: center;
+    /* Centrerar ikonen och texten perfekt i höjdled */
+    margin-bottom: 0.5rem;
+    list-style: none;
+    /* Du kan ta bort de vanliga prickarna nu när du har ikoner */
+}
+
+.stack-category li img {
+    transition: transform 0.2s ease-in-out;
+}
+
+.stack-category li:hover img {
+    transform: scale(1.2);
+    /* Gör ikonen lite större när man hovrar över raden */
+}
+
+/*
+
+
+.stack-category li img {
+    filter: grayscale(40%);
+
+    transition: all 0.2s ease-in-out;
+}
+
+.stack-category li:hover img {
+    filter: grayscale(0%);
+
+    transform: scale(1.2);
+    
+}
+
+*/
+
+svg:hover {
+    transform: scale(1.1);
+    fill: antiquewhite;
+    /* Eller din accentfärg */
+}
+
+
+[data-icon] {
+    text-decoration: none;
+    color: antiquewhite;
+    /* Ikonen får denna färg */
+    display: flex;
+    align-items: center;
+}
+
+[data-icon]:hover {
+    color: #3178C6;
+    /* Både ikon och text byter färg vid hover */
+}
+
+[data-icon] svg {
+
+    width: 20px;
+    height: 20px;
+}
