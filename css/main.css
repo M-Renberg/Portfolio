@@ -270,6 +270,13 @@ main {
                     0.3em 0.3em 0.3em rgba(146, 146, 146, 0.6);
             }
 
+            ul {
+                display: inline-flex;
+                float: left;
+                padding: 0;
+
+            }
+
         }
 
         .mp-msp {
@@ -294,6 +301,12 @@ main {
                     inset 0 -1em 1em rgba(49, 69, 79, 0.3),
                     0 0 0 2px rgb(137, 137, 136),
                     0.3em 0.3em 0.3em rgba(146, 146, 146, 0.6);
+
+                ul {
+                    display: inline-flex;
+                    float: left;
+                    padding: 0;
+                }
             }
         }
     }
