@@ -174,15 +174,29 @@
         </article>
         <article id="contact">
             <h1>Contact</h1>
-            <p>If you want to get in contact with me you can use any of the following links:</p>
             <div class="contact-links">
-
+                <p>Links:</p>
                 <a href="https://www.linkedin.com/in/mikael-renberg-98b062178/" data-icon="linkedin">LinkedIn</a>
-
                 <a href="mailto:mikael.k.renberg@hotmail.com" data-icon="email">E-post</a>
+                <a href="https://github.com/M-Renberg" data-icon="github">GitHub</a>
             </div>
-            <p>If you want o check out my github in more detail</p>
-            <a href="https://github.com/M-Renberg" data-icon="github">GitHub</a>
+            <div class="contact-container">
+                <form id="contact-form" class="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Ditt namn" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Din e-post" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" placeholder="Ditt meddelande..."
+                            required></textarea>
+                    </div>
+                    <button type="submit" id="submit-effect" data-hover="Skicka mailet!">Skicka</button>
+                </form>
+                <div id="form-status"></div>
+            </div>
+            </section>
         </article>
     </main>
     <footer id="main-footer">

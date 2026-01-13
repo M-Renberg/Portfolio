@@ -311,11 +311,73 @@ main {
         }
     }
 
-    #contact {
+    #contact.active {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        align-items: start;
+        margin-top: 5rem;
         padding-top: 80px;
 
+        h1 {
+            grid-column: 1 / span 2;
+        }
+
+
         a {
-            padding: 1rem;
+            padding: 0;
+            margin: 0;
+        }
+
+        .contact-links {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-container {
+            background-color: var(--main-box-background-color);
+            padding: 2.5rem;
+            border: 1px solid rgb(63, 63, 63);
+            border-radius: 7px;
+            max-width: 600px;
+            margin: 2rem auto;
+            box-shadow: 0 0 0 2px rgb(137, 137, 136), 0.3em 0.3em 1em rgba(0, 0, 0, 0.4);
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid dimgray;
+            border-radius: 4px;
+            color: antiquewhite;
+            font-family: inherit;
+            box-sizing: border-box;
+        }
+
+        .contact-form button {
+            background: #161326;
+            color: rgb(66, 184, 199);
+            padding: 15px;
+            border: 2px solid dimgray;
+            border-radius: 7px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        #form-status {
+            margin-top: 1rem;
+            text-align: center;
+            color: #3DDC84;
+            /* Grön för lyckat resultat */
         }
     }
 }
