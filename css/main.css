@@ -439,6 +439,13 @@ main {
             padding: 0px;
             padding-left: 10px;
             padding-right: 10px;
+
+            .techstack {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
         }
 
         #my-projects.active {
