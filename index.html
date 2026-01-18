@@ -12,7 +12,14 @@
 <body>
     <header id="main-header">
         <div class="logo">Mikael Renberg</div>
-        <nav>
+        <select id="menu-toggle" onchange="location = this.value;">
+            <option value="" selected disabled>☰</option>
+            <option value="#start">Start</option>
+            <option value="#my-projects">My Projects</option>
+            <option value="#aboutme">About Me</option>
+            <option value="#contact">Contact</option>
+        </select>
+        <nav id="navLinks">
             <a href="#start">Start</a>
             <a href="#my-projects">My Projects</a>
             <a href="#aboutme">About Me</a>
@@ -226,7 +233,7 @@
     </main>
     <footer id="main-footer">
         <p>Portfolio of Mikael Renberg 2026</p>
-        <a href="#contact">Contact me</a>
+        <a id="footer-link" href="#contact">Contact me</a>
     </footer>
 </body>
 

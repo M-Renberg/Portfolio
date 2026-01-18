@@ -412,3 +412,72 @@ main {
     }
 
 }
+
+@media(max-width: 575px) {
+
+    main {
+
+        #start.active {
+            margin-left: auto;
+            margin-right: auto;
+            width: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 0;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        #aboutme.active {
+            margin-left: auto;
+            margin-right: auto;
+            width: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        #my-projects.active {
+            margin-left: auto;
+            margin-right: auto;
+            width: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 0px;
+
+
+            .mp-myprojects {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .mp-schoolprojects {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        #contact.active {
+            margin-left: auto;
+            margin-right: auto;
+            width: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 0px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+    }
+}

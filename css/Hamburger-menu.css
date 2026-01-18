@@ -1,0 +1,52 @@
+header {
+    position: relative;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+@media(max-width: 575px) {
+
+    header {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+        padding: 5px 0px;
+
+    }
+
+    #navLinks {
+        display: none;
+    }
+
+    header .logo {
+        font-size: 20px;
+    }
+
+    #menu-toggle {
+        width: auto;
+        justify-self: end;
+        display: block;
+
+        border: 1px solid var(--main-border-color);
+        border-radius: 7px;
+
+        background-color: var(--main-box-background-color);
+        color: antiquewhite;
+
+        font-weight: bold;
+        cursor: pointer;
+        text-align: center;
+        font-size: 16px;
+
+
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+
+        option {
+            font-size: 14px;
+        }
+    }
+}

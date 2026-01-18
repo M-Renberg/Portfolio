@@ -3,8 +3,8 @@ import { initLinkEffects } from "./Link-Effects.js";
 import { initIcons } from "./icons.js";
 import { initBadges } from "./badges.js";
 import { initContactForm } from "./contactform.js";
-
 const init = () => {
+
   const runAll = () => {
 
     navigate();
@@ -15,6 +15,7 @@ const init = () => {
       initIcons();
       initBadges();
       initContactForm();
+
     } catch (error) {
       console.error("Ett fel uppstod i effekterna:", error);
     }
