@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+// import { useState, useEffect } from 'react';
 import Main from './partials/Main';
 // import Header from './partials/Header';
 // import Footer from './partials/Footer';

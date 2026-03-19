@@ -1,0 +1,76 @@
+[
+    {
+        "id": 1,
+        "link": "https://github.com/M-Renberg/ThePokemonTgcStore",
+        "title": "Pokémon TCG Store",
+        "subtitle": "Web store build in React",
+        "description": "We got some JSON files with all the Pokémon cards so I thought I would turn it into a store.",
+        "badges": [
+            "TypeScript",
+            "HTML5",
+            "CSS3",
+            "React"
+        ]
+    },
+    {
+        "id": 2,
+        "link": "https://github.com/M-Renberg/HolidayMaker",
+        "title": "Holidaymaker",
+        "subtitle": "Minimal API group project",
+        "description": "Minimal API developed during a 2 weeks sprint as a group project. It was a part of our agile course.",
+        "badges": [
+            "C#",
+            "SQL"
+        ]
+    },
+    {
+        "id": 3,
+        "link": "https://github.com/M-Renberg/RestaurangDB",
+        "title": "Restaurang Sql database",
+        "subtitle": "MySQL Database",
+        "description": "Database developed in MySQL. This was my examination assignment for my database course.",
+        "badges": [
+            "SQL"
+        ]
+    },
+    {
+        "id": 4,
+        "link": "https://github.com/M-Renberg/Hotel_State_Manager",
+        "title": "Hotel state manger",
+        "subtitle": "Console application bonus assignment",
+        "description": "It allows an admin to create a hotel layout that the manager later can edit.",
+        "badges": [
+            "C#"
+        ]
+    },
+    {
+        "id": 5,
+        "link": "https://github.com/M-Renberg/Healthcare_System",
+        "title": "Healthcare System",
+        "subtitle": "Group project for OOP/C#",
+        "description": "A console application simulating a healthcare system. Allows for patient, staff and admins to do different tasks based on permissions.",
+        "badges": [
+            "C#"
+        ]
+    },
+    {
+        "id": 6,
+        "link": "https://github.com/M-Renberg/Trading_System",
+        "title": "Trading system",
+        "subtitle": "Item trading assignment",
+        "description": "An Item trading system made as an assignment. It allows two users to trade items with one another.",
+        "badges": [
+            "C#"
+        ]
+    },
+    {
+        "id": 7,
+        "link": "https://github.com/M-Renberg/school",
+        "title": "School management system",
+        "subtitle": "Simulated school system",
+        "description": "A console application allowing students to check grades, teachers to manage schedules, and admins to manage the system.",
+        "badges": [
+            "C#"
+        ]
+    }
+]

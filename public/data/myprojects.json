@@ -1,0 +1,47 @@
+[
+    {
+        "id": 1,
+        "link": "https://marketplace.visualstudio.com/items?itemName=Moth-Coder.slime-helper",
+        "title": "Slime Helper",
+        "subtitle": "Slime Helper - Coding buddy",
+        "description": "Slime helper is a vscode extension that keeps track of your git, error messages and overall coding. It's also designed with animations and a personality as it keeps you company while coding.",
+        "badges": [
+            "C#",
+            "TypeScript",
+            "React"
+        ]
+    },
+    {
+        "id": 2,
+        "link": "https://github.com/M-Renberg/ChristmasGiftGame",
+        "title": "Christmas Gift Game",
+        "subtitle": "Gift exchange game",
+        "description": "A Christmas gift exchange game I developed while learning .MAUI and xaml/xml. The app is fully functional, and has a user friendly interface.",
+        "badges": [
+            "C#",
+            ".MAUI"
+        ]
+    },
+    {
+        "id": 3,
+        "link": "https://github.com/M-Renberg/Restaurang",
+        "title": "Restaurang",
+        "subtitle": "OOP Management Software",
+        "description": "Console application I developed during my OOP/C# course. It's a Restaurang management software focusing on personal management.",
+        "badges": [
+            "C#"
+        ]
+    },
+    {
+        "id": 4,
+        "link": "https://github.com/M-Renberg/Portfolio",
+        "title": "Portfolio",
+        "subtitle": "SPA portfolio",
+        "description": "The site that you're on right now, built as a single page application.",
+        "badges": [
+            "HTML5",
+            "CSS3",
+            "JavaScript"
+        ]
+    }
+]
