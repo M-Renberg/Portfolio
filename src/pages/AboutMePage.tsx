@@ -4,8 +4,8 @@ export default function AboutMe() {
 
     return (
         <article id="aboutme">
-            {/* <img class=navigator={}"selfieimage" src="Images/Snapchat-1375536355.webp"
-                alt="Selfie of myself. Blonde male with tattoos"> */}
+            <img className="" src="Images/Snapchat-1375536355.webp"
+                alt="Selfie of myself. Blonde male with tattoos" />
             <section className="aboutme">
                 <h3>About Me:</h3>
                 <p>Hey, I'm Mikael, and I a software development student from Sweden</p>
