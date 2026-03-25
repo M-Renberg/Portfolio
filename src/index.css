@@ -1,65 +1,60 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Chonburi&family=Courgette&family=Gelasio:ital,wght@0,400..700;1,400..700&family=Iceberg&display=swap');
+
+
+@theme {
+  /*Main colors */
+  --color-nice-bg: linear-gradient(to bottom, #2E3440, #091413);
+  --color-primary-bg: #091413;
+  --color-secondary-bg: #285A48;
+  --color-third-bg: #408A71;
+  --color-primary-font: #B0E4CC;
+  --color-border-one: #045757;
+  --color-border-two: #044343;
+  --color-text-op: #F0F5F0;
+  --color-landing-nav: #D1D1D1;
+  --color-teal-text: #2DD4BF;
+  /* Fx Colors */
+  --shadow-custom: rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+}
+
+
 :root {
-  --text: #6b6375;
-  --text-h: #08060d;
-  --bg: #fff;
-  --border: #e5e4e7;
-  --code-bg: #f4f3ec;
-  --accent: #aa3bff;
-  --accent-bg: rgba(170, 59, 255, 0.1);
-  --accent-border: rgba(170, 59, 255, 0.5);
-  --social-bg: rgba(244, 243, 236, 0.5);
-  --shadow:
-    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+  background: var(--color-nice-bg);
+  font-family: system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
 
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --mono: ui-monospace, Consolas, monospace;
+  h1{
+      color: var(--color-primary-font);
+      font-family: Iceberg;
 
-  font: 18px/145% var(--sans);
-  letter-spacing: 0.18px;
-  color-scheme: light dark;
-  color: var(--text);
-  background: var(--bg);
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  @media (max-width: 1024px) {
-    font-size: 16px;
   }
-}
+  h2,h3{
+      color: var(--color-third-bg);
+      font-family: Courgette;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text: #9ca3af;
-    --text-h: #f3f4f6;
-    --bg: #16171d;
-    --border: #2e303a;
-    --code-bg: #1f2028;
-    --accent: #c084fc;
-    --accent-bg: rgba(192, 132, 252, 0.15);
-    --accent-border: rgba(192, 132, 252, 0.5);
-    --social-bg: rgba(47, 48, 58, 0.5);
-    --shadow:
-      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
   }
+  p, span{
+    color: #F0F5F0;
+    font-family: Gelasio;
 
-  
-}
-
-#root {
-  width: 1126px;
-  max-width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  border-inline: 1px solid var(--border);
-  min-height: 100svh;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
+  }
+  h4{
+    color: #2DD4BF;
+    font-family: Chonburi;
+  }
 }
 
 body {
   margin: 0;
+  min-height: 100vh;
+}
+
+
+
+#root {
+  width: 100%;
+  max-width: 1126px;
+  margin: 0 auto;
+  min-height: 100vh;
 }

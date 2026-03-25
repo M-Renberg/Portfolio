@@ -30,6 +30,6 @@
   },
   "include": [
     "src",
-    "postcss.config.mjs"
+    "postcss.config.js"
   ]
 }
