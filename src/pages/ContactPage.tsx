@@ -6,9 +6,9 @@ export default function Contact() {
         <article className="grid grid-cols-2 gap-7 items-stretch mt-20 pt-10 pb-40 pl-2 pr-2">
             <div className="flex flex-col gap-5 p-4 m-0 border-2 border-border-one rounded-lg box-border text-center shadow-glow">
                 <section className="contacttext">
-                    <h2 className="text-center mb-8 mt-4">Let's Connect</h2>
-                    <p>Feel free to connect with me on Github or LinkedIn</p>
-                    <p>I'm always open to be apart of a project, and I would love to help you out.</p>
+                    <h2 className="text-center mb-8 mt-4 text-4xl text-shadow-lg/35">Let's Connect</h2>
+                    <p className='mb-3 text-xl'>Feel free to connect with me on Github or LinkedIn</p>
+                    <p className='mb-3 text-xl'>I'm always open to be apart of a project, and I would love to help you out.</p>
                 </section>
                 <div className="border-2 border-black rounded-lg m-0 content-center p-2">
                     <Icon name="linkedin" />
