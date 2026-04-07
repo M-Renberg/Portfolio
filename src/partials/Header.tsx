@@ -1,42 +1,25 @@
-/*
-    <nav className='header-nav'>
-      {routes
-        .filter(route => {
-          if (!route.menuLabel) return false;
-          if (user && route.path === '/login') return false;
-          if (!user && route.path === '/profile') return false;
-          return true;
-        })
-        .map((route, i) => (
-          <NavLink className="nav-btn" key={i} to={route.path}>{route.menuLabel}</NavLink>
-        ))
-      }
-
-      {user && (
-        <button className="nav-btn" onClick={handleLogout}>Logga ut ({user.firstname})</button>
-      )}
-    </nav>
-*/
-
+import { NavLink, useLocation } from "react-router-dom";
+import routes from '../routes';
+import '../tailwind/glitch-fx.css';
 
 export default function Header() {
 
-    return (
-        <header id="main-header">
-            <div className="logo">Mikael Renberg</div>
-            {/* <select id="menu-toggle" onchange="location = this.value;">
-                <option value="" selected disabled>☰</option>
-                <option value="#start">Start</option>
-                <option value="#my-projects">My Projects</option>
-                <option value="#aboutme">About Me</option>
-                <option value="#contact">Contact</option>
-            </select> */}
-            <nav id="navLinks">
-                <a href="#start">Start</a>
-                <a href="#my-projects">My Projects</a>
-                <a href="#aboutme">About Me</a>
-                <a href="#contact">Contact</a>
-            </nav>
-        </header>
-    );
+  const location = useLocation();
+
+  if (location.pathname === '/') return null;
+
+  return (
+    <header className="flex flex-row w-full justify-between p-4 items-baseline">
+      <h1 className="glitch-text text-6xl text-shadow-lg/85" data-text="Mikael Renberg">Mikael Renberg</h1>
+
+      <nav className=''>
+        {routes
+          .filter(route => route.menuLabel)
+          .map((route, i) => (
+            <NavLink className="text-landing-nav pl-2 pr-2 text-lg self-baseline hover:bg-nav-hover p-1 rounded-lg active:text-red-500" key={i} to={route.path}>{route.menuLabel}</NavLink>
+          ))
+        }
+      </nav>
+    </header>
+  );
 }
