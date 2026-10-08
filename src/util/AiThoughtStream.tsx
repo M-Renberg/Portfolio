@@ -106,7 +106,7 @@ export default function AiThoughtStream() {
         angle = -Math.PI / 2 + (Math.random() - 0.5) * 1.0;
       }
 
-      const colors = ['#2DD4BF', '#5EEAD4', '#A7F3D0', '#B0E4CC'];
+      const colors = ['#285A48', '#387862', '#2DD4BF', '#5EEAD4'];
       const chosenColor = colors[Math.floor(Math.random() * colors.length)];
 
       const initialCipher = phrase
@@ -119,15 +119,15 @@ export default function AiThoughtStream() {
         currentDisplay: initialCipher,
         x,
         y,
-        speed: 0.75 + Math.random() * 0.75, // clear floating motion
+        speed: 0.5 + Math.random() * 0.6, // gentle drifting speed
         angle,
-        angleDrift: (Math.random() - 0.5) * 0.03, // smooth curved trajectory
+        angleDrift: (Math.random() - 0.5) * 0.025, // smooth curved trajectory
         waveFreq: 0.012 + Math.random() * 0.015,
         age: isInitial ? Math.floor(Math.random() * 120) : 0,
-        maxAge: 380 + Math.random() * 240, // lives 7-11 seconds
-        fontSize: Math.floor(15 + Math.random() * 4), // 15px - 18px clearly readable
+        maxAge: 400 + Math.random() * 240, // lives ~8-12 seconds
+        fontSize: Math.floor(12 + Math.random() * 3), // 12px - 14px subtle size
         color: chosenColor,
-        peakAlpha: 0.55 + Math.random() * 0.3, // clearly visible (0.55 - 0.85)
+        peakAlpha: 0.20 + Math.random() * 0.14, // soft ambient opacity (0.20 - 0.34)
         lastScramble: now,
       };
     };
@@ -191,7 +191,7 @@ export default function AiThoughtStream() {
         ctx.fillStyle = t.color;
         ctx.globalAlpha = Math.max(0, Math.min(alpha, 1));
         ctx.shadowColor = '#2DD4BF';
-        ctx.shadowBlur = 8;
+        ctx.shadowBlur = 2;
         ctx.fillText(t.currentDisplay, t.x, t.y);
         ctx.restore();
 
