@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import ScrambleText from "../util/ScrambleText";
+import AiThoughtStream from "../util/AiThoughtStream";
 import '../tailwind/glitch-fx.css';
 
 function HudCard({
@@ -95,11 +96,14 @@ function HudCard({
 export default function LandingPage() {
     return (
         <div className="relative min-h-[calc(100vh-2rem)] w-full flex flex-col items-center justify-center">
+            {/* Ambient Thinking AI text stream curving through the background */}
+            <AiThoughtStream />
+
             {/* Initial solid black backdrop that fades away */}
             <div className="fixed inset-0 bg-black -z-20 pointer-events-none animate-black-fade" aria-hidden="true" />
 
             {/* Container that expands and fades in from the center out */}
-            <div className="center-fade-in relative w-full flex flex-col items-center justify-center py-10">
+            <div className="center-fade-in relative z-10 w-full flex flex-col items-center justify-center py-10">
                 {/* Glowing light ball in top right */}
                 <div 
                     className="pointer-events-none absolute -top-16 -right-10 sm:-top-24 sm:-right-16 w-72 h-72 sm:w-120 sm:h-120 rounded-full 
