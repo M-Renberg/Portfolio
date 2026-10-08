@@ -6,24 +6,24 @@ import { Badge } from "../util/Badges";
 
 export default function MyProjects() {
 
-    const myPrivetProjects = useFetchJson<ProjectInterface[]>('/data/myprojects.json');
+    const myPrivateProjects = useFetchJson<ProjectInterface[]>('/data/myprojects.json');
     const mySchoolProjects = useFetchJson<ProjectInterface[]>('/data/schoolprojects.json');
 
-    return myPrivetProjects && (
-        <article className="grid grid-cols-2 gap-7 items-stretch p-20">
+    return (
+        <article className="grid grid-cols-1 md:grid-cols-2 gap-7 items-stretch p-6 sm:p-12 lg:p-20">
             {/* Intro msg */}
-            <section className="col-span-full mt-2 border-2 border-border-one rounded-lg p-8 box-border text-center shadow-glow">
-                <h1 className="text-4xl mb-4">My projects</h1>
+            <section className="col-span-full mt-2 border-2 border-border-one rounded-lg p-6 sm:p-8 box-border text-center shadow-glow">
+                <h1 className="text-3xl sm:text-4xl mb-4">My projects</h1>
                 <p>Here you can find all the project that I've worked on.</p>
                 <p>Some of them are school projects and some of the are personal ones.</p>
                 <p>Every title of a project is a link to the projects repo.</p>
             </section>
             <section className="col-span-full text-center">
-                <h2 className="text-3xl mt-5 mb-4 text-primary-font">My personal projects:</h2>
+                <h2 className="text-2xl sm:text-3xl mt-5 mb-4 text-primary-font">My personal projects:</h2>
             </section>
             {/* Looping my project */}
-            <section className="col-span-full grid grid-cols-2 gap-5 mb-12">
-                {myPrivetProjects ? myPrivetProjects.map((mProject) => (
+            <section className="col-span-full grid grid-cols-1 md:grid-cols-2 gap-5 mb-12">
+                {myPrivateProjects ? myPrivateProjects.map((mProject) => (
                     <div className="p-6 border-2 border-border-two rounded-lg bg-third-bg shadow-glow flex flex-col h-full" key={mProject.id}>
                         <a className="font-semibold" href={mProject.link}>
                             <Icon name="github" />{mProject.title}</a>
@@ -33,15 +33,15 @@ export default function MyProjects() {
                             {mProject.badges.map(badge => (<Badge key={badge} tech={badge} />))}
                         </ul>
                     </div>
-                )) : <p>loading content</p>}
+                )) : <p className="col-span-full text-center">loading content</p>}
             </section>
             {/* Looping my school project */}
             <section className="col-span-full text-center">
-                <h2 className="text-3xl mt-5 mb-4 text-primary-font">My school projects:</h2>
+                <h2 className="text-2xl sm:text-3xl mt-5 mb-4 text-primary-font">My school projects:</h2>
             </section>
-            <section className="col-span-full grid grid-cols-2 gap-5 mb-12">
+            <section className="col-span-full grid grid-cols-1 md:grid-cols-2 gap-5 mb-12">
                 {mySchoolProjects ? mySchoolProjects.map((sProjects) => (
-                    <div className="p-6 border-2 border-border-two rounded-lg bg-third-bg shadow-glow flex flex-col h-full">
+                    <div className="p-6 border-2 border-border-two rounded-lg bg-third-bg shadow-glow flex flex-col h-full" key={sProjects.id}>
                         <a className="font-semibold" href={sProjects.link}>
                             <Icon name="github" />{sProjects.title}</a>
                         <p className="mt-3 mb-2">{sProjects.subtitle}</p>
@@ -50,7 +50,7 @@ export default function MyProjects() {
                             {sProjects.badges.map(badge => (<Badge key={badge} tech={badge} />))}
                         </ul>
                     </div>
-                )) : <p>loading content</p>}
+                )) : <p className="col-span-full text-center">loading content</p>}
             </section>
         </article >
     );
