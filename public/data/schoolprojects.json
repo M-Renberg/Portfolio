@@ -1,76 +1,148 @@
 [
-    {
-        "id": 1,
-        "link": "https://github.com/M-Renberg/ThePokemonTgcStore",
-        "title": "Pokémon TCG Store",
-        "subtitle": "Web store build in React",
-        "description": "We got some JSON files with all the Pokémon cards so I thought I would turn it into a store.",
-        "badges": [
-            "TypeScript",
-            "HTML5",
-            "CSS3",
-            "React"
-        ]
-    },
-    {
-        "id": 2,
-        "link": "https://github.com/M-Renberg/HolidayMaker",
-        "title": "Holidaymaker",
-        "subtitle": "Minimal API group project",
-        "description": "Minimal API developed during a 2 weeks sprint as a group project. It was a part of our agile course.",
-        "badges": [
-            "C#",
-            "SQL"
-        ]
-    },
-    {
-        "id": 3,
-        "link": "https://github.com/M-Renberg/RestaurangDB",
-        "title": "Restaurang Sql database",
-        "subtitle": "MySQL Database",
-        "description": "Database developed in MySQL. This was my examination assignment for my database course.",
-        "badges": [
-            "SQL"
-        ]
-    },
-    {
-        "id": 4,
-        "link": "https://github.com/M-Renberg/Hotel_State_Manager",
-        "title": "Hotel state manger",
-        "subtitle": "Console application bonus assignment",
-        "description": "It allows an admin to create a hotel layout that the manager later can edit.",
-        "badges": [
-            "C#"
-        ]
-    },
-    {
-        "id": 5,
-        "link": "https://github.com/M-Renberg/Healthcare_System",
-        "title": "Healthcare System",
-        "subtitle": "Group project for OOP/C#",
-        "description": "A console application simulating a healthcare system. Allows for patient, staff and admins to do different tasks based on permissions.",
-        "badges": [
-            "C#"
-        ]
-    },
-    {
-        "id": 6,
-        "link": "https://github.com/M-Renberg/Trading_System",
-        "title": "Trading system",
-        "subtitle": "Item trading assignment",
-        "description": "An Item trading system made as an assignment. It allows two users to trade items with one another.",
-        "badges": [
-            "C#"
-        ]
-    },
-    {
-        "id": 7,
-        "link": "https://github.com/M-Renberg/school",
-        "title": "School management system",
-        "subtitle": "Simulated school system",
-        "description": "A console application allowing students to check grades, teachers to manage schedules, and admins to manage the system.",
-        "badges": [
-            "C#"
-        ]
-    }
+  {
+    "id": "pokemon-tcg-store",
+    "slug": "pokemon-tcg-store",
+    "category": "academic",
+    "link": "https://github.com/M-Renberg/ThePokemonTgcStore",
+    "title": "Pokémon TCG Store",
+    "subtitle": "Web Store byggd i React",
+    "description": "We got some JSON files with Pokémon cards so I turned it into a full e-commerce store with search and shopping cart functionality.",
+    "longDescription": "En fullt fungerande webbshop utvecklad i React och TypeScript baserad på data från Pokémon TCG. Projektet innehåller dynamisk kortkatalog, filtrering efter typ och sällsynthet, varukorgshantering i webbläsaren samt responsiv checkout-simulering.",
+    "highlights": [
+      "Dynamisk katalogvisning med JSON-kortdata och sökfiltrering",
+      "Varukorg med realtidsberäkning av totalsumma och antal",
+      "Strukturerad komponenthierarki och TypeScript-typsäkerhet"
+    ],
+    "image": "/images/projects/pokemon-store.svg",
+    "badges": [
+      "TypeScript",
+      "React",
+      "HTML5",
+      "CSS3"
+    ]
+  },
+  {
+    "id": "holidaymaker",
+    "slug": "holidaymaker",
+    "category": "academic",
+    "link": "https://github.com/M-Renberg/HolidayMaker",
+    "title": "Holidaymaker",
+    "subtitle": "Minimal API Agile Group Project",
+    "description": "Minimal API developed during a 2-week sprint as a collaborative group project within our agile development course.",
+    "longDescription": "Ett grupparbete genomfört under en tvåveckors agil sprint (Scrum). Projektet innefattade kravställning, datamodellering och utveckling av ett Minimal API i C# .NET för att hantera hotellbokningar, tillgänglighet och gästregistrering.",
+    "highlights": [
+      "Agilt samarbete med Scrum-ceremonier, daily standups och GitHub Projects",
+      "Minimal API-arkitektur i .NET med Entity Framework Core och SQL",
+      "Tydlig separation of concerns mellan databaslager och presentationslager"
+    ],
+    "image": "/images/projects/project-placeholder.svg",
+    "badges": [
+      "C#",
+      ".NET",
+      "SQL",
+      "Agile/Scrum"
+    ]
+  },
+  {
+    "id": "restaurang-db",
+    "slug": "restaurang-db",
+    "category": "academic",
+    "link": "https://github.com/M-Renberg/RestaurangDB",
+    "title": "Restaurang SQL Database",
+    "subtitle": "Relational MySQL Database",
+    "description": "Relational database designed and implemented in MySQL as the examination project for our database design course.",
+    "longDescription": "Examinationsuppgift i databasdesign där en komplett relationsdatabas modellerades (ER-diagram), normaliserades till tredje normalformen (3NF) och implementerades med tabeller, foreign keys, triggers och vyer.",
+    "highlights": [
+      "Genomarbetat konceptuellt och logiskt databasdiagram (ERD)",
+      "Normalisering till 3NF för att minimera dataredundans",
+      "Komplexa SQL-frågor, joins och lagrade procedurer"
+    ],
+    "image": "/images/projects/project-placeholder.svg",
+    "badges": [
+      "SQL",
+      "MySQL",
+      "Database Design"
+    ]
+  },
+  {
+    "id": "hotel-state-manager",
+    "slug": "hotel-state-manager",
+    "category": "academic",
+    "link": "https://github.com/M-Renberg/Hotel_State_Manager",
+    "title": "Hotel State Manager",
+    "subtitle": "Console Application Bonus Assignment",
+    "description": "Allows an admin to design and configure hotel floor layouts which managers can subsequently operate and monitor.",
+    "longDescription": "Ett arkitektoniskt tillstånds- och administrationsverktyg i konsolmiljö. Systemet låter administratörer definiera och konfigurera hotellets rumslayout och våningsplan, medan receptions- och hotellchefer kan administrera beläggning.",
+    "highlights": [
+      "Tillståndshantering och dynamisk matrisrepresentation av hotellrum",
+      "Rollbaserat gränssnitt i C# för administratör och hotellchef",
+      "Persistent datalagring av hotellkonfigurationer"
+    ],
+    "image": "/images/projects/project-placeholder.svg",
+    "badges": [
+      "C#",
+      ".NET"
+    ]
+  },
+  {
+    "id": "healthcare-system",
+    "slug": "healthcare-system",
+    "category": "academic",
+    "link": "https://github.com/M-Renberg/Healthcare_System",
+    "title": "Healthcare System",
+    "subtitle": "OOP/C# Team Project",
+    "description": "Console application simulating a comprehensive healthcare system with distinct permission levels for patients, medical staff, and administrators.",
+    "longDescription": "Ett simulerat vård- och journalsystem utvecklat som ett grupparbete i objektorienterad programmering. Applikationen hanterar patientjournaler, bokningar, läkarkommentarer och säker åtkomstkontroll baserad på användarroller.",
+    "highlights": [
+      "Roll- och rättighetshantering (Patient, Läkare, Administratör)",
+      "Objektorienterad modellering av journalsystem och tidsbokningar",
+      "Team-utveckling med kodgranskningar och gemensam branching-strategi"
+    ],
+    "image": "/images/projects/project-placeholder.svg",
+    "badges": [
+      "C#",
+      ".NET",
+      "OOP"
+    ]
+  },
+  {
+    "id": "trading-system",
+    "slug": "trading-system",
+    "category": "academic",
+    "link": "https://github.com/M-Renberg/Trading_System",
+    "title": "Trading System",
+    "subtitle": "Item Trading Assignment",
+    "description": "Interactive item trading system allowing multiple users to exchange virtual inventory items securely.",
+    "longDescription": "Ett bytes- och byteshandelssystem byggt i C# som simulerar säker överföring och byteshandel av inventarieobjekt mellan användare med validering av erbjudanden.",
+    "highlights": [
+      "Inventarie- och objektshantering med strikta affärsregler",
+      "Tvåvägs bytesbekräftelse för att förhindra handelsfel",
+      "Modulariserad struktur för enkel utökning av föremålstyper"
+    ],
+    "image": "/images/projects/project-placeholder.svg",
+    "badges": [
+      "C#",
+      ".NET"
+    ]
+  },
+  {
+    "id": "school-management",
+    "slug": "school-management",
+    "category": "academic",
+    "link": "https://github.com/M-Renberg/school",
+    "title": "School Management System",
+    "subtitle": "Simulated Educational Platform",
+    "description": "Console application allowing students to track grades, teachers to manage courses and schedules, and administrators to oversee the institution.",
+    "longDescription": "Ett fullständigt skolsystem i C# som sammanför elever, lärare och administratörer. Systemet hanterar kursregistreringar, betygssättning, närvaro och schemaläggning i en sammanhängande arkitektur.",
+    "highlights": [
+      "Komplett arbetsflöde från kursregistrering till betygsrapportering",
+      "Tydlig datamodellering av akademiska relationer (Elev - Kurs - Betyg)",
+      "Robust konsol-UI med skyddade funktioner per behörighetsnivå"
+    ],
+    "image": "/images/projects/project-placeholder.svg",
+    "badges": [
+      "C#",
+      ".NET"
+    ]
+  }
 ]

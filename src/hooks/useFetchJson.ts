@@ -6,7 +6,7 @@ export default function useFetchJson<Data>(url: string) {
 
   useEffect(() => {
     (async () => {
-      const data = await fetchJson(url);
+      const data = await fetchJson<Data>(url);
       setFetchedData(data);
     })();
   }, [url]);

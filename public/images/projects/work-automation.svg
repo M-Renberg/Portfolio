@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#041210" />
+      <stop offset="50%" stop-color="#0b1f1c" />
+      <stop offset="100%" stop-color="#020807" />
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2DD4BF" />
+      <stop offset="100%" stop-color="#408A71" />
+    </linearGradient>
+    <radialGradient id="glowCircle" cx="70%" cy="30%" r="50%">
+      <stop offset="0%" stop-color="#2DD4BF" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#2DD4BF" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bgGrad)" />
+  <circle cx="560" cy="135" r="220" fill="url(#glowCircle)" />
+
+  <!-- Grid lines -->
+  <g stroke="#045757" stroke-opacity="0.3" stroke-width="1">
+    <line x1="0" y1="90" x2="800" y2="90" />
+    <line x1="0" y1="180" x2="800" y2="180" />
+    <line x1="0" y1="270" x2="800" y2="270" />
+    <line x1="0" y1="360" x2="800" y2="360" />
+    <line x1="160" y1="0" x2="160" y2="450" />
+    <line x1="320" y1="0" x2="320" y2="450" />
+    <line x1="480" y1="0" x2="480" y2="450" />
+    <line x1="640" y1="0" x2="640" y2="450" />
+  </g>
+
+  <!-- Dashboard Window -->
+  <rect x="90" y="60" width="620" height="330" rx="14" fill="#061614" stroke="#045757" stroke-width="1.5" opacity="0.95" />
+  
+  <!-- Window Header -->
+  <rect x="90" y="60" width="620" height="40" rx="14" fill="#0a2420" />
+  <circle cx="120" cy="80" r="5" fill="#EF4444" opacity="0.7" />
+  <circle cx="138" cy="80" r="5" fill="#F59E0B" opacity="0.7" />
+  <circle cx="156" cy="80" r="5" fill="#10B981" opacity="0.7" />
+  <text x="400" y="85" fill="#B0E4CC" font-family="monospace" font-size="12" text-anchor="middle" opacity="0.8">AUTOMATION HUB // WORKFLOW ENGINE</text>
+
+  <!-- Left Sidebar -->
+  <rect x="110" y="120" width="130" height="250" rx="8" fill="#041412" stroke="#045757" stroke-width="1" />
+  <rect x="125" y="140" width="100" height="12" rx="3" fill="#2DD4BF" opacity="0.4" />
+  <rect x="125" y="165" width="80" height="8" rx="2" fill="#B0E4CC" opacity="0.3" />
+  <rect x="125" y="185" width="90" height="8" rx="2" fill="#B0E4CC" opacity="0.3" />
+  <rect x="125" y="205" width="70" height="8" rx="2" fill="#B0E4CC" opacity="0.3" />
+  <rect x="125" y="225" width="85" height="8" rx="2" fill="#B0E4CC" opacity="0.3" />
+
+  <!-- Main Content Cards -->
+  <rect x="260" y="120" width="200" height="110" rx="8" fill="#09221e" stroke="#2DD4BF" stroke-width="1" stroke-opacity="0.4" />
+  <text x="280" y="150" fill="#2DD4BF" font-family="monospace" font-size="11">ACTIVE PIPELINES</text>
+  <text x="280" y="195" fill="#FFFFFF" font-family="sans-serif" font-weight="bold" font-size="32">99.8%</text>
+  <text x="280" y="215" fill="#B0E4CC" font-family="monospace" font-size="10" opacity="0.7">UPTIME // ZERO DOWNTIME</text>
+
+  <rect x="480" y="120" width="210" height="110" rx="8" fill="#09221e" stroke="#045757" stroke-width="1" />
+  <text x="500" y="150" fill="#B0E4CC" font-family="monospace" font-size="11">PROCESSED EVENTS</text>
+  <text x="500" y="195" fill="#2DD4BF" font-family="sans-serif" font-weight="bold" font-size="32">14,250</text>
+  <text x="500" y="215" fill="#B0E4CC" font-family="monospace" font-size="10" opacity="0.7">+34% EFFICIENCY GAIN</text>
+
+  <!-- Bottom Chart Area -->
+  <rect x="260" y="245" width="430" height="125" rx="8" fill="#071b17" stroke="#045757" stroke-width="1" />
+  <polyline fill="none" stroke="#2DD4BF" stroke-width="2.5" points="280,340 330,320 380,335 430,290 480,310 530,270 580,285 630,260 670,275" />
+  <circle cx="630" cy="260" r="5" fill="#2DD4BF" />
+  <circle cx="630" cy="260" r="10" stroke="#2DD4BF" stroke-width="1" fill="none" opacity="0.6" />
+
+  <!-- Tech tags -->
+  <rect x="280" y="260" width="55" height="18" rx="4" fill="#045757" opacity="0.4" />
+  <text x="307" y="273" fill="#2DD4BF" font-family="monospace" font-size="9" text-anchor="middle">.NET</text>
+  <rect x="345" y="260" width="55" height="18" rx="4" fill="#045757" opacity="0.4" />
+  <text x="372" y="273" fill="#2DD4BF" font-family="monospace" font-size="9" text-anchor="middle">REACT</text>
+</svg>
+

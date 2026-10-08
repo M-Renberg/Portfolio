@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgSlime" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#041411" />
+      <stop offset="50%" stop-color="#07221d" />
+      <stop offset="100%" stop-color="#020807" />
+    </linearGradient>
+    <radialGradient id="slimeGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#10B981" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#10B981" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#bgSlime)" />
+  <circle cx="400" cy="225" r="260" fill="url(#slimeGlow)" />
+
+  <!-- Code Editor Window -->
+  <rect x="100" y="55" width="600" height="340" rx="14" fill="#081816" stroke="#045757" stroke-width="1.5" />
+  <rect x="100" y="55" width="600" height="38" rx="14" fill="#0c2621" />
+  
+  <circle cx="130" cy="74" r="5" fill="#EF4444" opacity="0.8" />
+  <circle cx="148" cy="74" r="5" fill="#F59E0B" opacity="0.8" />
+  <circle cx="166" cy="74" r="5" fill="#10B981" opacity="0.8" />
+  <text x="400" y="79" fill="#B0E4CC" font-family="monospace" font-size="12" text-anchor="middle">extension.ts — VS Code // Slime Helper</text>
+
+  <!-- Left Sidebar (Explorer) -->
+  <rect x="100" y="93" width="90" height="302" fill="#051210" />
+  <rect x="115" y="115" width="60" height="8" rx="2" fill="#045757" />
+  <rect x="115" y="135" width="45" height="8" rx="2" fill="#045757" />
+  <rect x="115" y="155" width="55" height="8" rx="2" fill="#045757" />
+
+  <!-- Code Lines -->
+  <g transform="translate(210, 115)" font-family="monospace" font-size="13">
+    <text x="0" y="20" fill="#2DD4BF">const</text>
+    <text x="50" y="20" fill="#FFFFFF">slimeBuddy</text>
+    <text x="145" y="20" fill="#2DD4BF">=</text>
+    <text x="165" y="20" fill="#10B981">new SlimeHelper();</text>
+
+    <text x="0" y="50" fill="#B0E4CC" opacity="0.6">// Monitoring git branch &amp; compile diagnostics</text>
+    <text x="0" y="80" fill="#FFFFFF">slimeBuddy.<tspan fill="#2DD4BF">onGitCommit</tspan>(() =&gt; &#123;</text>
+    <text x="25" y="110" fill="#10B981">slimeBuddy.cheer("Great commit, Mikael! ✨");</text>
+    <text x="0" y="140" fill="#FFFFFF">&#125;);</text>
+  </g>
+
+  <!-- Cute Animated Slime Companion HUD element -->
+  <g transform="translate(560, 240)">
+    <!-- Slime Body -->
+    <path d="M-50,30 C-50,-20 -30,-45 0,-45 C30,-45 50,-20 50,30 C50,45 35,50 0,50 C-35,50 -50,45 -50,30 Z" fill="#2DD4BF" opacity="0.9" />
+    <ellipse cx="-15" cy="-5" rx="5" ry="7" fill="#041210" />
+    <ellipse cx="15" cy="-5" rx="5" ry="7" fill="#041210" />
+    <circle cx="-13" cy="-7" r="2" fill="#FFFFFF" />
+    <circle cx="17" cy="-7" r="2" fill="#FFFFFF" />
+    <path d="M-8,12 Q0,20 8,12" fill="none" stroke="#041210" stroke-width="2.5" stroke-linecap="round" />
+    <!-- Speech bubble -->
+    <rect x="-85" y="-95" width="170" height="35" rx="10" fill="#0b2420" stroke="#2DD4BF" stroke-width="1.2" />
+    <text x="0" y="-73" fill="#B0E4CC" font-family="monospace" font-size="11" text-anchor="middle" font-weight="bold">Ready to code! ⚡</text>
+  </g>
+</svg>
+

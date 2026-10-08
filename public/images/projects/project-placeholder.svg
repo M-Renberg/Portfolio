@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgHold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#041210" />
+      <stop offset="100%" stop-color="#08221d" />
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#bgHold)" />
+
+  <g stroke="#045757" stroke-dasharray="6,6" stroke-width="1.5" fill="none">
+    <rect x="50" y="50" width="700" height="350" rx="16" />
+    <circle cx="400" cy="200" r="60" />
+  </g>
+
+  <text x="400" y="210" fill="#2DD4BF" font-size="36" text-anchor="middle">⚡</text>
+  <text x="400" y="295" fill="#B0E4CC" font-family="monospace" font-size="14" text-anchor="middle" letter-spacing="2">SYSTEM PREVIEW // PROJECT ASSET</text>
+  <text x="400" y="325" fill="#2DD4BF" font-family="sans-serif" font-size="12" text-anchor="middle" opacity="0.7">Image placeholder &amp; documentation frame</text>
+</svg>
+

@@ -1,47 +1,84 @@
 [
-    {
-        "id": 1,
-        "link": "https://marketplace.visualstudio.com/items?itemName=Moth-Coder.slime-helper",
-        "title": "Slime Helper",
-        "subtitle": "Slime Helper - Coding buddy",
-        "description": "Slime helper is a vscode extension that keeps track of your git, error messages and overall coding. It's also designed with animations and a personality as it keeps you company while coding.",
-        "badges": [
-            "C#",
-            "TypeScript",
-            "React"
-        ]
-    },
-    {
-        "id": 2,
-        "link": "https://github.com/M-Renberg/ChristmasGiftGame",
-        "title": "Christmas Gift Game",
-        "subtitle": "Gift exchange game",
-        "description": "A Christmas gift exchange game I developed while learning .MAUI and xaml/xml. The app is fully functional, and has a user friendly interface.",
-        "badges": [
-            "C#",
-            ".MAUI"
-        ]
-    },
-    {
-        "id": 3,
-        "link": "https://github.com/M-Renberg/Restaurang",
-        "title": "Restaurang",
-        "subtitle": "OOP Management Software",
-        "description": "Console application I developed during my OOP/C# course. It's a Restaurang management software focusing on personal management.",
-        "badges": [
-            "C#"
-        ]
-    },
-    {
-        "id": 4,
-        "link": "https://github.com/M-Renberg/Portfolio",
-        "title": "Portfolio",
-        "subtitle": "SPA portfolio",
-        "description": "The site that you're on right now, built as a single page application.",
-        "badges": [
-            "HTML5",
-            "CSS3",
-            "JavaScript"
-        ]
-    }
+  {
+    "id": "slime-helper",
+    "slug": "slime-helper",
+    "category": "personal",
+    "link": "https://marketplace.visualstudio.com/items?itemName=Moth-Coder.slime-helper",
+    "title": "Slime Helper",
+    "subtitle": "VS Code Extension — Coding Buddy",
+    "description": "Slime helper is a VS Code extension that keeps track of your git, error messages and overall coding. It's also designed with animations and a personality as it keeps you company while coding.",
+    "longDescription": "Slime Helper är ett personligt och interaktivt tillägg till Visual Studio Code, skapat för att göra utveckling roligare och mer dynamiskt. Tillägget lyssnar på interna VS Code-händelser, såsom Git-commits och diagnostiska felmeddelanden, och reagerar med lekfulla animationer och uppmuntrande meddelanden i editorn.",
+    "highlights": [
+      "Publicerad på officiella Visual Studio Code Marketplace",
+      "Event-driven integration med VS Code Extension API och Git-händelser",
+      "Animerad kompanjon som reagerar på realtidshändelser under kodning"
+    ],
+    "image": "/images/projects/slime-helper.svg",
+    "badges": [
+      "C#",
+      "TypeScript",
+      "React"
+    ]
+  },
+  {
+    "id": "christmas-gift-game",
+    "slug": "christmas-gift-game",
+    "category": "personal",
+    "link": "https://github.com/M-Renberg/ChristmasGiftGame",
+    "title": "Christmas Gift Game",
+    "subtitle": "Julklappsspel i .NET MAUI",
+    "description": "A Christmas gift exchange game I developed while learning .NET MAUI and XAML/XML. The app is fully functional, and has a user-friendly interface.",
+    "longDescription": "Ett digitalt julklappsspel byggt i cross-platformramverket .NET MAUI med XAML. Applikationen hanterar spellogik för tärningskast, tidtagning, byte och stöld av paket enligt traditionella julklappsregler med ett smidigt och intuitivt användargränssnitt.",
+    "highlights": [
+      "Byggd med modern cross-platform arkitektur i .NET MAUI och C#",
+      "Reaktivt UI med XAML-datamatning och tillståndshantering",
+      "Tidsstyrd spelomgång och regler för interaktivt paketutbyte"
+    ],
+    "image": "/images/projects/christmas-game.svg",
+    "badges": [
+      "C#",
+      ".NET MAUI",
+      "XAML"
+    ]
+  },
+  {
+    "id": "restaurang",
+    "slug": "restaurang",
+    "category": "personal",
+    "link": "https://github.com/M-Renberg/Restaurang",
+    "title": "Restaurang",
+    "subtitle": "OOP Management Software",
+    "description": "Console application I developed during my OOP/C# course. It's a restaurant management software focusing on personnel and resource management.",
+    "longDescription": "Ett omfattande konsolsystem i C# utvecklat för att simulera drift och hantering av restaurangverksamhet. Systemet bygger på objektorienterade designmönster och hanterar personal, beställningar, bordshantering och menyregister.",
+    "highlights": [
+      "Tydlig objektorienterad arkitektur (OOP) med arv och polymorfism",
+      "Strukturerad datahantering och menysystem i konsolmiljö",
+      "Validering av inmatning och felhantering för stabil användarupplevelse"
+    ],
+    "badges": [
+      "C#",
+      ".NET"
+    ]
+  },
+  {
+    "id": "portfolio",
+    "slug": "portfolio",
+    "category": "personal",
+    "link": "https://github.com/M-Renberg/Portfolio",
+    "title": "Portfolio SPA",
+    "subtitle": "Modern React & Vite Portfolio",
+    "description": "The site that you're on right now, built as a single page application with modern HUD glassmorphism and custom cyber aesthetics.",
+    "longDescription": "Min personliga portfolio-webbplats byggd med React 19, Vite och Tailwind CSS v4. Designad med ett futuristiskt HUD-inspirerat designspråk, glaseffekter (backdrop-blur), anpassade SVG-illustrationer och dynamisk routing för djupgående projektdokumentation.",
+    "highlights": [
+      "Skräddarsydd design med Tailwind CSS v4 och Glassmorphism",
+      "Dynamisk ID-baserad routing för projekt och arbeten",
+      "Helt responsiv och optimerad för snabb laddningstid och prestanda"
+    ],
+    "badges": [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Vite"
+    ]
+  }
 ]

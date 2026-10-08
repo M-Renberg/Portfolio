@@ -1,0 +1,64 @@
+[
+  {
+    "id": "enterprise-automation",
+    "slug": "enterprise-automation",
+    "category": "work",
+    "employer": "Tech & Solutions Partner",
+    "role": "Full-Stack & Systemutvecklare",
+    "period": "2025 - Pågående",
+    "title": "Smart Process & Data Automation",
+    "subtitle": "Processautomatisering & integrationssystem åt arbetsgivare",
+    "description": "Utveckling av skräddarsydda interna verktyg, REST API-integrationer och automatiserade arbetsflöden för att effektivisera affärskritiska processer.",
+    "longDescription": "Under detta uppdrag för arbetsgivare utvecklades en modern integrationsplattform för att automatisera manuella och repetitiva arbetsmoment. Lösningen kopplar samman interna databaser med externa tjänster, validerar dataströmmar och ger medarbetare ett realtidsgränssnitt för status och loggar. Stor vikt lades vid robust felhantering, hög tillgänglighet och modern arkitektur i C# .NET och React.",
+    "highlights": [
+      "Automatiserade tidsödande manuella processer med över 40% tidsbesparing per vecka",
+      "Byggde feltoleranta REST API-integrationer med strukturerad loggning och monitorering",
+      "Skapade en modern, responsiv instrumentpanel i React med Tailwind CSS för driftpersonal",
+      "Designade optimerade databasfrågor och datamodeller i SQL för snabb dataåtkomst"
+    ],
+    "badges": [
+      "C#",
+      ".NET",
+      "React",
+      "TypeScript",
+      "SQL",
+      "REST APIs"
+    ],
+    "image": "/images/projects/work-automation.svg",
+    "images": [
+      "/images/projects/work-automation.svg"
+    ],
+    "link": "https://github.com/M-Renberg"
+  },
+  {
+    "id": "customer-portal",
+    "slug": "customer-portal",
+    "category": "work",
+    "employer": "Klientuppdrag & Företagstjänster",
+    "role": "Frontend & Systemutvecklare",
+    "period": "2025",
+    "title": "Kundportal & Ärendehanteringssystem",
+    "subtitle": "Webbaserad portal för kundinteraktion och ärendestyrning",
+    "description": "Framtagning av en säker och användarvänlig portal för ärendehantering, filuppladdning och statusuppföljning i realtid.",
+    "longDescription": "Utveckling av ett centralt ärende- och kommunikationssystem som förenklar kontakten mellan externa kunder och interna handläggare. Plattformen har rollbaserad behörighetsstyrning, omedelbara statusuppdateringar, och ett responsivt gränssnitt skräddarsytt för både mobila enheter och desktop.",
+    "highlights": [
+      "Implementerade rollbaserad behörighetskontroll och skyddade vyer",
+      "Byggde en överskådlig ärendevy med filtrering, sökning och statusindikatorer",
+      "Optimerade frontend-prestanda och UI-responsivitet med Tailwind CSS och React",
+      "Strukturerade modulär kodbas för enkel framtida vidareutveckling och underhåll"
+    ],
+    "badges": [
+      "TypeScript",
+      "React",
+      "Tailwind CSS",
+      "REST APIs",
+      "Azure"
+    ],
+    "image": "/images/projects/work-portal.svg",
+    "images": [
+      "/images/projects/work-portal.svg"
+    ],
+    "link": "https://github.com/M-Renberg"
+  }
+]
+
