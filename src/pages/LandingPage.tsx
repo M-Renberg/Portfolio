@@ -26,7 +26,7 @@ export default function LandingPage() {
             <div className="center-fade-in relative w-full flex flex-col items-center justify-center py-10">
                 {/* Glowing light ball in top right */}
                 <div 
-                    className="pointer-events-none absolute -top-16 -right-10 sm:-top-24 sm:-right-16 w-72 h-72 sm:w-[480px] sm:h-[480px] rounded-full 
+                    className="pointer-events-none absolute -top-16 -right-10 sm:-top-24 sm:-right-16 w-72 h-72 sm:w-120 sm:h-120 rounded-full 
                     bg-[radial-gradient(circle,_rgba(64,138,113,0.55)_0%,_rgba(40,90,72,0.3)_40%,_transparent_70%)] 
                     blur-3xl -z-10" 
                     aria-hidden="true"
@@ -42,7 +42,7 @@ export default function LandingPage() {
                     />
 
                     <div className="fade-in-delayed-1 max-w-xl mx-auto">
-                        <p className="text-xl sm:text-2xl text-center mb-2 font-medium">Hey, I'm Mikael.</p>
+                        {/* <p className="text-xl sm:text-2xl text-center mb-2 font-medium">Hey, I'm Mikael.</p> */}
                         <p className="text-base sm:text-lg text-center mb-1 text-[#F0F5F0]/90">A full-stack AI/ML Engineer.</p>
                         <p className="text-base sm:text-lg text-center mb-1 text-[#F0F5F0]/90">I bridge the gap between robust software and intelligent AI features</p>
                         <p className="text-base sm:text-lg text-center mb-1 text-[#F0F5F0]/90">Always with a strong focus clean code on quality.</p>
