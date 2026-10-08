@@ -117,19 +117,43 @@ export default function LandingPage() {
                         speedMs={35} 
                     />
 
-                    <div className="fade-in-delayed-1 max-w-xl mx-auto">
-                        {/* <p className="text-xl sm:text-2xl text-center mb-2 font-medium">Hey, I'm Mikael.</p> */}
-                        <p className="text-base sm:text-lg text-center mb-1 text-[#F0F5F0]/90">A full-stack AI/ML Engineer.</p>
-                        <p className="text-base sm:text-lg text-center mb-1 text-[#F0F5F0]/90">I bridge the gap between robust software and intelligent AI features</p>
-                        <p className="text-base sm:text-lg text-center mb-1 text-[#F0F5F0]/90">Always with a strong focus clean code on quality.</p>
-                        <p className="text-base sm:text-lg text-center mb-10 sm:mb-12 text-[#F0F5F0]/90">Welcome to my portfolio.</p>
+                    {/* Free-floating organic bio rows */}
+                    <div className="fade-in-delayed-1 flex flex-col items-center gap-3.5 sm:gap-4.5 my-6 sm:my-8 max-w-2xl text-center px-4">
+                        {/* Floating Row 1: Role */}
+                        <div className="float-row-1 transition-all duration-300 hover:scale-105 cursor-default">
+                            <p className="text-xl sm:text-2xl font-semibold tracking-wide text-white">
+                                A full-stack <span className="text-[#2DD4BF] font-bold text-shadow-sm">AI/ML Engineer</span>.
+                            </p>
+                        </div>
+
+                        {/* Floating Row 2: Mission */}
+                        <div className="float-row-2 transition-all duration-300 hover:scale-105 cursor-default">
+                            <p className="text-base sm:text-xl text-[#F0F5F0]/90 leading-relaxed">
+                                I bridge the gap between <span className="text-[#B0E4CC] font-medium">robust software</span> and <span className="text-[#2DD4BF] font-medium">intelligent AI features</span>.
+                            </p>
+                        </div>
+
+                        {/* Floating Row 3: Quality */}
+                        <div className="float-row-3 transition-all duration-300 hover:scale-105 cursor-default">
+                            <p className="text-base sm:text-lg text-[#F0F5F0]/80">
+                                Always with a strong focus on <span className="text-[#B0E4CC] font-medium">clean code</span> and <span className="text-[#2DD4BF] font-medium">high quality</span>.
+                            </p>
+                        </div>
+
+                        {/* Floating Row 4: Subtle Welcome beacon */}
+                        <div className="float-row-4 transition-all duration-300 hover:scale-105 cursor-default pt-2">
+                            <span className="inline-flex items-center gap-2 text-xs sm:text-sm font-mono tracking-widest text-[#408A71] uppercase">
+                                <span className="w-1.5 h-1.5 rounded-full bg-[#2DD4BF] animate-pulse" />
+                                Welcome to my portfolio
+                            </span>
+                        </div>
                     </div>
 
                     <div className="fade-in-delayed-2 grid grid-cols-1 md:grid-cols-3 gap-5 w-full max-w-5xl px-2 sm:px-4 mt-2 mb-10">
                         <HudCard
                             to="/projects"
                             tag="Repos & Projects"
-                            title="My Projects"
+                            title="My Work"
                             desc="Personal applications, AI tools and academic coursework."
                             cta="Explore projects"
                             icon={

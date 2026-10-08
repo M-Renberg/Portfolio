@@ -89,4 +89,57 @@
 
 .animate-black-fade {
   animation: blackFadeOut 1.5s ease-out forwards;
-}
+}
+
+@keyframes floatRow1 {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+@keyframes floatRow2 {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-9px);
+  }
+}
+
+@keyframes floatRow3 {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes floatRow4 {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.float-row-1 {
+  animation: floatRow1 5.4s ease-in-out infinite;
+}
+
+.float-row-2 {
+  animation: floatRow2 6.2s ease-in-out 1.2s infinite;
+}
+
+.float-row-3 {
+  animation: floatRow3 5.8s ease-in-out 2.4s infinite;
+}
+
+.float-row-4 {
+  animation: floatRow4 6.6s ease-in-out 0.8s infinite;
+}
+
