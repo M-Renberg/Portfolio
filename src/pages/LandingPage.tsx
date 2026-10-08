@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import ScrambleText from "../util/ScrambleText";
 import '../tailwind/glitch-fx.css';
 
 function NavRow({ to, label, detail }: { to: string; label: string; detail: string }) {
@@ -17,23 +18,44 @@ function NavRow({ to, label, detail }: { to: string; label: string; detail: stri
 
 export default function LandingPage() {
     return (
-        <article className="flex flex-col items-center justify-center px-4">
-            <h1 className="glitch-text text-5xl sm:text-7xl text-center text-shadow-lg/85 mt-12 sm:mt-20 mb-8 sm:mb-12" data-text="Mikael Renberg">Mikael Renberg</h1>
-            <div>
-                <p className="text-xl text-center mb-1">Hey I'm Mikael.</p>
-                <p className="text-l text-center mb-1">I study software development.</p>
-                <p className="text-l text-center mb-1">My biggest passion is making softwares and apps,</p>
-                <p className="text-l text-center mb-1">were I always have my focus on quality.</p>
-                <p className="text-l text-center mb-20">So welcome to my humble little portfolio.</p>
-            </div>
+        <div className="relative min-h-[calc(100vh-2rem)] w-full flex flex-col items-center justify-center">
+            {/* Initial solid black backdrop that fades away */}
+            <div className="fixed inset-0 bg-black -z-20 pointer-events-none animate-black-fade" aria-hidden="true" />
 
-            <NavRow to="/projects" label="⦾ My Projects" detail="Personal project, and school work." />
-            <NavRow to="/aboutme" label="⦾ About me" detail="Get to know me, and my tech stack." />
-            <NavRow to="/contact" label="⦾ Contact" detail="All the ways to get in contact with me." />
-            {/* <a id="my-projects-effect" href="#my-projects" data-hover="Personal project, and school work.">⦾ My
-                Projects</a>
-            <a id="about-me-effect" href="#aboutme" data-hover="Get to know me, and my tech stack.">⦾ About Me</a>
-            <a id="contact-effect" href="#contact" data-hover="All the ways to get in contact with me.">⦾ Contact</a> */}
-        </article>
+            {/* Container that expands and fades in from the center out */}
+            <div className="center-fade-in relative w-full flex flex-col items-center justify-center py-10">
+                {/* Glowing light ball in top right */}
+                <div 
+                    className="pointer-events-none absolute -top-16 -right-10 sm:-top-24 sm:-right-16 w-72 h-72 sm:w-[480px] sm:h-[480px] rounded-full 
+                    bg-[radial-gradient(circle,_rgba(64,138,113,0.55)_0%,_rgba(40,90,72,0.3)_40%,_transparent_70%)] 
+                    blur-3xl -z-10" 
+                    aria-hidden="true"
+                />
+
+                <article className="flex flex-col items-center justify-center px-4 w-full">
+                    {/* Big title with symbol-cycling scramble effect that resolves sequentially */}
+                    <ScrambleText 
+                        text="Mikael Renberg" 
+                        className="text-5xl sm:text-7xl text-center text-shadow-lg/85 mt-4 sm:mt-10 mb-8 sm:mb-10" 
+                        delayMs={250} 
+                        speedMs={35} 
+                    />
+
+                    <div className="fade-in-delayed-1 max-w-xl mx-auto">
+                        <p className="text-xl sm:text-2xl text-center mb-2 font-medium">Hey, I'm Mikael.</p>
+                        <p className="text-base sm:text-lg text-center mb-1 text-[#F0F5F0]/90">A full-stack AI/ML Engineer.</p>
+                        <p className="text-base sm:text-lg text-center mb-1 text-[#F0F5F0]/90">I bridge the gap between robust software and intelligent AI features</p>
+                        <p className="text-base sm:text-lg text-center mb-1 text-[#F0F5F0]/90">Always with a strong focus clean code on quality.</p>
+                        <p className="text-base sm:text-lg text-center mb-12 sm:mb-16 text-[#F0F5F0]/90">Welcome to my portfolio.</p>
+                    </div>
+
+                    <div className="fade-in-delayed-2 flex flex-col items-center gap-3 w-full">
+                        <NavRow to="/projects" label="⦾ My Projects" detail="Personal projects and school work." />
+                        <NavRow to="/aboutme" label="⦾ About me" detail="Get to know me and my tech stack." />
+                        <NavRow to="/contact" label="⦾ Contact" detail="All the ways to get in contact with me." />
+                    </div>
+                </article>
+            </div>
+        </div>
     );
 }

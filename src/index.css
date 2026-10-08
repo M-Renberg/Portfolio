@@ -4,7 +4,7 @@
 
 @theme {
   /*Main colors */
-  --color-nice-bg: linear-gradient(to bottom, #2E3440, #091413);
+  --color-nice-bg: radial-gradient(circle 600px at 85% 10%, rgba(64, 138, 113, 0.5) 0%, rgba(46, 52, 64, 0.55) 30%, #091413 70%);
   --color-primary-bg: #091413;
   --color-secondary-bg: #285A48;
   --color-third-bg: #408A71;
@@ -22,7 +22,7 @@
 
 
 :root {
-  background: var(--color-nice-bg);
+  background-color: #000000;
   font-family: system-ui, -apple-system, sans-serif;
   line-height: 1.5;
 
@@ -53,6 +53,8 @@
 body {
   margin: 0;
   min-height: 100vh;
+  background: var(--color-nice-bg) no-repeat fixed;
+  background-color: #091413;
 }
 
 
