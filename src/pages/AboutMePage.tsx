@@ -1,68 +1,142 @@
 import pfp from '../Images/pfp.webp';
+import ScrambleText from '../util/ScrambleText';
+import '../tailwind/glitch-fx.css';
 
 export default function AboutMe() {
+  const techCategories = [
+    {
+      title: 'Core Languages & Logic',
+      icon: '⚡',
+      items: ['C#', 'TypeScript', 'JavaScript', 'Python', 'SQL & NoSQL'],
+    },
+    {
+      title: 'Frontend & UI',
+      icon: '🎨',
+      items: ['React', 'Tailwind CSS', 'HTML5 & CSS3', 'XAML & XML'],
+    },
+    {
+      title: 'Frameworks & Platforms',
+      icon: '🛠️',
+      items: ['.NET', '.NET MAUI', 'Vite', 'REST APIs'],
+    },
+    {
+      title: 'Cloud & Environment',
+      icon: '☁️',
+      items: ['Azure', 'Supabase', 'Convex', 'Git & GitHub', 'VS Code & Rider'],
+    },
+  ];
 
-    return (
-        <article className='grid grid-cols-1 md:grid-cols-2 gap-7 items-stretch mt-10 pt-10 sm:mt-20 sm:pt-20 px-4'>
-            <section className="col-span-full grid grid-cols-1 md:grid-cols-2 items-center gap-6 m-0 p-6 sm:p-8 border-2 border-border-one rounded-lg box-border text-center md:text-left shadow-glow">
-                <img className="block mx-auto w-full max-w-2xs h-auto border border-black rounded-lg shadow-2xs" src={pfp}
-                    alt="Selfie of myself. Blonde male with tattoos" />
-                <div>
-                    <h3 className='text-center md:text-left mb-6 sm:mb-10 text-4xl sm:text-6xl text-shadow-lg/35'>About Me:</h3>
-                    <div>
-                        <p className='mb-3 text-lg sm:text-xl'>Hey, I'm Mikael, and I'm a software development student from Sweden</p>
-                        <p className='mb-3 text-lg sm:text-xl'>I'm currently studying at NBI-Handelsakademin where I'm majoring in AI development</p>
-                        <p className='mb-3 text-lg sm:text-xl'>I'm right now in my first year of studying and a lot of the things I upload here on GitHub are school
-                            projects and side projects that I'm working on.</p>
-                        <p className='mb-3 text-lg sm:text-xl'>My biggest passion is AI and AI integration. I think it's really fun to make AI a part of a website or an application.</p>
-                    </div>
-                </div>
-            </section>
-            <div className="col-span-full mt-4 sm:mt-8 mb-8 p-6 sm:p-8 rounded-lg box-border bg-third-bg shadow-glow">
-                <section className="grid col-span-full">
-                    <h2 className='text-center mb-8 text-black text-3xl sm:text-4xl'>Tech Stack:</h2>
-                </section>
-                <section className="grid col-span-full grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-7 mb-8">
-                    <div className="flex flex-col items-start">
-                        <h3 className='mb-4 text-black text-2xl'>Core languages & logic:</h3>
-                        <ul className='list-disc pl-5 m-0'>
-                            <li className='font-semibold'>C#</li>
-                            <li className='font-semibold'>JavaScript</li>
-                            <li className='font-semibold'>TypeScript</li>
-                            <li className='font-semibold'>SQL & NOSQL</li>
-                            <li className='font-semibold'>Python</li>
-                        </ul>
-                    </div>
-                    <div className="flex flex-col items-start">
-                        <h3 className='mb-4 text-black text-2xl'>Frontend & Web:</h3>
-                        <ul className='list-disc pl-5 m-0'>
-                            <li className='font-semibold'>HTML5</li>
-                            <li className='font-semibold'>CSS3</li>
-                            <li className='font-semibold'>XML</li>
-                            <li className='font-semibold'>XAML</li>
-                        </ul>
-                    </div>
-                    <div className="flex flex-col items-start">
-                        <h3 className='mb-4 text-black text-2xl'>Frameworks:</h3>
-                        <ul className='list-disc pl-5 m-0'>
-                            <li className='font-semibold'>.NET</li>
-                            <li className='font-semibold'>.MAUI</li>
-                            <li className='font-semibold'>React</li>
-                            <li className='font-semibold'>Tailwind</li>
-                        </ul>
-                    </div>
-                    <div className="flex flex-col items-start">
-                        <h3 className='mb-4 text-black text-2xl'>Tools & Enviornment:</h3>
-                        <ul className='list-disc pl-5 m-0'>
-                            <li className='font-semibold'>Version Control: Git & GitHub</li>
-                            <li className='font-semibold'>IDE: Visual Studio, VS Code, Rider</li>
-                            <li className='font-semibold'>Convex</li>
-                            <li className='font-semibold'>Azure</li>
-                            <li className='font-semibold'>Supabase</li>
-                        </ul>
-                    </div>
-                </section>
+  return (
+    <div className="relative min-h-[calc(100vh-2rem)] w-full flex flex-col items-center">
+      {/* Glowing light ball in top right */}
+      <div
+        className="pointer-events-none absolute -top-16 -right-10 sm:-top-24 sm:-right-16 w-72 h-72 sm:w-120 sm:h-120 rounded-full 
+        bg-[radial-gradient(circle,_rgba(64,138,113,0.55)_0%,_rgba(40,90,72,0.3)_40%,_transparent_70%)] 
+        blur-3xl -z-10"
+        aria-hidden="true"
+      />
+
+      {/* Main container with center fade-in */}
+      <div className="center-fade-in relative z-10 w-full max-w-5xl flex flex-col items-center py-8 sm:py-12 px-4 sm:px-8">
+        {/* Title */}
+        <div className="relative mb-2">
+          <div className="pointer-events-none absolute inset-0 -z-10 bg-black/60 blur-3xl scale-125" aria-hidden="true" />
+          <ScrambleText
+            text="About Me"
+            className="text-4xl sm:text-6xl text-center mt-2 mb-4 drop-shadow-[0_8px_30px_rgba(0,0,0,0.95)] drop-shadow-[0_0_40px_rgba(0,0,0,0.9)]"
+            delayMs={200}
+            speedMs={35}
+          />
+        </div>
+
+        {/* Intro subtitle */}
+        <div className="fade-in-delayed-1 max-w-2xl mx-auto text-center mb-10 drop-shadow-[0_3px_12px_rgba(0,0,0,0.95)]">
+          <p className="text-base sm:text-lg text-[#F0F5F0]/90 leading-relaxed">
+            Get to know my journey, academic background, and technical toolkit.
+          </p>
+        </div>
+
+        {/* Profile Card with Frosted Glass HUD styling */}
+        <section className="w-full mb-14 p-6 sm:p-10 rounded-2xl bg-[#0b1a18]/75 backdrop-blur-md border border-[#045757]/70 hover:border-[#2DD4BF]/60 transition-all duration-300 shadow-lg shadow-[0_0_25px_rgba(4,87,87,0.2)]">
+          {/* Top accent line */}
+          <div className="w-12 h-0.5 rounded-full bg-[#408A71] hover:w-full transition-all duration-500 mb-6" />
+
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+            {/* PFP Photo Column */}
+            <div className="md:col-span-4 flex justify-center">
+              <div className="relative group">
+                <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-teal-500/30 to-emerald-500/30 blur-md group-hover:blur-lg transition-all" />
+                <img
+                  className="relative block w-56 sm:w-64 h-auto rounded-2xl border-2 border-[#045757]/80 group-hover:border-[#2DD4BF]/80 transition-all duration-300 shadow-2xl object-cover"
+                  src={pfp}
+                  alt="Selfie of Mikael Renberg"
+                />
+              </div>
             </div>
-        </article>
-    );
+
+            {/* Bio Text Column */}
+            <div className="md:col-span-8 flex flex-col gap-4 text-left">
+              <h3 className="text-2xl sm:text-3xl font-bold text-[#B0E4CC] drop-shadow-[0_2px_8px_rgba(0,0,0,1)]">
+                Software & AI Development Student
+              </h3>
+
+              <div className="flex flex-col gap-3 text-base sm:text-lg text-[#F0F5F0]/85 leading-relaxed drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)]">
+                <p>
+                  Hey! I'm <strong className="text-white">Mikael</strong>, a software development student based in Sweden, currently majoring in AI development at <span className="text-[#2DD4BF] font-semibold">NBI-Handelsakademin</span>.
+                </p>
+                <p>
+                  I am currently in my first year of studies. Much of what I share on GitHub represents both rigorous academic coursework and independent side projects where I explore new architectural ideas.
+                </p>
+                <p>
+                  My greatest passion lies at the intersection of <span className="text-[#2DD4BF] font-semibold">AI integration and modern software systems</span> — turning complex algorithms into reliable, intuitive, and high-impact web and mobile applications.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Tech Stack Header */}
+        <div className="w-full mb-6 flex items-center gap-3 text-left">
+          <span className="w-2.5 h-2.5 rounded-full bg-[#2DD4BF] animate-pulse" />
+          <h2 className="text-2xl sm:text-3xl font-bold text-[#B0E4CC] drop-shadow-[0_2px_10px_rgba(0,0,0,1)] tracking-wide">
+            Technical Stack & Tools
+          </h2>
+        </div>
+
+        {/* 4 Frosted HUD Cards for Tech Categories */}
+        <section className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-14">
+          {techCategories.map((category) => (
+            <div
+              key={category.title}
+              className="group p-6 rounded-2xl bg-[#0b1a18]/75 backdrop-blur-md border border-[#045757]/70 hover:border-[#2DD4BF]/70 transition-all duration-300 shadow-lg hover:shadow-[0_0_25px_rgba(40,90,72,0.35)] flex flex-col justify-between text-left"
+            >
+              {/* Top accent bar */}
+              <div className="w-8 h-0.5 rounded-full bg-[#408A71] group-hover:w-full group-hover:bg-[#2DD4BF] transition-all duration-500 mb-4" />
+
+              <div>
+                <div className="flex items-center gap-2 mb-3">
+                  <span className="text-xl">{category.icon}</span>
+                  <h3 className="text-lg font-bold text-[#B0E4CC] group-hover:text-white transition-colors">
+                    {category.title}
+                  </h3>
+                </div>
+
+                <ul className="flex flex-col gap-2 pt-2">
+                  {category.items.map((item) => (
+                    <li
+                      key={item}
+                      className="text-sm font-mono text-[#F0F5F0]/80 flex items-center gap-2"
+                    >
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#2DD4BF]/60 group-hover:bg-[#2DD4BF]" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          ))}
+        </section>
+      </div>
+    </div>
+  );
 }
