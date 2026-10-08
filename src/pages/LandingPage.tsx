@@ -1,18 +1,94 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import ScrambleText from "../util/ScrambleText";
 import '../tailwind/glitch-fx.css';
 
-function NavRow({ to, label, detail }: { to: string; label: string; detail: string }) {
+function HudCard({
+    to,
+    tag,
+    title,
+    desc,
+    cta,
+    icon,
+}: {
+    to: string;
+    tag: string;
+    title: string;
+    desc: string;
+    cta: string;
+    icon: React.ReactNode;
+}) {
+    const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+    const [isHovered, setIsHovered] = useState(false);
+
+    const handleMouseMove = (e: React.MouseEvent<HTMLAnchorElement>) => {
+        const rect = e.currentTarget.getBoundingClientRect();
+        setMousePos({
+            x: e.clientX - rect.left,
+            y: e.clientY - rect.top,
+        });
+    };
+
     return (
-        <div className="group flex items-center gap-2 transition-all duration-200 border-2 border-transparent 
-        hover:border-gray-500 hover:rounded-[7px] hover:p-[0.3em_0.5em_0.6em_0.5em] hover:shadow-[0_0_15px_rgba(40,90,72,0.4)]">
-            <Link to={to} className="flex flex-col items-center gap-2">
-                <h4 className="text-2xl sm:text-3xl text-shadow-lg/80">{label}</h4>
-                <span className="max-w-0 overflow-hidden whitespace-nowrap opacity-0 blur-sm transition-all duration-400 group-hover:max-w-xs group-hover:opacity-100 group-hover:blur-none">
-                    {detail}
-                </span>
-            </Link>
-        </div>
+        <Link
+            to={to}
+            className="group relative block w-full rounded-2xl p-[1px] transition-all duration-300 hover:-translate-y-1.5 focus:outline-none"
+            onMouseMove={handleMouseMove}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+        >
+            {/* Outer border glow following cursor on hover */}
+            <div
+                className="pointer-events-none absolute inset-0 rounded-2xl transition-opacity duration-300 opacity-0 group-hover:opacity-100 -z-10"
+                style={{
+                    background: isHovered
+                        ? `radial-gradient(280px circle at ${mousePos.x}px ${mousePos.y}px, rgba(45, 212, 191, 0.4), transparent 70%)`
+                        : "none",
+                }}
+            />
+
+            {/* Card Body */}
+            <div className="relative flex flex-col justify-between h-full min-h-[210px] p-6 rounded-2xl bg-[#0b1a18]/75 backdrop-blur-md border border-[#045757]/70 group-hover:border-[#2DD4BF]/70 transition-all duration-300 shadow-lg group-hover:shadow-[0_0_25px_rgba(40,90,72,0.35)] overflow-hidden text-left">
+                {/* Subtle inner spotlight */}
+                <div
+                    className="pointer-events-none absolute inset-0 transition-opacity duration-300 opacity-0 group-hover:opacity-100"
+                    style={{
+                        background: isHovered
+                            ? `radial-gradient(240px circle at ${mousePos.x}px ${mousePos.y}px, rgba(64, 138, 113, 0.18), transparent 70%)`
+                            : "none",
+                    }}
+                />
+
+                {/* Top bar accent */}
+                <div className="w-10 h-0.5 rounded-full bg-[#408A71] group-hover:w-full group-hover:bg-[#2DD4BF] transition-all duration-500 mb-4" />
+
+                {/* Top header row: Icon + Tag */}
+                <div className="flex items-center justify-between gap-3 mb-4">
+                    <div className="w-11 h-11 rounded-xl flex items-center justify-center bg-[#285A48]/30 border border-[#285A48]/60 text-[#2DD4BF] group-hover:scale-105 group-hover:border-[#2DD4BF]/60 group-hover:bg-[#285A48]/50 transition-all duration-300">
+                        {icon}
+                    </div>
+                    <span className="text-xs font-mono font-medium px-2.5 py-1 rounded-full border border-teal-500/30 bg-teal-950/50 text-[#2DD4BF] shadow-xs">
+                        {tag}
+                    </span>
+                </div>
+
+                {/* Text content */}
+                <div className="flex-1 flex flex-col mb-4">
+                    <h3 className="text-xl sm:text-2xl font-bold text-[#B0E4CC] group-hover:text-white transition-colors mb-2">
+                        {title}
+                    </h3>
+                    <p className="text-sm text-[#F0F5F0]/75 leading-relaxed">
+                        {desc}
+                    </p>
+                </div>
+
+                {/* Bottom CTA - appears smoothly on hover */}
+                <div className="flex items-center gap-2 text-xs font-mono font-semibold text-[#2DD4BF] group-hover:text-teal-200 transition-all duration-300 pt-3 border-t border-white/5 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0">
+                    <span>{cta}</span>
+                    <span className="transition-transform duration-300 group-hover:translate-x-1.5">➔</span>
+                </div>
+            </div>
+        </Link>
     );
 }
 
@@ -46,13 +122,46 @@ export default function LandingPage() {
                         <p className="text-base sm:text-lg text-center mb-1 text-[#F0F5F0]/90">A full-stack AI/ML Engineer.</p>
                         <p className="text-base sm:text-lg text-center mb-1 text-[#F0F5F0]/90">I bridge the gap between robust software and intelligent AI features</p>
                         <p className="text-base sm:text-lg text-center mb-1 text-[#F0F5F0]/90">Always with a strong focus clean code on quality.</p>
-                        <p className="text-base sm:text-lg text-center mb-12 sm:mb-16 text-[#F0F5F0]/90">Welcome to my portfolio.</p>
+                        <p className="text-base sm:text-lg text-center mb-10 sm:mb-12 text-[#F0F5F0]/90">Welcome to my portfolio.</p>
                     </div>
 
-                    <div className="fade-in-delayed-2 flex flex-col items-center gap-3 w-full">
-                        <NavRow to="/projects" label="⦾ My Projects" detail="Personal projects and school work." />
-                        <NavRow to="/aboutme" label="⦾ About me" detail="Get to know me and my tech stack." />
-                        <NavRow to="/contact" label="⦾ Contact" detail="All the ways to get in contact with me." />
+                    <div className="fade-in-delayed-2 grid grid-cols-1 md:grid-cols-3 gap-5 w-full max-w-5xl px-2 sm:px-4 mt-2 mb-10">
+                        <HudCard
+                            to="/projects"
+                            tag="Repos & Projects"
+                            title="My Projects"
+                            desc="Personal applications, AI tools and academic coursework."
+                            cta="Explore projects"
+                            icon={
+                                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                                </svg>
+                            }
+                        />
+                        <HudCard
+                            to="/aboutme"
+                            tag="AI & Fullstack"
+                            title="About Me"
+                            desc="Background, NBI studies, core skills & complete tech stack."
+                            cta="View profile"
+                            icon={
+                                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                                </svg>
+                            }
+                        />
+                        <HudCard
+                            to="/contact"
+                            tag="Connect"
+                            title="Contact"
+                            desc="Open for collaborations, internships, or a friendly chat."
+                            cta="Get in touch"
+                            icon={
+                                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                                </svg>
+                            }
+                        />
                     </div>
                 </article>
             </div>
