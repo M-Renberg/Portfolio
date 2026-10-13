@@ -13,6 +13,7 @@ const badgeConfigs: Record<string, { name: string; color: string; icon: string }
   'html5': { name: 'HTML5', color: 'E34F26', icon: 'html5' },
   'css3': { name: 'CSS3', color: '1572B6', icon: 'css' },
   'react': { name: 'React', color: '61DAFB', icon: 'react' },
+  'tailwind': { name: 'Tailwind CSS', color: '06B6D4', icon: 'tailwindcss' },
   'tailwind css': { name: 'Tailwind CSS', color: '06B6D4', icon: 'tailwindcss' },
   'vite': { name: 'Vite', color: '646CFF', icon: 'vite' },
   'sql': { name: 'SQL', color: '4479A1', icon: 'mysql' },
@@ -20,7 +21,19 @@ const badgeConfigs: Record<string, { name: string; color: string; icon: string }
   'azure': { name: 'Azure', color: '0089D6', icon: 'microsoftazure' },
   'rest apis': { name: 'REST APIs', color: '2DD4BF', icon: 'postman' },
   'xml': { name: 'XML', color: 'FFA500', icon: 'xml' },
-  'xaml': { name: 'XAML', color: '0078D7', icon: 'visualstudio' }
+  'xaml': { name: 'XAML', color: '0078D7', icon: 'visualstudio' },
+  'fastapi': { name: 'FastAPI', color: '009688', icon: 'fastapi' },
+  'streamlit': { name: 'Streamlit', color: 'FF4B4B', icon: 'streamlit' },
+  'pandas': { name: 'Pandas', color: '150458', icon: 'pandas' },
+  'pytorch': { name: 'PyTorch', color: 'EE4C2C', icon: 'pytorch' },
+  'torch': { name: 'PyTorch', color: 'EE4C2C', icon: 'pytorch' },
+  'transformers': { name: 'Transformers', color: 'FFD21E', icon: 'huggingface' },
+  'hugging face': { name: 'Hugging Face', color: 'FFD21E', icon: 'huggingface' },
+  'huggingface': { name: 'Hugging Face', color: 'FFD21E', icon: 'huggingface' },
+  'scikit-learn': { name: 'Scikit-Learn', color: 'F7931E', icon: 'scikitlearn' },
+  'machine learning': { name: 'Machine Learning', color: '2DD4BF', icon: 'scikitlearn' },
+  'pydantic': { name: 'Pydantic', color: 'E92063', icon: 'pydantic' },
+  'supabase': { name: 'Supabase', color: '3ECF8E', icon: 'supabase' }
 };
 
 export function Badge({ tech }: { tech: string }) {

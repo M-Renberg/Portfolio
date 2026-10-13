@@ -1,5 +1,104 @@
 [
   {
+    "id": "project-telco-churn",
+    "slug": "project-telco-churn",
+    "category": "academic",
+    "link": "https://github.com/M-Renberg/Project_telco_churn",
+    "title": "Telco Customer Churn Prediction",
+    "subtitle": "Machine Learning Workflow & Streamlit App",
+    "description": "An end-to-end Machine Learning project predicting customer churn risk using the Kaggle Telco Customer Churn dataset, featuring a FastAPI serving backend and an interactive Streamlit UI.",
+    "longDescription": "Developed as an end-to-end Machine Learning group project, this application predicts customer churn risk using the Telco Customer Churn dataset from Kaggle. The project covers the complete data science lifecycle—from exploratory data analysis and feature engineering to model training, evaluation, and production serving.\n\nThe system features a microservice architecture with a dedicated FastAPI backend for real-time model inference and an interactive Streamlit web dashboard where users can adjust customer variables and instantly calculate churn risk. It also includes a dedicated Python CLI tool for automated model training and pipeline inspection.",
+    "highlights": [
+      "Full ML lifecycle including feature engineering, model training, and evaluation",
+      "Real-time inference backend microservice built with FastAPI and Uvicorn",
+      "Interactive Streamlit web frontend for live customer churn risk assessment",
+      "Dedicated Python CLI utility for automated model training and testing",
+      "Collaborative team project with Git version control and environment management"
+    ],
+    "image": "/images/projects/telco-churn.svg",
+    "badges": [
+      "Python",
+      "Machine Learning",
+      "FastAPI",
+      "Streamlit",
+      "Pandas",
+      "Scikit-Learn"
+    ]
+  },
+  {
+    "id": "orcale-llm",
+    "slug": "oracle-llm",
+    "category": "academic",
+    "link": "https://github.com/M-Renberg/orcale-llm",
+    "title": "Oracle-LLM",
+    "subtitle": "Conversational CSV Data Analysis with Local SmolLM2",
+    "description": "A FastAPI-based REST API that enables users to upload CSV datasets and ask natural language questions using a local, offline Small Language Model (SmolLM2).",
+    "longDescription": "Oracle-LLM is an intelligent REST API built with FastAPI that brings natural language querying to tabular data using locally hosted Small Language Models. Users can upload any CSV dataset and ask analytical questions without sending sensitive data to third-party cloud providers.\n\nThe system implements a modular, sequential LLM processing chain. When a user asks a question, a DataSelector step extracts the most relevant rows and schema properties, which are then routed to an LLMRunner running Hugging Face's SmolLM2-1.7B-Instruct model on local CPU. Subsequent AnalysisStep and ResponseParser phases refine and format the output into clean, reliable JSON responses.",
+    "highlights": [
+      "Modular sequential processing chain (DataSelector, LLMRunner, AnalysisStep, ResponseParser)",
+      "Local offline CPU inference with Hugging Face SmolLM2-1.7B-Instruct (~3.5 GB weights)",
+      "RESTful API built with FastAPI, Pydantic schemas, and interactive Swagger documentation (/docs)",
+      "In-memory dataset parsing and dynamic row filtering powered by Pandas"
+    ],
+    "image": "/images/projects/oracle-llm.svg",
+    "badges": [
+      "Python",
+      "FastAPI",
+      "Transformers",
+      "PyTorch",
+      "Pandas",
+      "Pydantic"
+    ]
+  },
+  {
+    "id": "words-and-dice",
+    "slug": "words-and-dice",
+    "category": "academic",
+    "link": "https://github.com/M-Renberg/words_and_dice",
+    "title": "Words and Di(c)e",
+    "subtitle": "Online PvP Word Game",
+    "description": "A TDD-developed player-versus-player browser word game with real-time multiplayer synchronization and matchmaking.",
+    "longDescription": "Words and Di(c)e (WnD) is a browser-based word game where players compete in real time to guess words fetched from an external API. The game utilizes test-driven development (TDD), short polling for game synchronization, and a custom invite system for smooth multiplayer sessions.",
+    "highlights": [
+      "Test-Driven Development (TDD) approach with thorough test coverage",
+      "Automated CI/CD pipeline verifying test suites before deployment",
+      "Real-time state synchronization for active multiplayer gameplay",
+      "Unique GUID-based invite code system for player matchmaking"
+    ],
+    "image": "/images/projects/project-placeholder.svg",
+    "badges": [
+      "TypeScript",
+      "React",
+      "C#",
+      "Tailwind CSS",
+      "Supabase"
+    ]
+  },
+  {
+    "id": "filmvisarna",
+    "slug": "filmvisarna",
+    "category": "academic",
+    "link": "https://github.com/M-Renberg/filmvisarna",
+    "title": "Filmvisarna",
+    "subtitle": "Movie Theater Web Platform with Adaptive Theme UI",
+    "description": "A cinema booking platform with an interactive seat reservation system and a dynamic UI that adapts its theme to the selected movie genre.",
+    "longDescription": "Filmvisarna is a modern cinema booking platform featuring a genre-adaptive layout that dynamically shifts its theme and atmosphere based on the movie genre being browsed. The platform provides an engaging user experience with an interactive seat reservation system, an intuitive checkout flow, and an integrated AI assistant to guide moviegoers.",
+    "highlights": [
+      "Dynamic genre-adaptive layout and visual theme",
+      "Interactive seat reservation and booking system",
+      "Cloud-based backend architecture optimized for real-time operations",
+      "Integrated AI assistant helping users discover movies"
+    ],
+    "image": "/images/projects/project-placeholder.svg",
+    "badges": [
+      "TypeScript",
+      "React",
+      "C#",
+      "Tailwind CSS",
+      "MySQL"
+    ]
+  },
+  {
     "id": "pokemon-tcg-store",
     "slug": "pokemon-tcg-store",
     "category": "academic",
