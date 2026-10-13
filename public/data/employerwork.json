@@ -6,6 +6,7 @@
     "employer": "Devotion Ventures",
     "role": "Full-Stack & AI Developer (Internship)",
     "period": "2025 - Present",
+    "image": "/images/projects/work-automation.svg",
     "title": "Applicant Tracking System (ATS)",
     "subtitle": "Automated Recruitment & Candidate Pipeline Platform",
     "description": "A full-stack, automated Applicant Tracking System built to streamline recruitment operations, featuring real-time data sync, AI-assisted screening, automated workflow pipelines, and team collaboration integrations.",

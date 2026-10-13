@@ -50,7 +50,11 @@ const badgeConfigs: Record<string, { name: string; color: string; icon: string }
   'bun': { name: 'Bun', color: 'FBF0DF', icon: 'bun' },
   'slack': { name: 'Slack', color: '4A154B', icon: 'slack' },
   'elevenlabs': { name: 'ElevenLabs', color: '000000', icon: 'elevenlabs' },
-  'shadcn/ui': { name: 'shadcn/ui', color: '000000', icon: 'shadcnui' }
+  'shadcn/ui': { name: 'shadcn/ui', color: '000000', icon: 'shadcnui' },
+  'full-stack': { name: 'Full-Stack', color: '2DD4BF', icon: 'stackshare' },
+  'agile/scrum': { name: 'Agile/Scrum', color: '0052CC', icon: 'jira' },
+  'database design': { name: 'Database Design', color: '4479A1', icon: 'mysql' },
+  'oop': { name: 'OOP', color: '239120', icon: 'dotnet' }
 };
 
 export function Badge({ tech }: { tech: string }) {
@@ -69,7 +73,7 @@ export function Badge({ tech }: { tech: string }) {
 
   return (
     <li className="flex items-center gap-1.5 bg-[#061211]/90 border border-[#045757]/80 hover:border-[#2DD4BF]/60 px-3 py-1 rounded-full text-xs sm:text-sm font-mono text-[#F0F5F0] transition-colors">
-      <img src={url} width="14" height="14" alt={config.name} className="inline flex-shrink-0" />
+      <img src={url} width="14" height="14" alt={config.name} className="inline shrink-0" />
       <span>{config.name}</span>
     </li>
   );

@@ -21,7 +21,7 @@ function WorkCard({ project }: { project: ProjectInterface }) {
   return (
     <Link
       to={`/work/${project.id}`}
-      className="group relative block w-full rounded-2xl p-[1px] transition-all duration-300 hover:-translate-y-1.5 focus:outline-none"
+      className="group relative block w-full rounded-2xl p-px transition-all duration-300 hover:-translate-y-1.5 focus:outline-none"
       onMouseMove={handleMouseMove}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
@@ -37,7 +37,7 @@ function WorkCard({ project }: { project: ProjectInterface }) {
       />
 
       {/* Card Body */}
-      <div className="relative flex flex-col justify-between h-full min-h-[300px] p-6 rounded-2xl bg-[#0b1a18]/75 backdrop-blur-md border border-[#045757]/70 group-hover:border-[#2DD4BF]/70 transition-all duration-300 shadow-lg group-hover:shadow-[0_0_25px_rgba(40,90,72,0.35)] overflow-hidden text-left">
+      <div className="relative flex flex-col justify-between h-full min-h-75 p-6 rounded-2xl bg-[#0b1a18]/75 backdrop-blur-md border border-[#045757]/70 group-hover:border-[#2DD4BF]/70 transition-all duration-300 shadow-lg group-hover:shadow-[0_0_25px_rgba(40,90,72,0.35)] overflow-hidden text-left">
         {/* Subtle inner spotlight */}
         <div
           className="pointer-events-none absolute inset-0 transition-opacity duration-300 opacity-0 group-hover:opacity-100"
@@ -63,7 +63,7 @@ function WorkCard({ project }: { project: ProjectInterface }) {
                   (e.target as HTMLImageElement).src = '/images/projects/project-placeholder.svg';
                 }}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0b1a18] via-transparent to-transparent opacity-60" />
+              <div className="absolute inset-0 bg-linear-to-t from-[#0b1a18] via-transparent to-transparent opacity-60" />
               {project.employer && (
                 <span className="absolute top-2.5 right-2.5 px-2.5 py-1 rounded-md text-xs font-mono bg-[#061211]/90 text-[#2DD4BF] border border-[#2DD4BF]/40 backdrop-blur-sm shadow-md">
                   {project.employer}
@@ -130,7 +130,7 @@ export default function MyProjects() {
       {/* Glowing light ball in top right */}
       <div
         className="pointer-events-none absolute -top-16 -right-10 sm:-top-24 sm:-right-16 w-72 h-72 sm:w-120 sm:h-120 rounded-full 
-        bg-[radial-gradient(circle,_rgba(64,138,113,0.55)_0%,_rgba(40,90,72,0.3)_40%,_transparent_70%)] 
+        bg-[radial-gradient(circle,rgba(64,138,113,0.55)_0%,rgba(40,90,72,0.3)_40%,transparent_70%)] 
         blur-3xl -z-10"
         aria-hidden="true"
       />
@@ -142,7 +142,7 @@ export default function MyProjects() {
           <div className="pointer-events-none absolute inset-0 -z-10 bg-black/60 blur-3xl scale-125" aria-hidden="true" />
           <ScrambleText
             text="My Work"
-            className="text-4xl sm:text-6xl text-center mt-2 mb-4 drop-shadow-[0_8px_30px_rgba(0,0,0,0.95)] drop-shadow-[0_0_40px_rgba(0,0,0,0.9)]"
+            className="text-4xl sm:text-6xl text-center mt-2 mb-4 drop-shadow-[0_0_40px_rgba(0,0,0,0.9)]"
             delayMs={200}
             speedMs={35}
           />

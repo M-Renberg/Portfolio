@@ -14,7 +14,7 @@ export default function WorkDetailPage() {
       {/* Glowing light ball in top right */}
       <div
         className="pointer-events-none absolute -top-16 -right-10 sm:-top-24 sm:-right-16 w-72 h-72 sm:w-120 sm:h-120 rounded-full 
-        bg-[radial-gradient(circle,_rgba(64,138,113,0.55)_0%,_rgba(40,90,72,0.3)_40%,_transparent_70%)] 
+        bg-[radial-gradient(circle,rgba(64,138,113,0.55)_0%,rgba(40,90,72,0.3)_40%,transparent_70%)] 
         blur-3xl -z-10"
         aria-hidden="true"
       />
@@ -140,12 +140,12 @@ export default function WorkDetailPage() {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-auto max-h-[460px] object-cover object-center group-hover:scale-[1.01] transition-transform duration-500"
+                  className="w-full h-auto max-h-115 object-cover object-center group-hover:scale-[1.01] transition-transform duration-500"
                   onError={(e) => {
                     (e.target as HTMLImageElement).src = '/images/projects/project-placeholder.svg';
                   }}
                 />
-                <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-[#0b1a18] via-transparent to-transparent opacity-40" />
+                <div className="absolute inset-0 pointer-events-none bg-linear-to-t from-[#0b1a18] via-transparent to-transparent opacity-40" />
               </div>
             )}
 
@@ -181,7 +181,7 @@ export default function WorkDetailPage() {
                           key={index}
                           className="flex items-start gap-2.5 text-sm text-[#F0F5F0]/85"
                         >
-                          <span className="w-2 h-2 rounded-full bg-[#2DD4BF] mt-1.5 flex-shrink-0 shadow-[0_0_8px_rgba(45,212,191,0.8)]" />
+                          <span className="w-2 h-2 rounded-full bg-[#2DD4BF] mt-1.5 shrink-0 shadow-[0_0_8px_rgba(45,212,191,0.8)]" />
                           <span>{highlight}</span>
                         </li>
                       ))}

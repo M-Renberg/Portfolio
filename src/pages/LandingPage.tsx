@@ -33,7 +33,7 @@ function HudCard({
     return (
         <Link
             to={to}
-            className="group relative block w-full rounded-2xl p-[1px] transition-all duration-300 hover:-translate-y-1.5 focus:outline-none"
+            className="group relative block w-full rounded-2xl p-px transition-all duration-300 hover:-translate-y-1.5 focus:outline-none"
             onMouseMove={handleMouseMove}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
@@ -107,7 +107,7 @@ export default function LandingPage() {
                 {/* Glowing light ball in top right */}
                 <div 
                     className="pointer-events-none absolute -top-16 -right-10 sm:-top-24 sm:-right-16 w-72 h-72 sm:w-120 sm:h-120 rounded-full 
-                    bg-[radial-gradient(circle,_rgba(64,138,113,0.55)_0%,_rgba(40,90,72,0.3)_40%,_transparent_70%)] 
+                    bg-[radial-gradient(circle,rgba(64,138,113,0.55)_0%,rgba(40,90,72,0.3)_40%,transparent_70%)] 
                     blur-3xl -z-10" 
                     aria-hidden="true"
                 />
@@ -119,7 +119,7 @@ export default function LandingPage() {
                         <div className="pointer-events-none absolute inset-0 -z-10 bg-black/60 blur-3xl scale-125" aria-hidden="true" />
                         <ScrambleText 
                             text="Mikael Renberg" 
-                            className="text-5xl sm:text-7xl text-center mt-4 sm:mt-10 mb-8 sm:mb-10 drop-shadow-[0_8px_30px_rgba(0,0,0,0.95)] drop-shadow-[0_0_40px_rgba(0,0,0,0.9)]" 
+                            className="text-5xl sm:text-7xl text-center mt-4 sm:mt-10 mb-8 sm:mb-10 drop-shadow-[0_0_40px_rgba(0,0,0,0.9)]" 
                             delayMs={250} 
                             speedMs={35} 
                         />
@@ -128,28 +128,28 @@ export default function LandingPage() {
                     {/* Free-floating organic bio rows without box - shadows on text only */}
                     <div className="fade-in-delayed-1 flex flex-col items-center gap-3.5 sm:gap-4.5 my-6 sm:my-8 max-w-2xl text-center px-4">
                         {/* Floating Row 1: Role */}
-                        <div className="float-row-1 transition-all duration-300 hover:scale-105 cursor-default drop-shadow-[0_4px_16px_rgba(0,0,0,1)] drop-shadow-[0_0_20px_rgba(0,0,0,0.95)]">
+                        <div className="float-row-1 transition-all duration-300 hover:scale-105 cursor-default drop-shadow-[0_0_20px_rgba(0,0,0,0.95)]">
                             <p className="text-xl sm:text-2xl font-semibold tracking-wide text-white">
                                 A full-stack <span className="text-[#2DD4BF] font-bold">AI/ML Engineer</span>.
                             </p>
                         </div>
 
                         {/* Floating Row 2: Mission */}
-                        <div className="float-row-2 transition-all duration-300 hover:scale-105 cursor-default drop-shadow-[0_4px_16px_rgba(0,0,0,1)] drop-shadow-[0_0_20px_rgba(0,0,0,0.95)]">
+                        <div className="float-row-2 transition-all duration-300 hover:scale-105 cursor-default drop-shadow-[0_0_20px_rgba(0,0,0,0.95)]">
                             <p className="text-base sm:text-xl text-[#F0F5F0]/90 leading-relaxed">
                                 I bridge the gap between <span className="text-[#B0E4CC] font-medium">robust software</span> and <span className="text-[#2DD4BF] font-medium">intelligent AI features</span>.
                             </p>
                         </div>
 
                         {/* Floating Row 3: Quality */}
-                        <div className="float-row-3 transition-all duration-300 hover:scale-105 cursor-default drop-shadow-[0_4px_16px_rgba(0,0,0,1)] drop-shadow-[0_0_20px_rgba(0,0,0,0.95)]">
+                        <div className="float-row-3 transition-all duration-300 hover:scale-105 cursor-default drop-shadow-[0_0_20px_rgba(0,0,0,0.95)]">
                             <p className="text-base sm:text-lg text-[#F0F5F0]/80">
                                 Always with a strong focus on <span className="text-[#B0E4CC] font-medium">clean code</span> and <span className="text-[#2DD4BF] font-medium">high quality</span>.
                             </p>
                         </div>
 
                         {/* Floating Row 4: Subtle Welcome beacon */}
-                        <div className="float-row-4 transition-all duration-300 hover:scale-105 cursor-default pt-2 drop-shadow-[0_4px_16px_rgba(0,0,0,1)] drop-shadow-[0_0_20px_rgba(0,0,0,0.95)]">
+                        <div className="float-row-4 transition-all duration-300 hover:scale-105 cursor-default pt-2 drop-shadow-[0_0_20px_rgba(0,0,0,0.95)]">
                             <span className="inline-flex items-center gap-2 text-xs sm:text-sm font-mono tracking-widest text-[#408A71] uppercase">
                                 <span className="w-1.5 h-1.5 rounded-full bg-[#2DD4BF] animate-pulse" />
                                 Welcome to my portfolio

@@ -16,7 +16,7 @@ export default function Contact() {
       {/* Glowing light ball in top right */}
       <div
         className="pointer-events-none absolute -top-16 -right-10 sm:-top-24 sm:-right-16 w-72 h-72 sm:w-120 sm:h-120 rounded-full 
-        bg-[radial-gradient(circle,_rgba(64,138,113,0.55)_0%,_rgba(40,90,72,0.3)_40%,_transparent_70%)] 
+        bg-[radial-gradient(circle,rgba(64,138,113,0.55)_0%,rgba(40,90,72,0.3)_40%,transparent_70%)] 
         blur-3xl -z-10"
         aria-hidden="true"
       />
@@ -28,7 +28,7 @@ export default function Contact() {
           <div className="pointer-events-none absolute inset-0 -z-10 bg-black/60 blur-3xl scale-125" aria-hidden="true" />
           <ScrambleText
             text="Contact"
-            className="text-4xl sm:text-6xl text-center mt-2 mb-4 drop-shadow-[0_8px_30px_rgba(0,0,0,0.95)] drop-shadow-[0_0_40px_rgba(0,0,0,0.9)]"
+            className="text-4xl sm:text-6xl text-center mt-2 mb-4 drop-shadow-[0_0_40px_rgba(0,0,0,0.9)]"
             delayMs={200}
             speedMs={35}
           />
@@ -165,7 +165,7 @@ export default function Contact() {
                       rows={4}
                       required
                       placeholder="Write your message here..."
-                      className="w-full p-3.5 rounded-xl bg-[#061211]/80 border border-[#045757]/70 text-[#F0F5F0] placeholder-white/30 focus:outline-none focus:border-[#2DD4BF] focus:ring-1 focus:ring-[#2DD4BF] transition-all resize-y min-h-[120px]"
+                      className="w-full p-3.5 rounded-xl bg-[#061211]/80 border border-[#045757]/70 text-[#F0F5F0] placeholder-white/30 focus:outline-none focus:border-[#2DD4BF] focus:ring-1 focus:ring-[#2DD4BF] transition-all resize-y min-h-30"
                     />
                   </div>
 

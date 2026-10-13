@@ -31,7 +31,7 @@ export default function AboutMe() {
       {/* Glowing light ball in top right */}
       <div
         className="pointer-events-none absolute -top-16 -right-10 sm:-top-24 sm:-right-16 w-72 h-72 sm:w-120 sm:h-120 rounded-full 
-        bg-[radial-gradient(circle,_rgba(64,138,113,0.55)_0%,_rgba(40,90,72,0.3)_40%,_transparent_70%)] 
+        bg-[radial-gradient(circle,rgba(64,138,113,0.55)_0%,rgba(40,90,72,0.3)_40%,transparent_70%)] 
         blur-3xl -z-10"
         aria-hidden="true"
       />
@@ -43,7 +43,7 @@ export default function AboutMe() {
           <div className="pointer-events-none absolute inset-0 -z-10 bg-black/60 blur-3xl scale-125" aria-hidden="true" />
           <ScrambleText
             text="About Me"
-            className="text-4xl sm:text-6xl text-center mt-2 mb-4 drop-shadow-[0_8px_30px_rgba(0,0,0,0.95)] drop-shadow-[0_0_40px_rgba(0,0,0,0.9)]"
+            className="text-4xl sm:text-6xl text-center mt-2 mb-4 drop-shadow-[0_0_40px_rgba(0,0,0,0.9)]"
             delayMs={200}
             speedMs={35}
           />
@@ -65,7 +65,7 @@ export default function AboutMe() {
             {/* PFP Photo Column */}
             <div className="md:col-span-4 flex justify-center">
               <div className="relative group">
-                <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-teal-500/30 to-emerald-500/30 blur-md group-hover:blur-lg transition-all" />
+                <div className="absolute -inset-1 rounded-2xl bg-linear-to-r from-teal-500/30 to-emerald-500/30 blur-md group-hover:blur-lg transition-all" />
                 <img
                   className="relative block w-56 sm:w-64 h-auto rounded-2xl border-2 border-[#045757]/80 group-hover:border-[#2DD4BF]/80 transition-all duration-300 shadow-2xl object-cover"
                   src={pfp}
