@@ -72,6 +72,15 @@ function WorkCard({ project }: { project: ProjectInterface }) {
             </div>
           )}
 
+          {/* Employer badge if no image banner */}
+          {project.employer && !project.image && (
+            <div className="mb-3">
+              <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-mono bg-[#061211]/90 text-[#2DD4BF] border border-[#2DD4BF]/40 shadow-sm">
+                🏢 {project.employer}
+              </span>
+            </div>
+          )}
+
           {/* Header with Title + External arrow indicator */}
           <div className="flex items-start justify-between gap-3 mb-1">
             <h3 className="text-xl sm:text-2xl font-bold text-[#B0E4CC] group-hover:text-white transition-colors flex items-center gap-2">

@@ -1,10 +1,102 @@
 [
   {
+    "id": "chill-night-mode",
+    "slug": "chill-night-mode",
+    "category": "personal",
+    "link": "https://marketplace.visualstudio.com/items?itemName=Moth-Coder.chill-night-mode",
+    "title": "Chill Night Mode 🌙",
+    "subtitle": "VS Code Dark Theme Crafted for Comfort",
+    "description": "A dark mode theme crafted for comfort, featuring an eye-care midnight background and high-legibility syntax highlighting to reduce eye strain.",
+    "longDescription": "Chill Night Mode is a minimalist dark theme for Visual Studio Code, created through extensive experimentation with color palettes to find the perfect balance between aesthetics and comfort. The goal was to provide a background that isn't too harsh and syntax highlighting that is easy to read and gentle on the eyes during long programming sessions.\n\nBuilt with a focus on eye care and distraction-free coding, the theme pairs balanced midnight tones with soft, distinct syntax colors.",
+    "highlights": [
+      "Eye-care background with deep, balanced dark tones to reduce eye strain",
+      "Carefully selected syntax colors for maximum legibility and comfort",
+      "Minimalist aesthetic designed to keep you focused on your code",
+      "Optimized for extended coding sessions and late-night development"
+    ],
+    "image": "/images/projects/chill-night-mode.svg",
+    "badges": [
+      "VS Code",
+      "CSS",
+      "JSON"
+    ]
+  },
+  {
+    "id": "chill-night-obsidian",
+    "slug": "chill-night-obsidian",
+    "category": "personal",
+    "link": "https://github.com/M-Renberg/chill-night-obsidian",
+    "title": "Chill Night — Obsidian Theme 🌙",
+    "subtitle": "Cozy & Minimalist Dark Theme for Obsidian",
+    "description": "A cozy, dark, and minimalist theme for Obsidian note-taking, using the Chill Night palette of midnight blacks (#0f0e0f) and soft pastel accents.",
+    "longDescription": "Chill Night for Obsidian provides a cozy, dark, and minimalist environment designed for deep thinking and focused writing. The theme utilizes the custom Chill Night color palette—a blend of deep midnight blacks (#0f0e0f) and soft pastel accents.\n\nIt features enhanced typography for both editing and reading modes, accent-coded UI elements (color-coded headers, links, and checkboxes to navigate notes at a glance), and beautifully styled code blocks with matching syntax highlighting.",
+    "highlights": [
+      "Signature Chill Night palette: midnight background (#0f0e0f) with pink, purple, and teal accents",
+      "Enhanced typography optimized for both Live Preview editing and reading modes",
+      "Accent-coded UI: color-coded headers (purple), links, variables (pink), and checkboxes",
+      "Custom syntax-highlighted code blocks matching the overall aesthetic"
+    ],
+    "image": "/images/projects/chill-night-obsidian.svg",
+    "badges": [
+      "Obsidian",
+      "CSS",
+      "Markdown"
+    ]
+  },
+  {
+    "id": "chill-night-starship",
+    "slug": "chill-night-starship",
+    "category": "personal",
+    "link": "https://github.com/M-Renberg/chill-night-starship",
+    "title": "Chill Night — Starship Prompt 🌙",
+    "subtitle": "Powerline-Style Starship Prompt Configuration",
+    "description": "A sleek Powerline-style Starship prompt configuration using the Chill Night color palette, featuring multi-segmented design and custom runtime icons.",
+    "longDescription": "A sleek, Powerline-style Starship cross-shell prompt configuration that brings the Chill Night color palette to the terminal. It features a clean, multi-segmented design with custom Nerd Font icons for various programming languages and runtime environments.\n\nThe prompt provides smart pathing with custom folder icons, multi-language support (Python, Node.js, Rust, Go, C#), and an optimized custom command that trims long .NET preview version strings for an ultra-clean terminal status bar: [ OS | User ][ Directory ][ Git ][ Python ][ Time ].",
+    "highlights": [
+      "Powerline multi-segmented bar with smooth Nerd Font glyph transitions",
+      "Chill Night color palette with custom dark tones and pastel accents",
+      "Smart directory pathing with contextual folder icons for repos and documents",
+      "Optimized .NET module that regex-trims long preview version strings",
+      "Broad developer support across Python, Node.js, Rust, Go, and C#"
+    ],
+    "image": "/images/projects/chill-night-starship.svg",
+    "badges": [
+      "Starship",
+      "Shell",
+      "PowerShell"
+    ]
+  },
+  {
+    "id": "slime-helper-desktop",
+    "slug": "slime-helper-desktop",
+    "category": "personal",
+    "link": "https://github.com/M-Renberg/Vsc-slime-helper-desktop-version",
+    "title": "Slime Helper (Desktop Version)",
+    "subtitle": "Standalone WPF Desktop Companion with Global AI & Git Hooks",
+    "description": "An interactive desktop companion that lives on your screen, reacts to your code, monitors git activity globally across any editor, and talks to AI (Gemini & Claude).",
+    "longDescription": "Slime Helper Desktop is a standalone WPF desktop application featuring an animated, squishy slime companion that keeps you company while coding. Unlike extension-based versions, this runs globally across the entire operating system, helping developers stay focused, take breaks, and chat with AI directly from the desktop or via a built-in CLI tool.\n\nThe application includes a global word watcher listening for code triggers across any editor, Git repository tracking that warns about copy-paste spikes ('vibe coding'), multiple animated skins (Default/Blue, Green, Pink, Girl), and seamless context-aware AI integration with Google Gemini and Anthropic Claude.",
+    "highlights": [
+      "Global Word Watcher listening for triggers across any IDE or text editor",
+      "Dual AI Brain integration with Google Gemini and Anthropic Claude",
+      "Git repository and file change monitoring detecting uncommitted edits and rapid code churn",
+      "Built-in CLI companion ('slime') installable directly to PATH from the right-click menu",
+      "Multiple animated skins with expressive states, breathing loops, and context controls"
+    ],
+    "image": "/images/projects/slime-helper-desktop.svg",
+    "badges": [
+      "C#",
+      ".NET",
+      "WPF",
+      "Gemini",
+      "Claude"
+    ]
+  },
+  {
     "id": "slime-helper",
     "slug": "slime-helper",
     "category": "personal",
     "link": "https://marketplace.visualstudio.com/items?itemName=Moth-Coder.slime-helper",
-    "title": "Slime Helper",
+    "title": "Slime Helper (VS Code Extension)",
     "subtitle": "VS Code Extension — Coding Buddy",
     "description": "Slime helper is a VS Code extension that keeps track of your git, error messages and overall coding. It's also designed with animations and a personality as it keeps you company while coding.",
     "longDescription": "Slime Helper is an interactive companion extension for Visual Studio Code, built to make software development more engaging and dynamic. The extension listens to internal VS Code events—such as Git commits and diagnostic error messages—and reacts with playful animations and encouraging feedback right inside the editor.",
@@ -55,6 +147,7 @@
       "Structured data handling and console-based menu navigation",
       "Input validation and exception handling for a stable user experience"
     ],
+    "image": "/images/projects/project-placeholder.svg",
     "badges": [
       "C#",
       ".NET"
@@ -74,6 +167,7 @@
       "Dynamic ID-based routing for in-depth project documentation",
       "Fully responsive and optimized for fast load times and performance"
     ],
+    "image": "/images/projects/project-placeholder.svg",
     "badges": [
       "React",
       "TypeScript",

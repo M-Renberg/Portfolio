@@ -1,63 +1,30 @@
 [
   {
-    "id": "enterprise-automation",
-    "slug": "enterprise-automation",
+    "id": "ats-devotion-ventures",
+    "slug": "ats-devotion-ventures",
     "category": "work",
-    "employer": "Tech & Solutions Partner",
-    "role": "Full-Stack & Systems Developer",
+    "employer": "Devotion Ventures",
+    "role": "Full-Stack & AI Developer (Internship)",
     "period": "2025 - Present",
-    "title": "Smart Process & Data Automation",
-    "subtitle": "Process automation & integration system for client/employer",
-    "description": "Development of tailored internal tools, REST API integrations, and automated workflows to streamline mission-critical business processes.",
-    "longDescription": "During this engagement for an employer, a modern integration platform was developed to automate manual and repetitive tasks. The solution connects internal databases with external services, validates data streams, and provides team members with a real-time dashboard for status monitoring and logs. Strong emphasis was placed on robust error handling, high availability, and modern architecture using C# .NET and React.",
+    "title": "Applicant Tracking System (ATS)",
+    "subtitle": "Automated Recruitment & Candidate Pipeline Platform",
+    "description": "A full-stack, automated Applicant Tracking System built to streamline recruitment operations, featuring real-time data sync, AI-assisted screening, automated workflow pipelines, and team collaboration integrations.",
+    "longDescription": "Developed as an internal recruitment platform for Devotion Ventures, this Applicant Tracking System (ATS) was designed to automate and streamline the end-to-end candidate intake and evaluation process.\n\nThe application is architected as a modern, reactive full-stack web system using React, TypeScript, Tailwind CSS, and Convex as the real-time cloud database and backend service. It coordinates a multi-stage candidate lifecycle from initial application through screening, conversational assessment, technical review, and final evaluation.\n\nKey architectural capabilities include scheduled background jobs for application synchronization, conversational AI integrations for candidate assessment, automated SLA monitoring to maintain responsive communication, and a human-in-the-loop review queue for outgoing correspondence.\n\nNote: As this is a private internal enterprise tool, the source repository, internal endpoints, and live dashboards are proprietary to Devotion Ventures and are not publicly accessible.",
     "highlights": [
-      "Automated time-consuming manual processes, saving over 40% of working hours per week",
-      "Built fault-tolerant REST API integrations with structured logging and monitoring",
-      "Created a modern, responsive dashboard in React with Tailwind CSS for operations personnel",
-      "Designed optimized SQL queries and data models for rapid data access"
+      "Engineered a multi-stage candidate management pipeline with real-time status updates",
+      "Built reactive cloud backend services and scheduled background jobs using Convex",
+      "Integrated AI-assisted evaluation workflows for candidate screening and assessment",
+      "Implemented automated communication queues with human-in-the-loop approval mechanisms",
+      "Integrated team notification channels for automated alerts and SLA tracking",
+      "Developed a responsive, accessible administrative dashboard using React, TypeScript, and modern component systems"
     ],
     "badges": [
-      "C#",
-      ".NET",
       "React",
+      "Convex",
       "TypeScript",
-      "SQL",
-      "REST APIs"
-    ],
-    "image": "/images/projects/work-automation.svg",
-    "images": [
-      "/images/projects/work-automation.svg"
-    ],
-    "link": "https://github.com/M-Renberg"
-  },
-  {
-    "id": "customer-portal",
-    "slug": "customer-portal",
-    "category": "work",
-    "employer": "Client Project & Enterprise Services",
-    "role": "Frontend & Systems Developer",
-    "period": "2025",
-    "title": "Customer Portal & Case Management System",
-    "subtitle": "Web-based portal for customer interaction and case management",
-    "description": "Development of a secure, user-friendly portal for issue tracking, document uploads, and real-time status monitoring.",
-    "longDescription": "Development of a centralized issue and communication platform designed to simplify interactions between external clients and internal case managers. The system features role-based access control, real-time status notifications, and a responsive interface tailored for both desktop and mobile devices.",
-    "highlights": [
-      "Implemented role-based access control (RBAC) and protected views",
-      "Built a clean case overview interface with filtering, search, and status indicators",
-      "Optimized frontend performance and UI responsiveness with Tailwind CSS and React",
-      "Structured a modular codebase for seamless future enhancements and maintenance"
-    ],
-    "badges": [
-      "TypeScript",
-      "React",
       "Tailwind CSS",
-      "REST APIs",
-      "Azure"
-    ],
-    "image": "/images/projects/work-portal.svg",
-    "images": [
-      "/images/projects/work-portal.svg"
-    ],
-    "link": "https://github.com/M-Renberg"
+      "Full-Stack",
+      "REST APIs"
+    ]
   }
 ]

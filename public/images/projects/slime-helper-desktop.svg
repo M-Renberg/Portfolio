@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgDesk" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#041210" />
+      <stop offset="50%" stop-color="#071e19" />
+      <stop offset="100%" stop-color="#020a08" />
+    </linearGradient>
+    <radialGradient id="slimeGlow" cx="35%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#2DD4BF" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="transparent" />
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bgDesk)" />
+  <circle cx="280" cy="225" r="220" fill="url(#slimeGlow)" />
+
+  <!-- Main Window Frame (Desktop Slime Workspace) -->
+  <rect x="70" y="45" width="660" height="360" rx="16" fill="#061613" stroke="#045757" stroke-width="1.5" />
+  
+  <!-- Header Bar -->
+  <rect x="70" y="45" width="660" height="42" rx="16" fill="#0a2620" />
+  <circle cx="102" cy="66" r="5" fill="#EF4444" opacity="0.8" />
+  <circle cx="120" cy="66" r="5" fill="#F59E0B" opacity="0.8" />
+  <circle cx="138" cy="66" r="5" fill="#10B981" opacity="0.8" />
+  <text x="400" y="71" fill="#B0E4CC" font-family="monospace" font-size="12" text-anchor="middle">SLIME HELPER // STANDALONE WPF DESKTOP COMPANION</text>
+
+  <!-- Left: The Slime Avatar Character -->
+  <g transform="translate(230, 240)">
+    <!-- Slime Body -->
+    <path d="M-75,45 C-75,-30 -45,-70 0,-70 C45,-70 75,-30 75,45 C75,65 50,75 0,75 C-50,75 -75,65 -75,45 Z" fill="#2DD4BF" opacity="0.95" />
+    <!-- Cheeks & Eyes -->
+    <ellipse cx="-25" cy="-5" rx="7" ry="10" fill="#041210" />
+    <ellipse cx="25" cy="-5" rx="7" ry="10" fill="#041210" />
+    <circle cx="-22" cy="-8" r="3" fill="#FFFFFF" />
+    <circle cx="28" cy="-8" r="3" fill="#FFFFFF" />
+    <ellipse cx="-42" cy="12" rx="8" ry="4" fill="#fb779c" opacity="0.8" />
+    <ellipse cx="42" cy="12" rx="8" ry="4" fill="#fb779c" opacity="0.8" />
+    <path d="M-10,18 Q0,28 10,18" fill="none" stroke="#041210" stroke-width="3" stroke-linecap="round" />
+
+    <!-- Speech bubble -->
+    <rect x="-120" y="-140" width="240" height="48" rx="12" fill="#0a2520" stroke="#2DD4BF" stroke-width="1.5" />
+    <text x="0" y="-118" fill="#FFFFFF" font-family="sans-serif" font-weight="bold" font-size="12" text-anchor="middle">"Ready to code, Mikael! ⚡"</text>
+    <text x="0" y="-102" fill="#B0E4CC" font-family="monospace" font-size="9" text-anchor="middle">AI BRAIN: GEMINI // CLAUDE CONNECTED</text>
+  </g>
+
+  <!-- Right: Context Menu & Features Card -->
+  <g transform="translate(420, 105)">
+    <!-- Context Menu Window -->
+    <rect x="0" y="0" width="275" height="260" rx="10" fill="#051412" stroke="#045757" stroke-width="1.2" />
+    <rect x="0" y="0" width="275" height="32" rx="10" fill="#0c2c25" />
+    <text x="15" y="21" fill="#2DD4BF" font-family="monospace" font-size="11" font-weight="bold">RIGHT-CLICK CONTEXT MENU</text>
+
+    <!-- Menu Items -->
+    <g transform="translate(15, 45)" font-family="sans-serif" font-size="12">
+      <!-- Item 1: Global Word Watcher -->
+      <rect x="0" y="0" width="245" height="32" rx="6" fill="#0a2420" />
+      <text x="12" y="20" fill="#ffffff">⚡ Global Word Watcher: <tspan fill="#2DD4BF">ON</tspan></text>
+
+      <!-- Item 2: AI Brain Switcher -->
+      <rect x="0" y="38" width="245" height="32" rx="6" fill="#0a2420" />
+      <text x="12" y="58" fill="#ffffff">🧠 AI Provider: <tspan fill="#2DD4BF">Claude / Gemini</tspan></text>
+
+      <!-- Item 3: Custom Skins -->
+      <rect x="0" y="76" width="245" height="32" rx="6" fill="#0a2420" />
+      <text x="12" y="96" fill="#ffffff">🎨 Skins: <tspan fill="#fb779c">Pink</tspan> / <tspan fill="#2DD4BF">Teal</tspan> / <tspan fill="#10B981">Green</tspan></text>
+
+      <!-- Item 4: CLI Installer -->
+      <rect x="0" y="114" width="245" height="32" rx="6" fill="#045757" opacity="0.6" />
+      <text x="12" y="134" fill="#B0E4CC" font-family="monospace" font-size="11">&gt; Install CLI to PATH ($ slime)</text>
+
+      <!-- Item 5: Git Activity Tracker -->
+      <rect x="0" y="152" width="245" height="45" rx="6" fill="#071b17" stroke="#2DD4BF" stroke-width="1" stroke-opacity="0.5" />
+      <text x="12" y="171" fill="#2DD4BF" font-family="monospace" font-size="10">GIT &amp; FILE TRACKER ACTIVE</text>
+      <text x="12" y="188" fill="#B0E4CC" font-family="monospace" font-size="9" opacity="0.8">Monitors uncommitted branch changes</text>
+    </g>
+  </g>
+</svg>
+

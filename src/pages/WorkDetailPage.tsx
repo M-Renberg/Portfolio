@@ -107,7 +107,7 @@ export default function WorkDetailPage() {
               </p>
 
               {/* Action buttons (Repo / External link) */}
-              {project.link && (
+              {project.link ? (
                 <div className="flex flex-wrap gap-3 pt-2">
                   <a
                     href={project.link}
@@ -115,10 +115,21 @@ export default function WorkDetailPage() {
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#045757]/40 hover:bg-[#2DD4BF] text-[#2DD4BF] hover:text-[#091413] border border-[#2DD4BF]/60 font-semibold text-sm transition-all duration-300 shadow-[0_0_15px_rgba(45,212,191,0.2)] hover:shadow-[0_0_25px_rgba(45,212,191,0.5)] cursor-pointer"
                   >
-                    <Icon name="github" className="w-4 h-4 m-0" />
-                    <span>Open Repository / Link</span>
+                    {project.link.includes('github') ? (
+                      <Icon name="github" className="w-4 h-4 m-0" />
+                    ) : (
+                      <span className="text-sm">🌐</span>
+                    )}
+                    <span>{project.link.includes('github') ? 'View Repository' : 'Open Live Application'}</span>
                     <span>&rarr;</span>
                   </a>
+                </div>
+              ) : (
+                <div className="pt-2">
+                  <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-[#061211]/80 border border-[#045757]/60 text-xs font-mono text-[#B0E4CC]/80">
+                    <span>🔒</span>
+                    <span>Private Enterprise Tool // Proprietary to {project.employer || 'Employer'}</span>
+                  </span>
                 </div>
               )}
             </header>
@@ -213,6 +224,10 @@ export default function WorkDetailPage() {
                         <span className="text-white">{project.period}</span>
                       </div>
                     )}
+                    <div className="flex justify-between py-1 border-b border-white/5">
+                      <span className="text-[#408A71]">Access:</span>
+                      <span className="text-white/80">{project.link ? 'Public' : 'Private / Proprietary'}</span>
+                    </div>
                   </div>
                 </div>
 

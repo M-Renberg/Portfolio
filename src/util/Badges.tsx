@@ -7,10 +7,12 @@ const badgeConfigs: Record<string, { name: string; color: string; icon: string }
   '.net/.maui': { name: '.NET MAUI', color: '512BD4', icon: 'dotnet' },
   '.net / .maui': { name: '.NET MAUI', color: '512BD4', icon: 'dotnet' },
   '.maui': { name: '.NET MAUI', color: '512BD4', icon: 'dotnet' },
+  'wpf': { name: 'WPF', color: '512BD4', icon: 'dotnet' },
   'typescript': { name: 'TypeScript', color: '3178C6', icon: 'typescript' },
   'javascript': { name: 'JavaScript', color: 'F7DF1E', icon: 'javascript' },
   'python': { name: 'Python', color: '3C78A9', icon: 'python' },
   'html5': { name: 'HTML5', color: 'E34F26', icon: 'html5' },
+  'css': { name: 'CSS', color: '1572B6', icon: 'css' },
   'css3': { name: 'CSS3', color: '1572B6', icon: 'css' },
   'react': { name: 'React', color: '61DAFB', icon: 'react' },
   'tailwind': { name: 'Tailwind CSS', color: '06B6D4', icon: 'tailwindcss' },
@@ -33,7 +35,22 @@ const badgeConfigs: Record<string, { name: string; color: string; icon: string }
   'scikit-learn': { name: 'Scikit-Learn', color: 'F7931E', icon: 'scikitlearn' },
   'machine learning': { name: 'Machine Learning', color: '2DD4BF', icon: 'scikitlearn' },
   'pydantic': { name: 'Pydantic', color: 'E92063', icon: 'pydantic' },
-  'supabase': { name: 'Supabase', color: '3ECF8E', icon: 'supabase' }
+  'supabase': { name: 'Supabase', color: '3ECF8E', icon: 'supabase' },
+  'obsidian': { name: 'Obsidian', color: '7C3AED', icon: 'obsidian' },
+  'starship': { name: 'Starship', color: 'DD0B78', icon: 'starship' },
+  'vs code': { name: 'VS Code', color: '007ACC', icon: 'visualstudiocode' },
+  'vscode': { name: 'VS Code', color: '007ACC', icon: 'visualstudiocode' },
+  'json': { name: 'JSON', color: '000000', icon: 'json' },
+  'markdown': { name: 'Markdown', color: '000000', icon: 'markdown' },
+  'gemini': { name: 'Gemini', color: '8E75B2', icon: 'googlegemini' },
+  'claude': { name: 'Claude', color: 'D97706', icon: 'anthropic' },
+  'powershell': { name: 'PowerShell', color: '5391FE', icon: 'powershell' },
+  'shell': { name: 'Shell', color: '89E051', icon: 'gnubash' },
+  'convex': { name: 'Convex', color: 'FF6B4A', icon: 'convex' },
+  'bun': { name: 'Bun', color: 'FBF0DF', icon: 'bun' },
+  'slack': { name: 'Slack', color: '4A154B', icon: 'slack' },
+  'elevenlabs': { name: 'ElevenLabs', color: '000000', icon: 'elevenlabs' },
+  'shadcn/ui': { name: 'shadcn/ui', color: '000000', icon: 'shadcnui' }
 };
 
 export function Badge({ tech }: { tech: string }) {

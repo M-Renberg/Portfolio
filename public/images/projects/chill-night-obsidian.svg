@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgObsidian" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a090b" />
+      <stop offset="50%" stop-color="#0f0e0f" />
+      <stop offset="100%" stop-color="#060507" />
+    </linearGradient>
+    <radialGradient id="obsidianGlow" cx="20%" cy="30%" r="50%">
+      <stop offset="0%" stop-color="#7C3AED" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="transparent" />
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bgObsidian)" />
+  <circle cx="160" cy="140" r="220" fill="url(#obsidianGlow)" />
+
+  <!-- Window Frame -->
+  <rect x="75" y="50" width="650" height="350" rx="14" fill="#0f0e0f" stroke="#252426" stroke-width="1.5" />
+
+  <!-- Header Bar -->
+  <rect x="75" y="50" width="650" height="42" rx="14" fill="#151417" />
+  <circle cx="105" cy="71" r="5" fill="#fb779c" opacity="0.8" />
+  <circle cx="123" cy="71" r="5" fill="#f7b731" opacity="0.8" />
+  <circle cx="141" cy="71" r="5" fill="#08cad3" opacity="0.8" />
+  <text x="400" y="76" fill="#dd7be5" font-family="sans-serif" font-weight="bold" font-size="12" text-anchor="middle">CHILL NIGHT // OBSIDIAN THEME</text>
+
+  <!-- Left Sidebar (Vault Tree) -->
+  <rect x="75" y="92" width="140" height="308" fill="#121114" />
+  <text x="95" y="118" fill="#7C3AED" font-family="monospace" font-size="11" font-weight="bold">VAULT NOTES</text>
+  <rect x="95" y="135" width="100" height="10" rx="2" fill="#252426" />
+  <rect x="95" y="155" width="80" height="10" rx="2" fill="#dd7be5" opacity="0.4" />
+  <rect x="95" y="175" width="90" height="10" rx="2" fill="#252426" />
+  <rect x="95" y="195" width="70" height="10" rx="2" fill="#252426" />
+
+  <!-- Note Markdown Preview -->
+  <g transform="translate(245, 120)">
+    <!-- Main Heading (Purple) -->
+    <text x="0" y="20" fill="#dd7be5" font-family="sans-serif" font-weight="bold" font-size="22"># Deep Thinking &amp; Knowledge 🌙</text>
+    <line x1="0" y1="32" x2="450" y2="32" stroke="#252426" stroke-width="1" />
+
+    <!-- Subheading -->
+    <text x="0" y="65" fill="#08cad3" font-family="sans-serif" font-weight="bold" font-size="15">## Key Insights &amp; Architecture</text>
+    <text x="0" y="95" fill="#e0e0e5" font-family="sans-serif" font-size="13">Notes organized with clear pastel visual hierarchy and midnight contrast.</text>
+
+    <!-- Interactive Checkboxes -->
+    <g transform="translate(0, 120)" font-family="sans-serif" font-size="13">
+      <rect x="0" y="0" width="16" height="16" rx="4" fill="#08cad3" />
+      <path d="M4,8 L7,11 L12,4" fill="none" stroke="#0f0e0f" stroke-width="2" />
+      <text x="26" y="13" fill="#ffffff">Optimized for editing &amp; reading modes</text>
+
+      <rect x="0" y="28" width="16" height="16" rx="4" fill="#08cad3" />
+      <path d="M4,36 L7,39 L12,32" fill="none" stroke="#0f0e0f" stroke-width="2" />
+      <text x="26" y="41" fill="#ffffff">Color-coded headers and internal wikilinks</text>
+
+      <rect x="0" y="56" width="16" height="16" rx="4" fill="#252426" stroke="#58585a" stroke-width="1" />
+      <text x="26" y="69" fill="#a0a0a5">Distraction-free writing environment</text>
+    </g>
+
+    <!-- Code Block -->
+    <g transform="translate(0, 205)">
+      <rect x="0" y="0" width="445" height="55" rx="8" fill="#151417" stroke="#252426" stroke-width="1" />
+      <text x="15" y="24" fill="#58585a" font-family="monospace" font-size="11">```markdown</text>
+      <text x="15" y="44" fill="#fb779c" font-family="monospace" font-size="12">[[Chill Night]] <tspan fill="#61afef">#obsidian-theme</tspan> <tspan fill="#dd7be5">#productivity</tspan></text>
+    </g>
+  </g>
+</svg>
+
