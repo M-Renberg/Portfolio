@@ -34,10 +34,10 @@ export default function WorkDetailPage() {
           {project && (
             <span className="text-xs font-mono px-3 py-1.5 rounded-lg bg-[#045757]/30 border border-[#045757]/60 text-[#B0E4CC]">
               {project.category === 'work'
-                ? 'WORK // ARBETSGIVARE'
+                ? 'WORK // CLIENT & EMPLOYER'
                 : project.category === 'academic'
-                ? 'ACADEMIC // UTBILDNING'
-                : 'PERSONAL // SIDOPROJEKT'}
+                ? 'ACADEMIC // COURSEWORK'
+                : 'PERSONAL // SIDE PROJECT'}
             </span>
           )}
         </div>
@@ -58,13 +58,13 @@ export default function WorkDetailPage() {
             <span className="text-4xl">⚠️</span>
             <h2 className="text-2xl font-bold text-[#B0E4CC]">Project Not Found</h2>
             <p className="text-sm text-[#F0F5F0]/80 max-w-md">
-              Kunde inte hitta projektet eller arbetet du letade efter. Det kan ha flyttats eller tagits bort.
+              Could not find the requested project or work experience. It may have been moved or removed.
             </p>
             <Link
               to="/work"
               className="mt-4 px-6 py-2.5 rounded-xl bg-[#045757]/50 hover:bg-[#2DD4BF] text-[#2DD4BF] hover:text-[#091413] font-semibold text-sm border border-[#2DD4BF]/60 transition-all cursor-pointer"
             >
-              Tillbaka till alla projekt
+              Back to all projects
             </Link>
           </div>
         )}
@@ -116,7 +116,7 @@ export default function WorkDetailPage() {
                     className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#045757]/40 hover:bg-[#2DD4BF] text-[#2DD4BF] hover:text-[#091413] border border-[#2DD4BF]/60 font-semibold text-sm transition-all duration-300 shadow-[0_0_15px_rgba(45,212,191,0.2)] hover:shadow-[0_0_25px_rgba(45,212,191,0.5)] cursor-pointer"
                   >
                     <Icon name="github" className="w-4 h-4 m-0" />
-                    <span>Öppna källkod / Länk</span>
+                    <span>Open Repository / Link</span>
                     <span>&rarr;</span>
                   </a>
                 </div>
@@ -145,7 +145,7 @@ export default function WorkDetailPage() {
                 <div>
                   <div className="w-12 h-0.5 rounded-full bg-[#408A71] hover:w-full transition-all duration-500 mb-6" />
                   <h3 className="text-xl sm:text-2xl font-bold text-[#B0E4CC] mb-4 drop-shadow-[0_2px_8px_rgba(0,0,0,1)]">
-                    Om projektet &amp; arbetet
+                    About the Project &amp; Work
                   </h3>
                   <div className="text-sm sm:text-base text-[#F0F5F0]/90 leading-relaxed flex flex-col gap-4">
                     {project.longDescription ? (
@@ -162,7 +162,7 @@ export default function WorkDetailPage() {
                 {project.highlights && project.highlights.length > 0 && (
                   <div className="mt-8 pt-6 border-t border-white/5">
                     <h4 className="text-xs font-mono uppercase tracking-wider text-[#2DD4BF] mb-3">
-                      Viktiga resultat &amp; ansvarsområden
+                      Key Results &amp; Responsibilities
                     </h4>
                     <ul className="flex flex-col gap-2.5">
                       {project.highlights.map((highlight, index) => (
@@ -184,7 +184,7 @@ export default function WorkDetailPage() {
                 {/* Tech Stack Card */}
                 <div className="p-6 rounded-2xl bg-[#0b1a18]/75 backdrop-blur-md border border-[#045757]/70 text-left shadow-lg">
                   <div className="w-8 h-0.5 rounded-full bg-[#408A71] mb-4" />
-                  <h3 className="text-lg font-bold text-[#B0E4CC] mb-4">Tekniker &amp; Verktyg</h3>
+                  <h3 className="text-lg font-bold text-[#B0E4CC] mb-4">Technologies &amp; Tools</h3>
                   <ul className="flex flex-wrap gap-2">
                     {project.badges.map((badge) => (
                       <Badge key={badge} tech={badge} />
@@ -195,15 +195,15 @@ export default function WorkDetailPage() {
                 {/* Quick Info / Context Card */}
                 <div className="p-6 rounded-2xl bg-[#0b1a18]/75 backdrop-blur-md border border-[#045757]/70 text-left shadow-lg">
                   <div className="w-8 h-0.5 rounded-full bg-[#408A71] mb-4" />
-                  <h3 className="text-lg font-bold text-[#B0E4CC] mb-3">Projektstatus</h3>
+                  <h3 className="text-lg font-bold text-[#B0E4CC] mb-3">Project Details</h3>
                   <div className="flex flex-col gap-2 text-xs font-mono text-[#F0F5F0]/80">
                     <div className="flex justify-between py-1 border-b border-white/5">
-                      <span className="text-[#408A71]">Typ:</span>
-                      <span className="text-[#2DD4BF] capitalize">{project.category || 'Projekt'}</span>
+                      <span className="text-[#408A71]">Type:</span>
+                      <span className="text-[#2DD4BF] capitalize">{project.category || 'Project'}</span>
                     </div>
                     {project.employer && (
                       <div className="flex justify-between py-1 border-b border-white/5">
-                        <span className="text-[#408A71]">Arbetsgivare:</span>
+                        <span className="text-[#408A71]">Employer:</span>
                         <span className="text-white">{project.employer}</span>
                       </div>
                     )}
@@ -218,15 +218,15 @@ export default function WorkDetailPage() {
 
                 {/* Contact CTA */}
                 <div className="p-6 rounded-2xl bg-[#061211]/90 border border-[#2DD4BF]/40 text-left flex flex-col gap-3 shadow-lg">
-                  <h4 className="text-sm font-bold text-[#B0E4CC]">Vill du veta mer?</h4>
+                  <h4 className="text-sm font-bold text-[#B0E4CC]">Interested in Learning More?</h4>
                   <p className="text-xs text-[#F0F5F0]/80">
-                    Jag berättar gärna mer om implementationen och arkitekturen bakom detta arbete.
+                    I would be happy to share more details about the implementation, architecture, and technology behind this work.
                   </p>
                   <Link
                     to="/contact"
                     className="mt-1 text-xs font-mono text-[#2DD4BF] hover:text-white flex items-center gap-1 group"
                   >
-                    <span>Ta kontakt</span>
+                    <span>Get in touch</span>
                     <span className="group-hover:translate-x-1 transition-transform">&rarr;</span>
                   </Link>
                 </div>
@@ -237,7 +237,7 @@ export default function WorkDetailPage() {
             {project.images && project.images.length > 1 && (
               <section className="w-full p-6 sm:p-8 rounded-2xl bg-[#0b1a18]/75 backdrop-blur-md border border-[#045757]/70 text-left shadow-lg">
                 <div className="w-12 h-0.5 rounded-full bg-[#408A71] mb-6" />
-                <h3 className="text-xl font-bold text-[#B0E4CC] mb-6">Skärmdumpar &amp; Illustrationer</h3>
+                <h3 className="text-xl font-bold text-[#B0E4CC] mb-6">Screenshots &amp; Previews</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {project.images.map((imgSrc, i) => (
                     <div
@@ -265,13 +265,13 @@ export default function WorkDetailPage() {
                 className="text-xs sm:text-sm font-mono text-[#2DD4BF] hover:text-white transition-colors flex items-center gap-2"
               >
                 <span>&larr;</span>
-                <span>Alla projekt &amp; arbeten</span>
+                <span>All projects &amp; work</span>
               </Link>
               <Link
                 to="/contact"
                 className="text-xs sm:text-sm font-mono text-[#B0E4CC] hover:text-[#2DD4BF] transition-colors"
               >
-                Hör av dig &rarr;
+                Get in touch &rarr;
               </Link>
             </div>
           </article>
@@ -280,4 +280,3 @@ export default function WorkDetailPage() {
     </div>
   );
 }
-

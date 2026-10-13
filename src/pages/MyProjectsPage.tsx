@@ -102,8 +102,8 @@ function WorkCard({ project }: { project: ProjectInterface }) {
           </ul>
 
           <div className="flex justify-between items-center text-xs font-mono pt-1 text-[#408A71] group-hover:text-[#2DD4BF] transition-colors">
-            <span>{project.category === 'work' ? 'Arbete åt arbetsgivare' : 'Se detaljer & dokumentation'}</span>
-            <span className="group-hover:translate-x-1 transition-transform">Läs mer &rarr;</span>
+            <span>{project.category === 'work' ? 'Client & Employer Work' : 'View details & documentation'}</span>
+            <span className="group-hover:translate-x-1 transition-transform">Read more &rarr;</span>
           </div>
         </div>
       </div>
@@ -142,14 +142,14 @@ export default function MyProjects() {
         {/* Intro message */}
         <div className="fade-in-delayed-1 max-w-2xl mx-auto text-center mb-12 drop-shadow-[0_3px_12px_rgba(0,0,0,0.95)]">
           <p className="text-base sm:text-lg text-[#F0F5F0]/90 leading-relaxed">
-            En samling av professionella uppdrag åt arbetsgivare, intelligenta AI-lösningar och egna mjukvaruprojekt.
+            A curated showcase of professional client projects, intelligent AI solutions, and independent software systems.
           </p>
           <p className="text-xs sm:text-sm font-mono text-[#2DD4BF] mt-2 tracking-wide">
-            ⦾ Klicka på ett kort för att läsa mer om projektet, se skärmdumpar och tekniska detaljer
+            ⦾ Click on any card to explore project details, screenshots, and technical specs
           </p>
         </div>
 
-        {/* Section 1: Work (Arbeten åt arbetsgivare) */}
+        {/* Section 1: Work (Employer & Client Work) */}
         <section className="w-full mb-16 text-left">
           <div className="flex items-center gap-3 mb-2">
             <span className="w-2.5 h-2.5 rounded-full bg-[#2DD4BF] animate-pulse" />
@@ -158,7 +158,7 @@ export default function MyProjects() {
             </h2>
           </div>
           <p className="text-sm font-mono text-[#F0F5F0]/70 mb-6">
-            Professionella arbeten, integrationer och systemlösningar utvecklade åt arbetsgivare och uppdragsgivare.
+            Professional systems, integrations, and software solutions developed for employers and clients.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -168,7 +168,7 @@ export default function MyProjects() {
               ))
             ) : (
               <p className="col-span-full text-center text-sm font-mono text-[#F0F5F0]/60 py-8">
-                Laddar arbeten...
+                Loading work experience...
               </p>
             )}
           </div>
@@ -183,7 +183,7 @@ export default function MyProjects() {
             </h2>
           </div>
           <p className="text-sm font-mono text-[#F0F5F0]/70 mb-6">
-            Egna projekt och mjukvaror utvecklade för att utforska nya tekniker, arkitekturer och idéer.
+            Self-driven projects built to explore emerging technologies, architectures, and ideas.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -193,7 +193,7 @@ export default function MyProjects() {
               ))
             ) : (
               <p className="col-span-full text-center text-sm font-mono text-[#F0F5F0]/60 py-8">
-                Laddar projekt...
+                Loading projects...
               </p>
             )}
           </div>
@@ -208,7 +208,7 @@ export default function MyProjects() {
             </h2>
           </div>
           <p className="text-sm font-mono text-[#F0F5F0]/70 mb-6">
-            Teamprojekt och examinationsuppgifter under min utbildning inom mjukvaru- och AI-utveckling.
+            Team projects and examination assignments completed during my software and AI development studies.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -218,7 +218,7 @@ export default function MyProjects() {
               ))
             ) : (
               <p className="col-span-full text-center text-sm font-mono text-[#F0F5F0]/60 py-8">
-                Laddar projekt...
+                Loading projects...
               </p>
             )}
           </div>

@@ -4,17 +4,17 @@
     "slug": "enterprise-automation",
     "category": "work",
     "employer": "Tech & Solutions Partner",
-    "role": "Full-Stack & Systemutvecklare",
-    "period": "2025 - Pågående",
+    "role": "Full-Stack & Systems Developer",
+    "period": "2025 - Present",
     "title": "Smart Process & Data Automation",
-    "subtitle": "Processautomatisering & integrationssystem åt arbetsgivare",
-    "description": "Utveckling av skräddarsydda interna verktyg, REST API-integrationer och automatiserade arbetsflöden för att effektivisera affärskritiska processer.",
-    "longDescription": "Under detta uppdrag för arbetsgivare utvecklades en modern integrationsplattform för att automatisera manuella och repetitiva arbetsmoment. Lösningen kopplar samman interna databaser med externa tjänster, validerar dataströmmar och ger medarbetare ett realtidsgränssnitt för status och loggar. Stor vikt lades vid robust felhantering, hög tillgänglighet och modern arkitektur i C# .NET och React.",
+    "subtitle": "Process automation & integration system for client/employer",
+    "description": "Development of tailored internal tools, REST API integrations, and automated workflows to streamline mission-critical business processes.",
+    "longDescription": "During this engagement for an employer, a modern integration platform was developed to automate manual and repetitive tasks. The solution connects internal databases with external services, validates data streams, and provides team members with a real-time dashboard for status monitoring and logs. Strong emphasis was placed on robust error handling, high availability, and modern architecture using C# .NET and React.",
     "highlights": [
-      "Automatiserade tidsödande manuella processer med över 40% tidsbesparing per vecka",
-      "Byggde feltoleranta REST API-integrationer med strukturerad loggning och monitorering",
-      "Skapade en modern, responsiv instrumentpanel i React med Tailwind CSS för driftpersonal",
-      "Designade optimerade databasfrågor och datamodeller i SQL för snabb dataåtkomst"
+      "Automated time-consuming manual processes, saving over 40% of working hours per week",
+      "Built fault-tolerant REST API integrations with structured logging and monitoring",
+      "Created a modern, responsive dashboard in React with Tailwind CSS for operations personnel",
+      "Designed optimized SQL queries and data models for rapid data access"
     ],
     "badges": [
       "C#",
@@ -34,18 +34,18 @@
     "id": "customer-portal",
     "slug": "customer-portal",
     "category": "work",
-    "employer": "Klientuppdrag & Företagstjänster",
-    "role": "Frontend & Systemutvecklare",
+    "employer": "Client Project & Enterprise Services",
+    "role": "Frontend & Systems Developer",
     "period": "2025",
-    "title": "Kundportal & Ärendehanteringssystem",
-    "subtitle": "Webbaserad portal för kundinteraktion och ärendestyrning",
-    "description": "Framtagning av en säker och användarvänlig portal för ärendehantering, filuppladdning och statusuppföljning i realtid.",
-    "longDescription": "Utveckling av ett centralt ärende- och kommunikationssystem som förenklar kontakten mellan externa kunder och interna handläggare. Plattformen har rollbaserad behörighetsstyrning, omedelbara statusuppdateringar, och ett responsivt gränssnitt skräddarsytt för både mobila enheter och desktop.",
+    "title": "Customer Portal & Case Management System",
+    "subtitle": "Web-based portal for customer interaction and case management",
+    "description": "Development of a secure, user-friendly portal for issue tracking, document uploads, and real-time status monitoring.",
+    "longDescription": "Development of a centralized issue and communication platform designed to simplify interactions between external clients and internal case managers. The system features role-based access control, real-time status notifications, and a responsive interface tailored for both desktop and mobile devices.",
     "highlights": [
-      "Implementerade rollbaserad behörighetskontroll och skyddade vyer",
-      "Byggde en överskådlig ärendevy med filtrering, sökning och statusindikatorer",
-      "Optimerade frontend-prestanda och UI-responsivitet med Tailwind CSS och React",
-      "Strukturerade modulär kodbas för enkel framtida vidareutveckling och underhåll"
+      "Implemented role-based access control (RBAC) and protected views",
+      "Built a clean case overview interface with filtering, search, and status indicators",
+      "Optimized frontend performance and UI responsiveness with Tailwind CSS and React",
+      "Structured a modular codebase for seamless future enhancements and maintenance"
     ],
     "badges": [
       "TypeScript",
@@ -61,4 +61,3 @@
     "link": "https://github.com/M-Renberg"
   }
 ]
-

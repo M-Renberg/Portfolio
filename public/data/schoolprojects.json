@@ -5,13 +5,13 @@
     "category": "academic",
     "link": "https://github.com/M-Renberg/ThePokemonTgcStore",
     "title": "Pokémon TCG Store",
-    "subtitle": "Web Store byggd i React",
-    "description": "We got some JSON files with Pokémon cards so I turned it into a full e-commerce store with search and shopping cart functionality.",
-    "longDescription": "En fullt fungerande webbshop utvecklad i React och TypeScript baserad på data från Pokémon TCG. Projektet innehåller dynamisk kortkatalog, filtrering efter typ och sällsynthet, varukorgshantering i webbläsaren samt responsiv checkout-simulering.",
+    "subtitle": "Web Store Built in React",
+    "description": "We were provided with JSON datasets containing Pokémon cards, which I transformed into a full e-commerce store with search and shopping cart functionality.",
+    "longDescription": "A fully functional web store built in React and TypeScript using Pokémon TCG card data. The project features dynamic card browsing, filtering by type and rarity, in-browser shopping cart management, and a responsive checkout simulation.",
     "highlights": [
-      "Dynamisk katalogvisning med JSON-kortdata och sökfiltrering",
-      "Varukorg med realtidsberäkning av totalsumma och antal",
-      "Strukturerad komponenthierarki och TypeScript-typsäkerhet"
+      "Dynamic catalog display with JSON card data and real-time search filtering",
+      "Shopping cart with automatic subtotal calculation and quantity adjustments",
+      "Structured component hierarchy with end-to-end TypeScript type safety"
     ],
     "image": "/images/projects/pokemon-store.svg",
     "badges": [
@@ -29,11 +29,11 @@
     "title": "Holidaymaker",
     "subtitle": "Minimal API Agile Group Project",
     "description": "Minimal API developed during a 2-week sprint as a collaborative group project within our agile development course.",
-    "longDescription": "Ett grupparbete genomfört under en tvåveckors agil sprint (Scrum). Projektet innefattade kravställning, datamodellering och utveckling av ett Minimal API i C# .NET för att hantera hotellbokningar, tillgänglighet och gästregistrering.",
+    "longDescription": "A group project completed during a two-week agile sprint (Scrum). The project involved requirements gathering, data modeling, and developing a Minimal API in C# .NET to manage hotel bookings, room availability, and guest registrations.",
     "highlights": [
-      "Agilt samarbete med Scrum-ceremonier, daily standups och GitHub Projects",
-      "Minimal API-arkitektur i .NET med Entity Framework Core och SQL",
-      "Tydlig separation of concerns mellan databaslager och presentationslager"
+      "Agile team collaboration with Scrum ceremonies, daily standups, and GitHub Projects",
+      "Minimal API architecture in .NET using Entity Framework Core and SQL",
+      "Clear separation of concerns between database and presentation layers"
     ],
     "image": "/images/projects/project-placeholder.svg",
     "badges": [
@@ -48,14 +48,14 @@
     "slug": "restaurang-db",
     "category": "academic",
     "link": "https://github.com/M-Renberg/RestaurangDB",
-    "title": "Restaurang SQL Database",
+    "title": "Restaurant SQL Database",
     "subtitle": "Relational MySQL Database",
     "description": "Relational database designed and implemented in MySQL as the examination project for our database design course.",
-    "longDescription": "Examinationsuppgift i databasdesign där en komplett relationsdatabas modellerades (ER-diagram), normaliserades till tredje normalformen (3NF) och implementerades med tabeller, foreign keys, triggers och vyer.",
+    "longDescription": "Final examination project in database design where a complete relational database was conceptualized (ER diagram), normalized to the third normal form (3NF), and implemented with relational tables, foreign keys, triggers, and views.",
     "highlights": [
-      "Genomarbetat konceptuellt och logiskt databasdiagram (ERD)",
-      "Normalisering till 3NF för att minimera dataredundans",
-      "Komplexa SQL-frågor, joins och lagrade procedurer"
+      "Comprehensive conceptual and logical entity-relationship diagram (ERD)",
+      "Full 3NF normalization to eliminate data redundancy",
+      "Complex SQL queries, joins, and stored procedures"
     ],
     "image": "/images/projects/project-placeholder.svg",
     "badges": [
@@ -71,12 +71,12 @@
     "link": "https://github.com/M-Renberg/Hotel_State_Manager",
     "title": "Hotel State Manager",
     "subtitle": "Console Application Bonus Assignment",
-    "description": "Allows an admin to design and configure hotel floor layouts which managers can subsequently operate and monitor.",
-    "longDescription": "Ett arkitektoniskt tillstånds- och administrationsverktyg i konsolmiljö. Systemet låter administratörer definiera och konfigurera hotellets rumslayout och våningsplan, medan receptions- och hotellchefer kan administrera beläggning.",
+    "description": "Allows an administrator to design and configure hotel floor layouts, which managers can subsequently operate and monitor.",
+    "longDescription": "An architectural state and management console tool. The system enables administrators to define and configure hotel floor layouts and room tiers, while reception and hotel managers oversee occupancy in real time.",
     "highlights": [
-      "Tillståndshantering och dynamisk matrisrepresentation av hotellrum",
-      "Rollbaserat gränssnitt i C# för administratör och hotellchef",
-      "Persistent datalagring av hotellkonfigurationer"
+      "State management and dynamic matrix representation of hotel rooms",
+      "Role-based console interface in C# for administrators and hotel managers",
+      "Persistent data storage of hotel room configurations"
     ],
     "image": "/images/projects/project-placeholder.svg",
     "badges": [
@@ -92,11 +92,11 @@
     "title": "Healthcare System",
     "subtitle": "OOP/C# Team Project",
     "description": "Console application simulating a comprehensive healthcare system with distinct permission levels for patients, medical staff, and administrators.",
-    "longDescription": "Ett simulerat vård- och journalsystem utvecklat som ett grupparbete i objektorienterad programmering. Applikationen hanterar patientjournaler, bokningar, läkarkommentarer och säker åtkomstkontroll baserad på användarroller.",
+    "longDescription": "A simulated healthcare and electronic medical records (EMR) system developed as an OOP group project. The application manages patient health records, appointment bookings, doctor notes, and secure access control governed by user roles.",
     "highlights": [
-      "Roll- och rättighetshantering (Patient, Läkare, Administratör)",
-      "Objektorienterad modellering av journalsystem och tidsbokningar",
-      "Team-utveckling med kodgranskningar och gemensam branching-strategi"
+      "Role-based access management (Patient, Doctor, Administrator)",
+      "Object-oriented modeling of electronic health records and appointment scheduling",
+      "Team development using code reviews and a structured Git branching strategy"
     ],
     "image": "/images/projects/project-placeholder.svg",
     "badges": [
@@ -113,11 +113,11 @@
     "title": "Trading System",
     "subtitle": "Item Trading Assignment",
     "description": "Interactive item trading system allowing multiple users to exchange virtual inventory items securely.",
-    "longDescription": "Ett bytes- och byteshandelssystem byggt i C# som simulerar säker överföring och byteshandel av inventarieobjekt mellan användare med validering av erbjudanden.",
+    "longDescription": "An item exchange and trading system built in C# that simulates secure inventory swaps between users with offer validation and state confirmation.",
     "highlights": [
-      "Inventarie- och objektshantering med strikta affärsregler",
-      "Tvåvägs bytesbekräftelse för att förhindra handelsfel",
-      "Modulariserad struktur för enkel utökning av föremålstyper"
+      "Inventory and item management governed by strict business rules",
+      "Two-way trade confirmation to prevent transaction errors",
+      "Modular structure enabling straightforward extension of item categories"
     ],
     "image": "/images/projects/project-placeholder.svg",
     "badges": [
@@ -133,11 +133,11 @@
     "title": "School Management System",
     "subtitle": "Simulated Educational Platform",
     "description": "Console application allowing students to track grades, teachers to manage courses and schedules, and administrators to oversee the institution.",
-    "longDescription": "Ett fullständigt skolsystem i C# som sammanför elever, lärare och administratörer. Systemet hanterar kursregistreringar, betygssättning, närvaro och schemaläggning i en sammanhängande arkitektur.",
+    "longDescription": "A complete school management system in C# bringing together students, teachers, and administrators. The application handles course enrollments, grading, attendance tracking, and scheduling within a cohesive architecture.",
     "highlights": [
-      "Komplett arbetsflöde från kursregistrering till betygsrapportering",
-      "Tydlig datamodellering av akademiska relationer (Elev - Kurs - Betyg)",
-      "Robust konsol-UI med skyddade funktioner per behörighetsnivå"
+      "End-to-end workflow from course enrollment to grade reporting",
+      "Clean data modeling of academic entities (Student - Course - Grade)",
+      "Robust console UI with secured operations per authorization level"
     ],
     "image": "/images/projects/project-placeholder.svg",
     "badges": [
