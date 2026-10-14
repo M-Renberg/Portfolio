@@ -57,7 +57,7 @@ export default function AboutMe() {
         </div>
 
         {/* Profile Card with Frosted Glass HUD styling */}
-        <section className="w-full mb-14 p-6 sm:p-10 rounded-2xl bg-[#0b1a18]/75 backdrop-blur-md border border-[#045757]/70 hover:border-[#2DD4BF]/60 transition-all duration-300 shadow-lg shadow-[0_0_25px_rgba(4,87,87,0.2)]">
+        <section className="w-full mb-14 p-6 sm:p-10 rounded-2xl bg-[#0b1a18]/75 backdrop-blur-md border border-[#045757]/70 hover:border-[#2DD4BF]/60 transition-all duration-300 shadow-[0_0_25px_rgba(4,87,87,0.2)]">
           {/* Top accent line */}
           <div className="w-12 h-0.5 rounded-full bg-[#408A71] hover:w-full transition-all duration-500 mb-6" />
 

@@ -44,7 +44,7 @@ export default function Contact() {
         {/* 2-Column Grid */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-stretch w-full mb-14">
           {/* Left Column: Connect Channels HUD Card */}
-          <section className="md:col-span-5 p-6 sm:p-8 rounded-2xl bg-[#0b1a18]/75 backdrop-blur-md border border-[#045757]/70 hover:border-[#2DD4BF]/60 transition-all duration-300 shadow-lg shadow-[0_0_25px_rgba(4,87,87,0.2)] flex flex-col justify-between text-left">
+          <section className="md:col-span-5 p-6 sm:p-8 rounded-2xl bg-[#0b1a18]/75 backdrop-blur-md border border-[#045757]/70 hover:border-[#2DD4BF]/60 transition-all duration-300 shadow-[0_0_25px_rgba(4,87,87,0.2)] flex flex-col justify-between text-left">
             <div>
               <div className="w-12 h-0.5 rounded-full bg-[#408A71] hover:w-full transition-all duration-500 mb-6" />
               <div className="flex items-center gap-2 mb-3">
@@ -103,7 +103,7 @@ export default function Contact() {
           </section>
 
           {/* Right Column: Direct Message Form HUD Card */}
-          <section className="md:col-span-7 p-6 sm:p-10 rounded-2xl bg-[#0b1a18]/75 backdrop-blur-md border border-[#045757]/70 hover:border-[#2DD4BF]/60 transition-all duration-300 shadow-lg shadow-[0_0_25px_rgba(4,87,87,0.2)] text-left flex flex-col justify-between">
+          <section className="md:col-span-7 p-6 sm:p-10 rounded-2xl bg-[#0b1a18]/75 backdrop-blur-md border border-[#045757]/70 hover:border-[#2DD4BF]/60 transition-all duration-300 shadow-[0_0_25px_rgba(4,87,87,0.2)] text-left flex flex-col justify-between">
             <div>
               <div className="w-12 h-0.5 rounded-full bg-[#408A71] hover:w-full transition-all duration-500 mb-6" />
               <h2 className="text-2xl sm:text-3xl font-bold text-[#B0E4CC] mb-6 drop-shadow-[0_2px_8px_rgba(0,0,0,1)]">
