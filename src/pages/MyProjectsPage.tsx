@@ -21,7 +21,7 @@ function WorkCard({ project }: { project: ProjectInterface }) {
   return (
     <Link
       to={`/work/${project.id}`}
-      className="group relative block w-full rounded-2xl p-px transition-all duration-300 hover:-translate-y-1.5 focus:outline-none"
+      className="group relative block w-full h-full rounded-2xl p-px transition-all duration-300 hover:-translate-y-1.5 focus:outline-none"
       onMouseMove={handleMouseMove}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
@@ -37,7 +37,7 @@ function WorkCard({ project }: { project: ProjectInterface }) {
       />
 
       {/* Card Body */}
-      <div className="relative flex flex-col justify-between h-full min-h-75 p-6 rounded-2xl bg-[#0b1a18]/75 backdrop-blur-md border border-[#045757]/70 group-hover:border-[#2DD4BF]/70 transition-all duration-300 shadow-lg group-hover:shadow-[0_0_25px_rgba(40,90,72,0.35)] overflow-hidden text-left">
+      <div className="relative flex flex-col justify-between h-full min-h-75 p-5 sm:p-6 rounded-2xl bg-[#0b1a18]/75 backdrop-blur-md border border-[#045757]/70 group-hover:border-[#2DD4BF]/70 transition-all duration-300 shadow-lg group-hover:shadow-[0_0_25px_rgba(40,90,72,0.35)] overflow-hidden text-left">
         {/* Subtle inner spotlight */}
         <div
           className="pointer-events-none absolute inset-0 transition-opacity duration-300 opacity-0 group-hover:opacity-100"
@@ -111,8 +111,8 @@ function WorkCard({ project }: { project: ProjectInterface }) {
           </ul>
 
           <div className="flex justify-between items-center text-xs font-mono pt-1 text-[#408A71] group-hover:text-[#2DD4BF] transition-colors">
-            <span>{project.category === 'work' ? 'Client & Employer Work' : 'View details & documentation'}</span>
-            <span className="group-hover:translate-x-1 transition-transform">Read more &rarr;</span>
+            <span>{project.category === 'work' ? 'Client & Employer Work' : 'Project Documentation'}</span>
+            <span className="group-hover:translate-x-1 transition-transform">Inspect &rarr;</span>
           </div>
         </div>
       </div>
@@ -125,6 +125,74 @@ export default function MyProjects() {
   const myPrivateProjects = useFetchJson<ProjectInterface[]>('/data/myprojects.json');
   const mySchoolProjects = useFetchJson<ProjectInterface[]>('/data/schoolprojects.json');
 
+  const [activeFolder, setActiveFolder] = useState<'work' | 'personal' | 'academic' | 'all'>('work');
+  const [searchQuery, setSearchQuery] = useState('');
+
+  const totalCount =
+    (employerWork?.length || 0) +
+    (myPrivateProjects?.length || 0) +
+    (mySchoolProjects?.length || 0);
+
+  const folders = [
+    {
+      id: 'work' as const,
+      path: '~/work/',
+      name: 'Work Experience',
+      desc: 'Production enterprise systems, client integrations, and software developed for employers.',
+      icon: '🏢',
+      count: employerWork?.length || 0,
+      data: employerWork,
+    },
+    {
+      id: 'personal' as const,
+      path: '~/personal/',
+      name: 'Independent & Side Projects',
+      desc: 'Self-driven software systems, developer ergonomics tools, and open-source themes.',
+      icon: '🚀',
+      count: myPrivateProjects?.length || 0,
+      data: myPrivateProjects,
+    },
+    {
+      id: 'academic' as const,
+      path: '~/academic/',
+      name: 'Academic & AI/ML Work',
+      desc: 'Applied machine learning pipelines, local LLMs, and collaborative systems developed at NBI.',
+      icon: '🎓',
+      count: mySchoolProjects?.length || 0,
+      data: mySchoolProjects,
+    },
+    {
+      id: 'all' as const,
+      path: '~/all/',
+      name: 'All Projects (Index)',
+      desc: 'A complete index directory showing all professional, personal, and academic work.',
+      icon: '🌐',
+      count: totalCount,
+      data: [
+        ...(employerWork || []),
+        ...(myPrivateProjects || []),
+        ...(mySchoolProjects || []),
+      ],
+    },
+  ];
+
+  const currentFolder = folders.find((f) => f.id === activeFolder) || folders[0];
+
+  // Filter projects by search query
+  const rawProjects = currentFolder.data;
+  const filteredProjects = rawProjects
+    ? rawProjects.filter((p) => {
+        if (!searchQuery.trim()) return true;
+        const q = searchQuery.toLowerCase().trim();
+        return (
+          p.title.toLowerCase().includes(q) ||
+          p.subtitle.toLowerCase().includes(q) ||
+          p.description.toLowerCase().includes(q) ||
+          p.badges.some((b) => b.toLowerCase().includes(q))
+        );
+      })
+    : null;
+
   return (
     <div className="relative min-h-[calc(100vh-2rem)] w-full flex flex-col items-center">
       {/* Glowing light ball in top right */}
@@ -135,103 +203,185 @@ export default function MyProjects() {
         aria-hidden="true"
       />
 
-      {/* Container that expands and fades in from center out */}
-      <div className="center-fade-in relative z-10 w-full max-w-6xl flex flex-col items-center py-8 sm:py-12 px-4 sm:px-8">
+      {/* Main Container */}
+      <div className="center-fade-in relative z-10 w-full max-w-7xl flex flex-col items-center py-6 sm:py-10 px-4 sm:px-6">
         {/* Title */}
         <div className="relative mb-2">
-          <div className="pointer-events-none absolute inset-0 -z-10 bg-black/60 blur-3xl scale-125" aria-hidden="true" />
+          <div
+            className="pointer-events-none absolute inset-0 -z-10 bg-black/60 blur-3xl scale-125"
+            aria-hidden="true"
+          />
           <ScrambleText
             text="My Work"
-            className="text-4xl sm:text-6xl text-center mt-2 mb-4 drop-shadow-[0_0_40px_rgba(0,0,0,0.9)]"
+            className="text-4xl sm:text-6xl text-center mt-2 mb-3 drop-shadow-[0_0_40px_rgba(0,0,0,0.9)]"
             delayMs={200}
             speedMs={35}
           />
         </div>
 
         {/* Intro message */}
-        <div className="fade-in-delayed-1 max-w-2xl mx-auto text-center mb-12 drop-shadow-[0_3px_12px_rgba(0,0,0,0.95)]">
+        <div className="fade-in-delayed-1 max-w-2xl mx-auto text-center mb-8 drop-shadow-[0_3px_12px_rgba(0,0,0,0.95)]">
           <p className="text-base sm:text-lg text-[#F0F5F0]/90 leading-relaxed">
-            A curated showcase of professional client projects, intelligent AI solutions, and independent software systems.
-          </p>
-          <p className="text-xs sm:text-sm font-mono text-[#2DD4BF] mt-2 tracking-wide">
-            ⦾ Click on any card to explore project details, screenshots, and technical specs
+            Select a directory in the filesystem on the left to explore client work, side projects, or AI engineering systems.
           </p>
         </div>
 
-        {/* Section 1: Work (Employer & Client Work) */}
-        <section className="w-full mb-16 text-left">
-          <div className="flex items-center gap-3 mb-2">
-            <span className="w-2.5 h-2.5 rounded-full bg-[#2DD4BF] animate-pulse" />
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#B0E4CC] drop-shadow-[0_2px_10px_rgba(0,0,0,1)] tracking-wide">
-              Work
-            </h2>
-          </div>
-          <p className="text-sm font-mono text-[#F0F5F0]/70 mb-6">
-            Professional systems, integrations, and software solutions developed for employers and clients.
-          </p>
+        {/* Two-Column Cyberpunk OS Explorer Layout */}
+        <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          {/* LEFT SIDEBAR: File Tree Explorer */}
+          <aside className="lg:col-span-3 w-full">
+            <div className="lg:sticky lg:top-24 p-5 rounded-2xl bg-[#0b1a18]/75 backdrop-blur-md border border-[#045757]/70 shadow-lg text-left">
+              {/* Explorer Header */}
+              <div className="flex items-center justify-between pb-3 mb-3 border-b border-[#045757]/60">
+                <span className="text-xs font-mono font-bold tracking-wider text-[#2DD4BF] flex items-center gap-2">
+                  <span>📂</span>
+                  <span>FILESYSTEM</span>
+                </span>
+                <span className="w-2 h-2 rounded-full bg-[#2DD4BF] animate-pulse" />
+              </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {employerWork ? (
-              employerWork.map((project) => (
-                <WorkCard key={project.id} project={project} />
-              ))
-            ) : (
-              <p className="col-span-full text-center text-sm font-mono text-[#F0F5F0]/60 py-8">
-                Loading work experience...
-              </p>
-            )}
-          </div>
-        </section>
+              {/* Path & Stats */}
+              <div className="flex justify-between items-center text-[11px] font-mono text-[#F0F5F0]/60 mb-3">
+                <span className="text-[#408A71]">~/mikael/projects</span>
+                <span className="text-[#2DD4BF] font-semibold">{totalCount} files</span>
+              </div>
 
-        {/* Section 2: Independent & Personal Projects */}
-        <section className="w-full mb-16 text-left">
-          <div className="flex items-center gap-3 mb-2">
-            <span className="w-2.5 h-2.5 rounded-full bg-[#2DD4BF] animate-pulse" />
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#B0E4CC] drop-shadow-[0_2px_10px_rgba(0,0,0,1)] tracking-wide">
-              Independent &amp; Personal Projects
-            </h2>
-          </div>
-          <p className="text-sm font-mono text-[#F0F5F0]/70 mb-6">
-            Self-driven projects built to explore emerging technologies, architectures, and ideas.
-          </p>
+              {/* Folder Navigation */}
+              <nav className="flex flex-col gap-1.5">
+                {folders.map((folder) => {
+                  const isActive = activeFolder === folder.id;
+                  return (
+                    <button
+                      key={folder.id}
+                      type="button"
+                      onClick={() => {
+                        setActiveFolder(folder.id);
+                        setSearchQuery('');
+                      }}
+                      className={`group w-full flex items-center justify-between px-3 py-2.5 rounded-xl text-xs font-mono transition-all text-left cursor-pointer ${
+                        isActive
+                          ? 'bg-[#045757]/70 text-white border border-[#2DD4BF] shadow-[0_0_15px_rgba(45,212,191,0.25)] font-semibold'
+                          : 'text-[#B0E4CC]/80 hover:text-white hover:bg-[#061211]/80 border border-transparent hover:border-[#045757]/60'
+                      }`}
+                    >
+                      <div className="flex items-center gap-2 truncate">
+                        <span>{folder.icon}</span>
+                        <span className="truncate">{folder.path}</span>
+                      </div>
+                      <span
+                        className={`text-[10px] px-2 py-0.5 rounded-md font-mono shrink-0 ${
+                          isActive
+                            ? 'bg-[#2DD4BF] text-[#091413] font-bold'
+                            : 'bg-[#061211] text-[#2DD4BF] border border-[#2DD4BF]/30'
+                        }`}
+                      >
+                        {folder.count}
+                      </span>
+                    </button>
+                  );
+                })}
+              </nav>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {myPrivateProjects ? (
-              myPrivateProjects.map((project) => (
-                <WorkCard key={project.id} project={project} />
-              ))
-            ) : (
-              <p className="col-span-full text-center text-sm font-mono text-[#F0F5F0]/60 py-8">
-                Loading projects...
-              </p>
-            )}
-          </div>
-        </section>
+              {/* Search / Filter Box */}
+              <div className="mt-5 pt-4 border-t border-white/5">
+                <label
+                  htmlFor="explorer-search"
+                  className="block text-[11px] font-mono text-[#B0E4CC]/70 uppercase tracking-wider mb-2"
+                >
+                  Filter directory
+                </label>
+                <div className="relative">
+                  <input
+                    id="explorer-search"
+                    type="text"
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    placeholder="Search Python, React, AI..."
+                    className="w-full px-3 py-2 rounded-xl bg-[#061211]/90 border border-[#045757]/70 text-xs font-mono text-[#F0F5F0] placeholder-white/30 focus:outline-none focus:border-[#2DD4BF] focus:ring-1 focus:ring-[#2DD4BF] transition-all"
+                  />
+                  {searchQuery && (
+                    <button
+                      type="button"
+                      onClick={() => setSearchQuery('')}
+                      className="absolute right-2.5 top-2 text-xs font-mono text-[#2DD4BF] hover:text-white"
+                      title="Clear"
+                    >
+                      &times;
+                    </button>
+                  )}
+                </div>
+              </div>
 
-        {/* Section 3: Collaborative & Academic Work */}
-        <section className="w-full mb-16 text-left">
-          <div className="flex items-center gap-3 mb-2">
-            <span className="w-2.5 h-2.5 rounded-full bg-[#2DD4BF] animate-pulse" />
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#B0E4CC] drop-shadow-[0_2px_10px_rgba(0,0,0,1)] tracking-wide">
-              Collaborative &amp; Academic Work
-            </h2>
-          </div>
-          <p className="text-sm font-mono text-[#F0F5F0]/70 mb-6">
-            Team projects and examination assignments completed during my software and AI development studies.
-          </p>
+              {/* Fast Filter Tags */}
+              <div className="mt-4 pt-3 border-t border-white/5">
+                <p className="text-[10px] font-mono text-[#408A71] uppercase tracking-wider mb-2">
+                  Quick tags
+                </p>
+                <div className="flex flex-wrap gap-1">
+                  {['AI/ML', 'React', 'Python', 'Convex', 'FastAPI'].map((tag) => (
+                    <button
+                      key={tag}
+                      type="button"
+                      onClick={() => setSearchQuery(tag === searchQuery ? '' : tag)}
+                      className={`text-[10px] font-mono px-2 py-0.5 rounded-md transition-colors cursor-pointer ${
+                        searchQuery === tag
+                          ? 'bg-[#2DD4BF] text-[#091413] font-bold'
+                          : 'bg-[#061211] text-[#B0E4CC]/80 border border-[#045757]/60 hover:border-[#2DD4BF]/60'
+                      }`}
+                    >
+                      #{tag}
+                    </button>
+                  ))}
+                </div>
+              </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {mySchoolProjects ? (
-              mySchoolProjects.map((project) => (
-                <WorkCard key={project.id} project={project} />
-              ))
-            ) : (
-              <p className="col-span-full text-center text-sm font-mono text-[#F0F5F0]/60 py-8">
-                Loading projects...
-              </p>
-            )}
-          </div>
-        </section>
+              {/* Navigation Tip */}
+              <div className="mt-5 pt-3 border-t border-white/5 text-[11px] font-mono text-[#408A71]">
+                <p>💡 Tip: Click on a folder to view its project contents</p>
+              </div>
+            </div>
+          </aside>
+
+          {/* RIGHT MAIN AREA: Active Directory Project View */}
+          <main className="lg:col-span-9 w-full min-w-0">
+            {/* Active Folder Grid */}
+            <div key={activeFolder} className="w-full fade-in-delayed-1">
+              {filteredProjects ? (
+                filteredProjects.length > 0 ? (
+                  <div
+                    className={`grid gap-6 ${
+                      filteredProjects.length === 1
+                        ? 'grid-cols-1 max-w-xl mx-auto'
+                        : 'grid-cols-1 md:grid-cols-2'
+                    }`}
+                  >
+                    {filteredProjects.map((project) => (
+                      <WorkCard key={project.id} project={project} />
+                    ))}
+                  </div>
+                ) : (
+                  <div className="w-full p-12 rounded-2xl bg-[#0b1a18]/60 border border-[#045757]/60 text-center flex flex-col items-center gap-3">
+                    <span className="text-3xl">🔍</span>
+                    <p className="text-base font-mono text-[#B0E4CC]">
+                      No projects matching "{searchQuery}" in {currentFolder.path}
+                    </p>
+                    <button
+                      type="button"
+                      onClick={() => setSearchQuery('')}
+                      className="mt-2 px-4 py-1.5 rounded-lg bg-[#045757]/40 text-xs font-mono text-[#2DD4BF] border border-[#2DD4BF]/40 hover:bg-[#2DD4BF] hover:text-[#091413] transition-colors cursor-pointer"
+                    >
+                      Clear filter
+                    </button>
+                  </div>
+                )
+              ) : (
+                <div className="w-full py-16 text-center text-sm font-mono text-[#F0F5F0]/60 animate-pulse">
+                  Loading {currentFolder.name.toLowerCase()}...
+                </div>
+              )}
+            </div>
+          </main>
+        </div>
       </div>
     </div>
   );
