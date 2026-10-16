@@ -1,6 +1,10 @@
 import AboutHero from '../components/about/AboutHero';
-import AboutProfile from '../components/about/AboutProfile';
-import AboutTechStack from '../components/about/AboutTechStack';
+import AboutDossier from '../components/about/AboutDossier';
+import AboutProductionFeature from '../components/about/AboutProductionFeature';
+import AboutLivingStack from '../components/about/AboutLivingStack';
+import AboutEngineeringEthos from '../components/about/AboutEngineeringEthos';
+import AboutJourneyTimeline from '../components/about/AboutJourneyTimeline';
+import AboutRecruiterCta from '../components/about/AboutRecruiterCta';
 import '../tailwind/glitch-fx.css';
 
 export default function AboutMe() {
@@ -17,8 +21,12 @@ export default function AboutMe() {
       {/* Main container with center fade-in */}
       <div className="center-fade-in relative z-10 w-full max-w-5xl flex flex-col items-center py-8 sm:py-12 px-4 sm:px-8">
         <AboutHero />
-        <AboutProfile />
-        <AboutTechStack />
+        <AboutDossier />
+        <AboutProductionFeature />
+        <AboutLivingStack />
+        <AboutEngineeringEthos />
+        <AboutJourneyTimeline />
+        <AboutRecruiterCta />
       </div>
     </div>
   );
