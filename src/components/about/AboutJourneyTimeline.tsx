@@ -14,7 +14,7 @@ export default function AboutJourneyTimeline() {
     {
       period: '2024 - 2026',
       role: 'Software & AI Development Degree',
-      organization: 'NBI-Handelsakademin (Gothenburg)',
+      organization: 'NBI-Handelsakademin (Malmö)',
       badge: 'ACADEMIC_SPECIALIZATION',
       badgeColor: 'text-[#B0E4CC] border-[#045757]/60 bg-[#061211]',
       desc: 'Rigorous 2-year vocational program specializing in applied machine learning, deep learning (PyTorch), Python microservices (FastAPI), C# .NET architecture, and database normalization (3NF).',

@@ -76,7 +76,8 @@ function WorkCard({ project }: { project: ProjectInterface }) {
           {project.employer && !project.image && (
             <div className="mb-3">
               <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-mono bg-[#061211]/90 text-[#2DD4BF] border border-[#2DD4BF]/40 shadow-sm">
-                🏢 {project.employer}
+                <span className="w-1.5 h-1.5 rounded-full bg-[#2DD4BF] animate-pulse" />
+                {project.employer}
               </span>
             </div>
           )}
@@ -120,63 +121,104 @@ function WorkCard({ project }: { project: ProjectInterface }) {
   );
 }
 
+type FolderId = 'all' | 'ai-ml' | 'work' | 'fullstack' | 'systems';
+
+const QUICK_TAGS = ['Machine Learning', 'Python', 'React', 'FastAPI', 'Convex', 'C#', '.NET'];
+
 export default function MyProjects() {
   const employerWork = useFetchJson<ProjectInterface[]>('/data/employerwork.json');
   const myPrivateProjects = useFetchJson<ProjectInterface[]>('/data/myprojects.json');
   const mySchoolProjects = useFetchJson<ProjectInterface[]>('/data/schoolprojects.json');
 
-  const [activeFolder, setActiveFolder] = useState<'work' | 'personal' | 'academic' | 'all'>('work');
+  const [activeFolder, setActiveFolder] = useState<FolderId>('all');
   const [searchQuery, setSearchQuery] = useState('');
 
-  const totalCount =
-    (employerWork?.length || 0) +
-    (myPrivateProjects?.length || 0) +
-    (mySchoolProjects?.length || 0);
+  const allProjects = [
+    ...(employerWork || []),
+    ...(myPrivateProjects || []),
+    ...(mySchoolProjects || []),
+  ];
+
+  const aiMlProjects = allProjects.filter((p) =>
+    p.id === 'project-telco-churn' ||
+    p.id === 'orcale-llm' ||
+    p.id === 'ats-devotion-ventures' ||
+    p.id === 'slime-helper-desktop' ||
+    p.badges.some((b) =>
+      ['machine learning', 'pytorch', 'transformers', 'fastapi', 'scikit-learn', 'ai', 'gemini', 'claude'].includes(b.toLowerCase())
+    )
+  );
+
+  const workProjects = employerWork || [];
+
+  const fullstackProjects = allProjects.filter((p) =>
+    p.id === 'ats-devotion-ventures' ||
+    p.id === 'words-and-dice' ||
+    p.id === 'filmvisarna' ||
+    p.id === 'pokemon-tcg-store' ||
+    p.id === 'holidaymaker' ||
+    p.id === 'portfolio'
+  );
+
+  const systemsProjects = allProjects.filter((p) =>
+    p.id === 'restaurang-db' ||
+    p.id === 'slime-helper-desktop' ||
+    p.id === 'chill-night-mode' ||
+    p.id === 'chill-night-obsidian' ||
+    p.id === 'chill-night-starship' ||
+    p.id === 'hotel-state-manager' ||
+    p.id === 'healthcare-system' ||
+    p.id === 'trading-system' ||
+    p.id === 'school-management' ||
+    p.id === 'restaurang' ||
+    p.id === 'christmas-game'
+  );
 
   const folders = [
+    {
+      id: 'all' as const,
+      path: '~/all/',
+      name: 'All Projects',
+      desc: 'Complete index directory of all commercial, machine learning, systems, and full-stack software.',
+      count: allProjects.length,
+      data: allProjects,
+    },
+    {
+      id: 'ai-ml' as const,
+      path: '~/ai-ml/',
+      name: 'Machine Learning & AI',
+      desc: 'Applied machine learning pipelines trained from scratch, local CPU language models, and AI screening workflows.',
+      count: aiMlProjects.length,
+      data: aiMlProjects,
+    },
     {
       id: 'work' as const,
       path: '~/work/',
       name: 'Work Experience',
-      desc: 'Production enterprise systems, client integrations, and software developed for employers.',
-      icon: '🏢',
-      count: employerWork?.length || 0,
-      data: employerWork,
+      desc: 'Commercial enterprise systems, client integrations, and production software developed for employers.',
+      count: workProjects.length,
+      data: workProjects,
     },
     {
-      id: 'personal' as const,
-      path: '~/personal/',
-      name: 'Independent & Side Projects',
-      desc: 'Self-driven software systems, developer ergonomics tools, and open-source themes.',
-      icon: '🚀',
-      count: myPrivateProjects?.length || 0,
-      data: myPrivateProjects,
+      id: 'fullstack' as const,
+      path: '~/fullstack/',
+      name: 'Full-Stack & Web',
+      desc: 'Reactive cloud platforms, test-driven multiplayer applications, normalized relational databases, and REST APIs.',
+      count: fullstackProjects.length,
+      data: fullstackProjects,
     },
     {
-      id: 'academic' as const,
-      path: '~/academic/',
-      name: 'Academic & AI/ML Work',
-      desc: 'Applied machine learning pipelines, local LLMs, and collaborative systems developed at NBI.',
-      icon: '🎓',
-      count: mySchoolProjects?.length || 0,
-      data: mySchoolProjects,
-    },
-    {
-      id: 'all' as const,
-      path: '~/all/',
-      name: 'All Projects (Index)',
-      desc: 'A complete index directory showing all professional, personal, and academic work.',
-      icon: '🌐',
-      count: totalCount,
-      data: [
-        ...(employerWork || []),
-        ...(myPrivateProjects || []),
-        ...(mySchoolProjects || []),
-      ],
+      id: 'systems' as const,
+      path: '~/systems/',
+      name: 'Systems & Developer Tools',
+      desc: 'Desktop software with OS hooks, VS Code themes, terminal configurations, and object-oriented architectures.',
+      count: systemsProjects.length,
+      data: systemsProjects,
     },
   ];
 
   const currentFolder = folders.find((f) => f.id === activeFolder) || folders[0];
+  const totalCount = allProjects.length;
 
   // Filter projects by search query
   const rawProjects = currentFolder.data;
@@ -184,7 +226,16 @@ export default function MyProjects() {
     ? rawProjects.filter((p) => {
         if (!searchQuery.trim()) return true;
         const q = searchQuery.toLowerCase().trim();
+
+        // Smart alias search for ML / AI terms
+        const matchesAiAlias =
+          (q === 'ai/ml' || q === 'ai' || q === 'ml') &&
+          p.badges.some((b) =>
+            ['machine learning', 'pytorch', 'transformers', 'scikit-learn', 'fastapi'].includes(b.toLowerCase())
+          );
+
         return (
+          matchesAiAlias ||
           p.title.toLowerCase().includes(q) ||
           p.subtitle.toLowerCase().includes(q) ||
           p.description.toLowerCase().includes(q) ||
@@ -192,6 +243,21 @@ export default function MyProjects() {
         );
       })
     : null;
+
+  const handleTagClick = (tag: string) => {
+    if (searchQuery.toLowerCase() === tag.toLowerCase()) {
+      setSearchQuery('');
+    } else {
+      setSearchQuery(tag);
+      const tagLower = tag.toLowerCase();
+      const inCurrent = currentFolder.data?.some((p) =>
+        p.badges.some((b) => b.toLowerCase().includes(tagLower))
+      );
+      if (!inCurrent) {
+        setActiveFolder('all');
+      }
+    }
+  };
 
   return (
     <div className="relative min-h-[calc(100vh-2rem)] w-full flex flex-col items-center">
@@ -220,16 +286,90 @@ export default function MyProjects() {
         </div>
 
         {/* Intro message */}
-        <div className="fade-in-delayed-1 max-w-2xl mx-auto text-center mb-8 drop-shadow-[0_3px_12px_rgba(0,0,0,0.95)]">
+        <div className="fade-in-delayed-1 max-w-2xl mx-auto text-center mb-6 sm:mb-8 drop-shadow-[0_3px_12px_rgba(0,0,0,0.95)]">
           <p className="text-base sm:text-lg text-[#F0F5F0]/90 leading-relaxed">
-            Select a directory in the filesystem on the left to explore client work, side projects, or AI engineering systems.
+            Select a directory in the filesystem to explore enterprise work, machine learning pipelines, and full-stack software systems.
           </p>
+        </div>
+
+        {/* Mobile Directory & Filter Bar (Visible on mobile & tablet: < lg) */}
+        <div className="lg:hidden w-full mb-6 flex flex-col gap-3 text-left">
+          {/* Horizontal scrollable directory tabs */}
+          <div className="flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none no-scrollbar text-xs font-mono">
+            {folders.map((folder) => {
+              const isActive = activeFolder === folder.id;
+              return (
+                <button
+                  key={folder.id}
+                  type="button"
+                  onClick={() => {
+                    setActiveFolder(folder.id);
+                    setSearchQuery('');
+                  }}
+                  className={`shrink-0 flex items-center gap-2 px-3.5 py-2 rounded-xl transition-all cursor-pointer ${
+                    isActive
+                      ? 'bg-[#045757]/80 text-white border border-[#2DD4BF] shadow-[0_0_12px_rgba(45,212,191,0.25)] font-semibold'
+                      : 'bg-[#061211]/80 text-[#B0E4CC]/80 border border-[#045757]/60 hover:text-white'
+                  }`}
+                >
+                  <span>{folder.path}</span>
+                  <span
+                    className={`text-[10px] px-1.5 py-0.5 rounded-md font-mono ${
+                      isActive ? 'bg-[#2DD4BF] text-[#091413] font-bold' : 'bg-[#0b1a18] text-[#2DD4BF]'
+                    }`}
+                  >
+                    {folder.count}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
+
+          {/* Mobile Search and Filter Row */}
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
+            <div className="relative flex-1">
+              <input
+                type="text"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                placeholder="Filter Python, React, ML, C#..."
+                className="w-full px-3.5 py-2 rounded-xl bg-[#061211]/90 border border-[#045757]/70 text-xs font-mono text-[#F0F5F0] placeholder-white/30 focus:outline-none focus:border-[#2DD4BF] transition-all"
+              />
+              {searchQuery && (
+                <button
+                  type="button"
+                  onClick={() => setSearchQuery('')}
+                  className="absolute right-3 top-2 text-xs font-mono text-[#2DD4BF] hover:text-white"
+                >
+                  &times;
+                </button>
+              )}
+            </div>
+
+            {/* Mobile Quick Tags - horizontal scroll */}
+            <div className="flex items-center gap-1.5 overflow-x-auto pb-1 scrollbar-none no-scrollbar">
+              {QUICK_TAGS.map((tag) => (
+                <button
+                  key={tag}
+                  type="button"
+                  onClick={() => handleTagClick(tag)}
+                  className={`shrink-0 text-[10px] font-mono px-2.5 py-1 rounded-md transition-colors cursor-pointer ${
+                    searchQuery.toLowerCase() === tag.toLowerCase()
+                      ? 'bg-[#2DD4BF] text-[#091413] font-bold'
+                      : 'bg-[#061211] text-[#B0E4CC]/80 border border-[#045757]/60'
+                  }`}
+                >
+                  #{tag}
+                </button>
+              ))}
+            </div>
+          </div>
         </div>
 
         {/* Two-Column Cyberpunk OS Explorer Layout */}
         <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          {/* LEFT SIDEBAR: File Tree Explorer */}
-          <aside className="lg:col-span-3 w-full">
+          {/* LEFT SIDEBAR: File Tree Explorer (Desktop sticky, hidden on mobile) */}
+          <aside className="hidden lg:block lg:col-span-3 w-full">
             <div className="lg:sticky lg:top-24 p-5 rounded-2xl bg-[#0b1a18]/75 backdrop-blur-md border border-[#045757]/70 shadow-lg text-left">
               {/* Explorer Header */}
               <div className="flex items-center justify-between pb-3 mb-3 border-b border-[#045757]/60">
@@ -264,10 +404,7 @@ export default function MyProjects() {
                           : 'text-[#B0E4CC]/80 hover:text-white hover:bg-[#061211]/80 border border-transparent hover:border-[#045757]/60'
                       }`}
                     >
-                      <div className="flex items-center gap-2 truncate">
-                        <span>{folder.icon}</span>
-                        <span className="truncate">{folder.path}</span>
-                      </div>
+                      <span className="truncate">{folder.path}</span>
                       <span
                         className={`text-[10px] px-2 py-0.5 rounded-md font-mono shrink-0 ${
                           isActive
@@ -296,7 +433,7 @@ export default function MyProjects() {
                     type="text"
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
-                    placeholder="Search Python, React, AI..."
+                    placeholder="Search Python, React, ML..."
                     className="w-full px-3 py-2 rounded-xl bg-[#061211]/90 border border-[#045757]/70 text-xs font-mono text-[#F0F5F0] placeholder-white/30 focus:outline-none focus:border-[#2DD4BF] focus:ring-1 focus:ring-[#2DD4BF] transition-all"
                   />
                   {searchQuery && (
@@ -318,13 +455,13 @@ export default function MyProjects() {
                   Quick tags
                 </p>
                 <div className="flex flex-wrap gap-1">
-                  {['AI/ML', 'React', 'Python', 'Convex', 'FastAPI'].map((tag) => (
+                  {QUICK_TAGS.map((tag) => (
                     <button
                       key={tag}
                       type="button"
-                      onClick={() => setSearchQuery(tag === searchQuery ? '' : tag)}
+                      onClick={() => handleTagClick(tag)}
                       className={`text-[10px] font-mono px-2 py-0.5 rounded-md transition-colors cursor-pointer ${
-                        searchQuery === tag
+                        searchQuery.toLowerCase() === tag.toLowerCase()
                           ? 'bg-[#2DD4BF] text-[#091413] font-bold'
                           : 'bg-[#061211] text-[#B0E4CC]/80 border border-[#045757]/60 hover:border-[#2DD4BF]/60'
                       }`}
@@ -337,13 +474,28 @@ export default function MyProjects() {
 
               {/* Navigation Tip */}
               <div className="mt-5 pt-3 border-t border-white/5 text-[11px] font-mono text-[#408A71]">
-                <p>💡 Tip: Click on a folder to view its project contents</p>
+                <p>Tip: Click a directory to explore specialized engineering domains.</p>
               </div>
             </div>
           </aside>
 
           {/* RIGHT MAIN AREA: Active Directory Project View */}
-          <main className="lg:col-span-9 w-full min-w-0">
+          <main className="w-full lg:col-span-9 min-w-0">
+            {/* Active Folder Header Banner */}
+            <div className="w-full mb-6 p-4 rounded-xl bg-[#0b1a18]/60 border border-[#045757]/60 flex flex-col sm:flex-row justify-between sm:items-center gap-2 text-left">
+              <div>
+                <div className="flex items-center gap-2">
+                  <span className="text-xs font-mono text-[#2DD4BF] font-semibold">{currentFolder.path}</span>
+                  <span className="text-xs font-mono text-[#408A71]">//</span>
+                  <span className="text-xs font-mono text-white/90">{currentFolder.name}</span>
+                </div>
+                <p className="text-xs text-[#F0F5F0]/70 mt-1 max-w-xl">{currentFolder.desc}</p>
+              </div>
+              <span className="text-xs font-mono px-2.5 py-1 rounded-md bg-[#061211] text-[#2DD4BF] border border-[#2DD4BF]/30 shrink-0 self-start sm:self-center">
+                {filteredProjects?.length || 0} {filteredProjects?.length === 1 ? 'project' : 'projects'}
+              </span>
+            </div>
+
             {/* Active Folder Grid */}
             <div key={activeFolder} className="w-full fade-in-delayed-1">
               {filteredProjects ? (
@@ -351,7 +503,7 @@ export default function MyProjects() {
                   <div
                     className={`grid gap-6 ${
                       filteredProjects.length === 1
-                        ? 'grid-cols-1 max-w-xl mx-auto'
+                        ? 'grid-cols-1 max-w-2xl mx-auto'
                         : 'grid-cols-1 md:grid-cols-2'
                     }`}
                   >
@@ -361,7 +513,9 @@ export default function MyProjects() {
                   </div>
                 ) : (
                   <div className="w-full p-12 rounded-2xl bg-[#0b1a18]/60 border border-[#045757]/60 text-center flex flex-col items-center gap-3">
-                    <span className="text-3xl">🔍</span>
+                    <span className="text-xs font-mono px-3 py-1 rounded-md bg-[#061211] text-[#2DD4BF] border border-[#2DD4BF]/30">
+                      [NO_MATCH]
+                    </span>
                     <p className="text-base font-mono text-[#B0E4CC]">
                       No projects matching "{searchQuery}" in {currentFolder.path}
                     </p>

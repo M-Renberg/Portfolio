@@ -1,24 +1,38 @@
 import { useEffect, useRef } from 'react';
 
 const THOUGHT_PHRASES = [
-  'neural_network.train()',
-  'evaluating_loss: 0.0012',
-  'latent_space.sample()',
-  'attention_matrix: [0.98]',
-  'gradient_descent.step()',
-  'async inference_pass()',
-  'token_stream: [0x4F, 0x8A]',
-  'context_window: 128k',
-  'clean_architecture.verify()',
-  'heuristic_search.expand()',
-  'pattern_recognition: TRUE',
+  // Machine Learning Lifecycle & Training (Scikit-Learn, PyTorch, Math)
+  'scikit_learn.fit(X_train, y_train)',
+  'evaluating_loss: 0.0014',
+  'roc_auc_score: 0.942',
+  'confusion_matrix.calculate()',
+  'feature_engineering.transform()',
   'backpropagate_gradients()',
-  'cognitive_state: ACTIVE',
-  'synthesize_logic()',
-  'model.optimize_weights()',
-  'deep_layers.activate()',
-  'fullstack_agent: READY',
-  'zero_technical_debt',
+  'gradient_descent.step()',
+  'cross_val_score(cv=5): 0.92',
+  'torch.optim.AdamW(lr=1e-4)',
+
+  // Deep Learning & Local SLM Inference (Transformers, SmolLM2, NLP)
+  'smollm2.cpu_inference()',
+  'transformers.AutoModelForCausalLM',
+  'streaming_tokens: 48 t/s',
+  'context_window: 128k',
+  'kv_cache.lookup: HIT',
+  'pydantic.validate_schema()',
+  'token_stream: [0x4F, 0x8A]',
+
+  // Production Serving & Full-Stack Architecture (FastAPI, Convex, Devotion ATS)
+  'fastapi.post("/api/v1/predict")',
+  'uvicorn.workers: ACTIVE',
+  'convex.mutation: candidate_sync',
+  'human_in_the_loop: APPROVED',
+  'sqlite_3nf.constraint_check()',
+  'type_safety: STRICT',
+  'async_event_queue.drain()',
+
+  // Telemetry & LIA Signals
+  'malmo_sweden.lia_ready: TRUE',
+  'zero_data_leakage: VERIFIED',
 ];
 
 const CIPHER_CHARS = '!<>-_/[]{}—=+*^?#%&0123456789ABCDEF';

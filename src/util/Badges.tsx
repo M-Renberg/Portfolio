@@ -54,7 +54,9 @@ const badgeConfigs: Record<string, { name: string; color: string; icon: string }
   'full-stack': { name: 'Full-Stack', color: '2DD4BF', icon: 'stackshare' },
   'agile/scrum': { name: 'Agile/Scrum', color: '0052CC', icon: 'jira' },
   'database design': { name: 'Database Design', color: '4479A1', icon: 'mysql' },
-  'oop': { name: 'OOP', color: '239120', icon: 'dotnet' }
+  'oop': { name: 'OOP', color: '239120', icon: 'dotnet' },
+  'ai': { name: 'AI', color: '2DD4BF', icon: 'openai' },
+  'ai integration': { name: 'AI Integration', color: '2DD4BF', icon: 'openai' }
 };
 
 export function Badge({ tech }: { tech: string }) {

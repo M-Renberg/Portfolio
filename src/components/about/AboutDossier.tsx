@@ -77,7 +77,7 @@ export default function AboutDossier() {
                 </div>
                 <div className="flex justify-between items-center py-1 border-b border-white/5">
                   <span className="text-[#408A71]">LOCATION:</span>
-                  <span className="text-white font-medium">Gothenburg, Sweden</span>
+                  <span className="text-white font-medium">Malmö, Sweden</span>
                 </div>
                 <div className="flex justify-between items-center py-1">
                   <span className="text-[#408A71]">LANGUAGES:</span>
@@ -148,7 +148,7 @@ export default function AboutDossier() {
             {activeTab === 'overview' && (
               <div className="fade-in flex flex-col gap-4 text-[#F0F5F0]/90 text-sm sm:text-base leading-relaxed">
                 <p>
-                  Hey! I'm <strong className="text-white font-semibold">Mikael Renberg</strong>, a software development and AI engineering student based in Gothenburg, Sweden, studying at{' '}
+                  Hey! I'm <strong className="text-white font-semibold">Mikael Renberg</strong>, a software development and AI engineering student based in Malmö, Sweden, studying at{' '}
                   <span className="text-[#2DD4BF] font-semibold">NBI-Handelsakademin</span> while interning at{' '}
                   <span className="text-[#2DD4BF] font-semibold">Devotion Ventures</span>.
                 </p>

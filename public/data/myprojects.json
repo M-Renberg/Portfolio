@@ -1,5 +1,52 @@
 [
   {
+    "id": "slime-helper-desktop",
+    "slug": "slime-helper-desktop",
+    "category": "personal",
+    "link": "https://github.com/M-Renberg/Vsc-slime-helper-desktop-version",
+    "title": "Slime Helper (Desktop Version)",
+    "subtitle": "Standalone WPF Desktop Companion with Multi-Model AI & Git Hooks",
+    "description": "An interactive desktop companion that lives on your screen, reacts to your code, monitors git activity globally across any editor, and integrates multi-model AI (Gemini & Claude) for context-aware developer assistance.",
+    "longDescription": "Slime Helper Desktop is a standalone WPF desktop application featuring an animated, squishy slime companion that keeps you company while coding. Unlike extension-based versions, this runs globally across the entire operating system, helping developers stay focused, take breaks, and chat with AI directly from the desktop or via a built-in CLI tool.\n\nThe application includes a global word watcher listening for code triggers across any editor, Git repository tracking that warns about copy-paste spikes ('vibe coding'), multiple animated skins (Default/Blue, Green, Pink, Girl), and seamless context-aware AI integration with Google Gemini and Anthropic Claude.",
+    "highlights": [
+      "Dual AI Brain integration with Google Gemini and Anthropic Claude for real-time coding assistance",
+      "Global Word Watcher listening for triggers across any IDE or text editor",
+      "Git repository and file change monitoring detecting uncommitted edits and rapid code churn",
+      "Built-in CLI companion ('slime') installable directly to PATH from the right-click menu",
+      "Multiple animated skins with expressive states, breathing loops, and context controls"
+    ],
+    "image": "/images/projects/slime-helper-desktop.png",
+    "badges": [
+      "AI",
+      "Gemini",
+      "Claude",
+      "C#",
+      ".NET",
+      "WPF"
+    ]
+  },
+  {
+    "id": "slime-helper",
+    "slug": "slime-helper",
+    "category": "personal",
+    "link": "https://marketplace.visualstudio.com/items?itemName=Moth-Coder.slime-helper",
+    "title": "Slime Helper (VS Code Extension)",
+    "subtitle": "VS Code Extension — Coding Buddy",
+    "description": "Slime helper is a VS Code extension that keeps track of your git, error messages and overall coding. It's also designed with animations and a personality as it keeps you company while coding.",
+    "longDescription": "Slime Helper is an interactive companion extension for Visual Studio Code, built to make software development more engaging and dynamic. The extension listens to internal VS Code events—such as Git commits and diagnostic error messages—and reacts with playful animations and encouraging feedback right inside the editor.",
+    "highlights": [
+      "Published on the official Visual Studio Code Marketplace",
+      "Event-driven integration with the VS Code Extension API and Git events",
+      "Animated desktop companion reacting to real-time coding events"
+    ],
+    "image": "/images/projects/slime-helper.png",
+    "badges": [
+      "C#",
+      "TypeScript",
+      "React"
+    ]
+  },
+  {
     "id": "chill-night-mode",
     "slug": "chill-night-mode",
     "category": "personal",
@@ -14,7 +61,7 @@
       "Minimalist aesthetic designed to keep you focused on your code",
       "Optimized for extended coding sessions and late-night development"
     ],
-    "image": "/images/projects/chill-night-mode.svg",
+    "image": "/images/projects/chill-night-mode.png",
     "badges": [
       "VS Code",
       "CSS",
@@ -36,7 +83,7 @@
       "Accent-coded UI: color-coded headers (purple), links, variables (pink), and checkboxes",
       "Custom syntax-highlighted code blocks matching the overall aesthetic"
     ],
-    "image": "/images/projects/chill-night-obsidian.svg",
+    "image": "/images/projects/chill-night-obsidian.png",
     "badges": [
       "Obsidian",
       "CSS",
@@ -59,57 +106,11 @@
       "Optimized .NET module that regex-trims long preview version strings",
       "Broad developer support across Python, Node.js, Rust, Go, and C#"
     ],
-    "image": "/images/projects/chill-night-starship.svg",
+    "image": "/images/projects/chill-night-starship.png",
     "badges": [
       "Starship",
       "Shell",
       "PowerShell"
-    ]
-  },
-  {
-    "id": "slime-helper-desktop",
-    "slug": "slime-helper-desktop",
-    "category": "personal",
-    "link": "https://github.com/M-Renberg/Vsc-slime-helper-desktop-version",
-    "title": "Slime Helper (Desktop Version)",
-    "subtitle": "Standalone WPF Desktop Companion with Global AI & Git Hooks",
-    "description": "An interactive desktop companion that lives on your screen, reacts to your code, monitors git activity globally across any editor, and talks to AI (Gemini & Claude).",
-    "longDescription": "Slime Helper Desktop is a standalone WPF desktop application featuring an animated, squishy slime companion that keeps you company while coding. Unlike extension-based versions, this runs globally across the entire operating system, helping developers stay focused, take breaks, and chat with AI directly from the desktop or via a built-in CLI tool.\n\nThe application includes a global word watcher listening for code triggers across any editor, Git repository tracking that warns about copy-paste spikes ('vibe coding'), multiple animated skins (Default/Blue, Green, Pink, Girl), and seamless context-aware AI integration with Google Gemini and Anthropic Claude.",
-    "highlights": [
-      "Global Word Watcher listening for triggers across any IDE or text editor",
-      "Dual AI Brain integration with Google Gemini and Anthropic Claude",
-      "Git repository and file change monitoring detecting uncommitted edits and rapid code churn",
-      "Built-in CLI companion ('slime') installable directly to PATH from the right-click menu",
-      "Multiple animated skins with expressive states, breathing loops, and context controls"
-    ],
-    "image": "/images/projects/slime-helper-desktop.svg",
-    "badges": [
-      "C#",
-      ".NET",
-      "WPF",
-      "Gemini",
-      "Claude"
-    ]
-  },
-  {
-    "id": "slime-helper",
-    "slug": "slime-helper",
-    "category": "personal",
-    "link": "https://marketplace.visualstudio.com/items?itemName=Moth-Coder.slime-helper",
-    "title": "Slime Helper (VS Code Extension)",
-    "subtitle": "VS Code Extension — Coding Buddy",
-    "description": "Slime helper is a VS Code extension that keeps track of your git, error messages and overall coding. It's also designed with animations and a personality as it keeps you company while coding.",
-    "longDescription": "Slime Helper is an interactive companion extension for Visual Studio Code, built to make software development more engaging and dynamic. The extension listens to internal VS Code events—such as Git commits and diagnostic error messages—and reacts with playful animations and encouraging feedback right inside the editor.",
-    "highlights": [
-      "Published on the official Visual Studio Code Marketplace",
-      "Event-driven integration with the VS Code Extension API and Git events",
-      "Animated desktop companion reacting to real-time coding events"
-    ],
-    "image": "/images/projects/slime-helper.svg",
-    "badges": [
-      "C#",
-      "TypeScript",
-      "React"
     ]
   },
   {

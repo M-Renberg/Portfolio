@@ -162,7 +162,7 @@ export default function LandingPage() {
                             to="/work"
                             tag="Repos & Projects"
                             title="My Work"
-                            desc="Personal applications, AI tools and academic coursework."
+                            desc="Production-grade machine learning models, local AI inference, and robust full-stack applications."
                             cta="Explore work"
                             icon={
                                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
