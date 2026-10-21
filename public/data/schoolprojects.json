@@ -15,7 +15,7 @@
       "Dedicated Python CLI utility for automated model training and testing",
       "Collaborative team project with Git version control and environment management"
     ],
-    "image": "/images/projects/telco-churn.svg",
+    "image": "/images/projects/project-placeholder.svg",
     "badges": [
       "Python",
       "Machine Learning",
@@ -40,7 +40,7 @@
       "RESTful API built with FastAPI, Pydantic schemas, and interactive Swagger documentation (/docs)",
       "In-memory dataset parsing and dynamic row filtering powered by Pandas"
     ],
-    "image": "/images/projects/oracle-llm.svg",
+    "image": "/images/projects/project-placeholder.svg",
     "badges": [
       "Python",
       "FastAPI",
@@ -112,7 +112,7 @@
       "Shopping cart with automatic subtotal calculation and quantity adjustments",
       "Structured component hierarchy with end-to-end TypeScript type safety"
     ],
-    "image": "/images/projects/pokemon-store.svg",
+    "image": "/images/projects/project-placeholder.svg",
     "badges": [
       "TypeScript",
       "React",

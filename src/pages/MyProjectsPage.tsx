@@ -64,21 +64,6 @@ function WorkCard({ project }: { project: ProjectInterface }) {
                 }}
               />
               <div className="absolute inset-0 bg-linear-to-t from-[#0b1a18] via-transparent to-transparent opacity-60" />
-              {project.employer && (
-                <span className="absolute top-2.5 right-2.5 px-2.5 py-1 rounded-md text-xs font-mono bg-[#061211]/90 text-[#2DD4BF] border border-[#2DD4BF]/40 backdrop-blur-sm shadow-md">
-                  {project.employer}
-                </span>
-              )}
-            </div>
-          )}
-
-          {/* Employer badge if no image banner */}
-          {project.employer && !project.image && (
-            <div className="mb-3">
-              <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-mono bg-[#061211]/90 text-[#2DD4BF] border border-[#2DD4BF]/40 shadow-sm">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#2DD4BF] animate-pulse" />
-                {project.employer}
-              </span>
             </div>
           )}
 
