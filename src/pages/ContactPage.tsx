@@ -1,9 +1,19 @@
 import { useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { Icon } from '../util/Icons';
 import ScrambleText from '../util/ScrambleText';
 import '../tailwind/glitch-fx.css';
 
+const CONTACT_EMAIL = 'mikael.k.renberg@hotmail.com';
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xjggvzjd';
+
 type InquiryIntent = 'lia' | 'ai' | 'fullstack' | 'chat';
+
+const VALID_INTENTS: InquiryIntent[] = ['lia', 'ai', 'fullstack', 'chat'];
+
+const isValidIntent = (val: string | null): val is InquiryIntent => {
+  return val !== null && VALID_INTENTS.includes(val as InquiryIntent);
+};
 
 interface IntentConfig {
   id: InquiryIntent;
@@ -45,8 +55,22 @@ const intentConfigs: IntentConfig[] = [
 ];
 
 export default function Contact() {
-  const [selectedIntent, setSelectedIntent] = useState<InquiryIntent>('lia');
+  const [searchParams, setSearchParams] = useSearchParams();
+  const paramIntent = searchParams.get('intent');
+  const selectedIntent: InquiryIntent = isValidIntent(paramIntent) ? paramIntent : 'lia';
+
   const [copiedEmail, setCopiedEmail] = useState(false);
+
+  const handleSelectIntent = (intentId: InquiryIntent) => {
+    setSearchParams(
+      (prev) => {
+        const next = new URLSearchParams(prev);
+        next.set('intent', intentId);
+        return next;
+      },
+      { replace: true }
+    );
+  };
 
   // Form state
   const [name, setName] = useState('');
@@ -68,7 +92,7 @@ export default function Contact() {
   const activeIntentConfig = intentConfigs.find((c) => c.id === selectedIntent) || intentConfigs[0];
 
   const handleCopyEmail = () => {
-    navigator.clipboard.writeText('mikael.k.renberg@hotmail.com');
+    navigator.clipboard.writeText(CONTACT_EMAIL);
     setCopiedEmail(true);
     setTimeout(() => setCopiedEmail(false), 2500);
   };
@@ -82,22 +106,41 @@ export default function Contact() {
       return;
     }
 
+    const trimmedName = name.trim();
+    const trimmedEmail = email.trim();
+    const trimmedOrg = organization.trim();
+    const trimmedMessage = message.trim();
+
+    // Input validation guards before dispatching
+    if (!trimmedName || !trimmedEmail || !trimmedMessage) {
+      setErrorMessage('Please fill in all required fields (Name, Email, and Message).');
+      setStatus('error');
+      return;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(trimmedEmail)) {
+      setErrorMessage('Please enter a valid return email address.');
+      setStatus('error');
+      return;
+    }
+
     setStatus('submitting');
     setErrorMessage('');
 
     try {
       const payload = {
-        name,
-        email,
-        organization: organization.trim() || 'Not specified',
+        name: trimmedName,
+        email: trimmedEmail,
+        organization: trimmedOrg || 'Not specified',
         inquiry_intent: activeIntentConfig.label,
-        message,
-        _subject: `${activeIntentConfig.subjectPrefix} from ${name}${organization ? ` (${organization})` : ''}`,
-        _replyto: email,
+        message: trimmedMessage,
+        _subject: `${activeIntentConfig.subjectPrefix} from ${trimmedName}${trimmedOrg ? ` (${trimmedOrg})` : ''}`,
+        _replyto: trimmedEmail,
         _gotcha: honeypot,
       };
 
-      const response = await fetch('https://formspree.io/f/xjggvzjd', {
+      const response = await fetch(FORMSPREE_ENDPOINT, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -132,11 +175,16 @@ export default function Contact() {
 
   // Fallback mailto generator in case of network issue
   const getFallbackMailto = () => {
-    const subject = encodeURIComponent(`${activeIntentConfig.subjectPrefix} from ${name || 'Website Visitor'}`);
+    const trimmedName = name.trim();
+    const trimmedEmail = email.trim();
+    const trimmedOrg = organization.trim();
+    const trimmedMessage = message.trim();
+
+    const subject = encodeURIComponent(`${activeIntentConfig.subjectPrefix} from ${trimmedName || 'Website Visitor'}`);
     const body = encodeURIComponent(
-      `Name: ${name}\nEmail: ${email}\nOrganization: ${organization}\nIntent: ${activeIntentConfig.label}\n\nMessage:\n${message}`
+      `Name: ${trimmedName}\nEmail: ${trimmedEmail}\nOrganization: ${trimmedOrg}\nIntent: ${activeIntentConfig.label}\n\nMessage:\n${trimmedMessage}`
     );
-    return `mailto:mikael.k.renberg@hotmail.com?subject=${subject}&body=${body}`;
+    return `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
   };
 
   return (
@@ -194,7 +242,7 @@ export default function Contact() {
             <div className="h-full p-6 sm:p-8 rounded-2xl bg-[#0b1a18]/75 backdrop-blur-md border border-[#045757]/70 group-hover:border-[#2DD4BF]/60 transition-all duration-300 shadow-lg flex flex-col justify-between text-left">
               <div>
                 {/* Corner Telemetry Marker */}
-                <div className="flex justify-between items-center text-[10px] font-mono text-[#408A71] pb-3 mb-4 border-b border-[#045757]/40">
+                <div className="flex justify-between items-center text-[10px] font-mono text-[#52aa8c] pb-3 mb-4 border-b border-[#045757]/40">
                   <span>SYS_ID // COMM-084</span>
                   <span className="flex items-center gap-1.5 text-[#2DD4BF] font-semibold">
                     <span className="w-1.5 h-1.5 rounded-full bg-[#2DD4BF] animate-pulse" />
@@ -214,14 +262,14 @@ export default function Contact() {
 
                 {/* 1-Click Copy Email Card */}
                 <div className="mb-4 p-4 rounded-xl bg-[#061211]/90 border border-[#045757]/80 hover:border-[#2DD4BF]/70 transition-all shadow-sm">
-                  <div className="flex items-center justify-between text-[11px] font-mono text-[#408A71] mb-1.5">
+                  <div className="flex items-center justify-between text-[11px] font-mono text-[#52aa8c] mb-1.5">
                     <span>PRIMARY EMAIL</span>
                     <span>1-CLICK CLIPBOARD</span>
                   </div>
 
                   <div className="flex items-center justify-between gap-2">
                     <span className="text-xs sm:text-sm font-mono text-white font-medium truncate select-all">
-                      mikael.k.renberg@hotmail.com
+                      {CONTACT_EMAIL}
                     </span>
 
                     <button
@@ -252,7 +300,7 @@ export default function Contact() {
                       <Icon name="linkedin" className="text-[#2DD4BF] group-hover/link:scale-110 transition-transform m-0" />
                       <span className="font-semibold text-xs sm:text-sm">LinkedIn Profile & InMail</span>
                     </div>
-                    <span className="text-xs font-mono text-[#408A71] group-hover/link:text-[#2DD4BF] transition-colors">
+                    <span className="text-xs font-mono text-[#52aa8c] group-hover/link:text-[#2DD4BF] transition-colors">
                       Connect &rarr;
                     </span>
                   </a>
@@ -267,7 +315,7 @@ export default function Contact() {
                       <Icon name="github" className="text-[#2DD4BF] group-hover/link:scale-110 transition-transform m-0" />
                       <span className="font-semibold text-xs sm:text-sm">GitHub (20+ Repositories)</span>
                     </div>
-                    <span className="text-xs font-mono text-[#408A71] group-hover/link:text-[#2DD4BF] transition-colors">
+                    <span className="text-xs font-mono text-[#52aa8c] group-hover/link:text-[#2DD4BF] transition-colors">
                       Inspect &rarr;
                     </span>
                   </a>
@@ -277,11 +325,11 @@ export default function Contact() {
               {/* Operational SLA & Bilingual Telemetry */}
               <div className="pt-4 border-t border-[#045757]/40 flex flex-col gap-2 text-xs font-mono text-[#F0F5F0]/75">
                 <div className="flex items-center justify-between">
-                  <span className="text-[#408A71]">LOCATION:</span>
+                  <span className="text-[#52aa8c]">LOCATION:</span>
                   <span className="text-white">Malmö, Sweden (CET / UTC+1)</span>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="text-[#408A71]">RESPONSE_SLA:</span>
+                  <span className="text-[#52aa8c]">RESPONSE_SLA:</span>
                   <span className="text-[#2DD4BF] font-semibold">&lt; 24h on weekdays</span>
                 </div>
                 <div className="mt-2 pt-2 border-t border-white/5 text-[11px] text-[#B0E4CC]/80">
@@ -314,7 +362,7 @@ export default function Contact() {
             <div className="h-full p-6 sm:p-8 rounded-2xl bg-[#0b1a18]/75 backdrop-blur-md border border-[#045757]/70 group-hover:border-[#2DD4BF]/60 transition-all duration-300 shadow-lg text-left flex flex-col justify-between">
               <div>
                 {/* Corner marker */}
-                <div className="flex justify-between items-center text-[10px] font-mono text-[#408A71] pb-3 mb-4 border-b border-[#045757]/40">
+                <div className="flex justify-between items-center text-[10px] font-mono text-[#52aa8c] pb-3 mb-4 border-b border-[#045757]/40">
                   <span>DISPATCH_TERMINAL // SEC-03</span>
                   <span className="text-[#2DD4BF] font-mono">FORMSPREE_ENCRYPTED</span>
                 </div>
@@ -330,7 +378,7 @@ export default function Contact() {
 
                 {/* Intent Selection Chips */}
                 <div className="mb-5">
-                  <label className="block text-[11px] font-mono text-[#408A71] uppercase tracking-wider mb-2">
+                  <label className="block text-[11px] font-mono text-[#52aa8c] uppercase tracking-wider mb-2">
                     Inquiry Frequency // Topic
                   </label>
                   <div className="flex flex-wrap gap-1.5">
@@ -340,7 +388,7 @@ export default function Contact() {
                         <button
                           key={config.id}
                           type="button"
-                          onClick={() => setSelectedIntent(config.id)}
+                          onClick={() => handleSelectIntent(config.id)}
                           className={`px-3 py-1.5 rounded-xl text-xs font-mono transition-all cursor-pointer flex items-center gap-1.5 ${
                             isSelected
                               ? 'bg-[#2DD4BF] text-[#091413] font-bold shadow-[0_0_15px_rgba(45,212,191,0.35)]'
@@ -365,7 +413,7 @@ export default function Contact() {
                     <p className="text-sm text-[#F0F5F0]/90 max-w-md font-sans">
                       Thank you for reaching out, <strong className="text-white">{name}</strong>! Your message regarding <strong className="text-[#2DD4BF] font-mono">{activeIntentConfig.label}</strong> has been delivered directly to Mikael's primary inbox.
                     </p>
-                    <div className="p-3 rounded-xl bg-[#0b1a18] border border-[#045757]/60 text-xs font-mono text-[#408A71] w-full max-w-sm">
+                    <div className="p-3 rounded-xl bg-[#0b1a18] border border-[#045757]/60 text-xs font-mono text-[#52aa8c] w-full max-w-sm">
                       STATUS: DELIVERED // RESPONSE SLA: &lt; 24H
                     </div>
                     <button
@@ -387,6 +435,7 @@ export default function Contact() {
                       style={{ display: 'none' }}
                       tabIndex={-1}
                       autoComplete="off"
+                      aria-hidden="true"
                     />
 
                     {/* Name + Organization Grid */}
@@ -446,7 +495,7 @@ export default function Contact() {
                         <label htmlFor="message-input" className="block text-xs font-mono text-[#B0E4CC] uppercase tracking-wider">
                           Payload // Message *
                         </label>
-                        <span className="text-[10px] font-mono text-[#408A71]">
+                        <span className="text-[10px] font-mono text-[#52aa8c]" aria-live="polite">
                           {message.length} / 1500 CHARS
                         </span>
                       </div>

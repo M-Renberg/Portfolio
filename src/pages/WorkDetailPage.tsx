@@ -9,6 +9,12 @@ export default function WorkDetailPage() {
   const { id } = useParams<{ id: string }>();
   const { project, loading, error } = useProjectDetail(id);
 
+  const contactIntent = project?.badges?.some(
+    (b: string) => b.toLowerCase().includes('ai') || b.toLowerCase().includes('llm')
+  )
+    ? 'ai'
+    : 'fullstack';
+
   return (
     <div className="relative min-h-[calc(100vh-2rem)] w-full flex flex-col items-center">
       {/* Glowing light ball in top right */}
@@ -238,7 +244,7 @@ export default function WorkDetailPage() {
                     I would be happy to share more details about the implementation, architecture, and technology behind this work.
                   </p>
                   <Link
-                    to="/contact"
+                    to={`/contact?intent=${contactIntent}`}
                     className="mt-1 text-xs font-mono text-[#2DD4BF] hover:text-white flex items-center gap-1 group"
                   >
                     <span>Get in touch</span>
@@ -283,7 +289,7 @@ export default function WorkDetailPage() {
                 <span>All projects &amp; work</span>
               </Link>
               <Link
-                to="/contact"
+                to={`/contact?intent=${contactIntent}`}
                 className="text-xs sm:text-sm font-mono text-[#B0E4CC] hover:text-[#2DD4BF] transition-colors"
               >
                 Get in touch &rarr;
