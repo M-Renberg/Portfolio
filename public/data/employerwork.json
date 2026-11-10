@@ -1,11 +1,41 @@
 [
   {
+    "id": "brand-about-me",
+    "slug": "brand-about-me",
+    "category": "work",
+    "employer": "Brand About Me (BAM)",
+    "role": "Full-Stack & AI Developer (Current LIA)",
+    "period": "2026 - Present",
+    "image": "/images/projects/brand-about-me.svg",
+    "title": "Marketing Intelligence AI Engine & Platform",
+    "subtitle": "Full-Stack React/TypeScript Architecture & Core AI Engine",
+    "description": "Full-stack development and applied AI implementations at Brand About Me (BAM), a digital marketing company. Architected and integrated the core AI engine powering automated marketing workflows, content intelligence, and platform operations.",
+    "longDescription": "At Brand About Me (BAM), an innovative digital marketing company, I work as a Full-Stack & AI Developer during my ongoing LIA (internship). My primary focus is bridging full-stack web development with pragmatic, automated AI systems.\n\nA central responsibility has been designing and building BAM's core AI engine, which powers automated marketing workflows, content intelligence, and smart decision-making across their digital platform.\n\nThe system is architected using React and TypeScript, emphasizing clean component boundaries, deterministic type safety, high responsiveness, and seamless integration between user-facing marketing tools and underlying AI models and services.\n\nKey areas of work include architecting modular AI pipeline steps, implementing context evaluation and prompt orchestration, developing responsive operator UIs, and integrating reliable API endpoints for marketing automation.\n\nNote: As this is a private commercial platform, proprietary marketing algorithms, client campaigns, and internal platform features remain confidential.",
+    "highlights": [
+      "Architected and built the core AI engine powering intelligent marketing workflows on the BAM platform",
+      "Engineered responsive full-stack features using React and TypeScript for maximum UI performance and type safety",
+      "Implemented AI pipeline steps for content synthesis, audience analysis, and brand tone verification",
+      "Integrated clean REST endpoints and event-driven data flows between client interfaces and AI services",
+      "Collaborated in an agile digital marketing environment to translate strategic marketing goals into software architecture",
+      "Maintained strict standards for modularity, clean code practices, and system reliability"
+    ],
+    "badges": [
+      "React",
+      "TypeScript",
+      "AI Engine",
+      "Full-Stack",
+      "Applied AI",
+      "Digital Marketing",
+      "REST APIs"
+    ]
+  },
+  {
     "id": "ats-devotion-ventures",
     "slug": "ats-devotion-ventures",
     "category": "work",
     "employer": "Devotion Ventures",
     "role": "Full-Stack Developer",
-    "period": "2025",
+    "period": "2026",
     "image": "/images/projects/work-automation.svg",
     "title": "Internal Enterprise Workflow Platform",
     "subtitle": "Reactive Full-Stack Web Platform & Background Automation",

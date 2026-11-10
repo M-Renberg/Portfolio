@@ -164,29 +164,47 @@ export default function AboutDossier() {
             {activeTab === 'production' && (
               <div className="fade-in flex flex-col gap-4 text-[#F0F5F0]/90 text-sm sm:text-base leading-relaxed">
                 <div className="flex items-center gap-2 text-xs font-mono text-[#2DD4BF] uppercase tracking-wider mb-1">
-                  <span>ENTERPRISE PRODUCTION // INTERNAL WORKFLOW PLATFORM</span>
+                  <span>COMMERCIAL PRODUCTION &amp; LIA HIGHLIGHTS</span>
                 </div>
-                <p>
-                  For <strong className="text-white">Devotion Ventures</strong>, I developed a reactive full-stack internal platform engineered for real-time operational coordination and data orchestration across internal teams.
-                </p>
-                <ul className="flex flex-col gap-2.5 text-xs sm:text-sm font-mono text-[#F0F5F0]/85 pl-1">
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#2DD4BF]">▹</span>
-                    <span><strong className="text-[#B0E4CC]">Reactive Architecture:</strong> Engineered with React, TypeScript, and Convex for low-latency state synchronization across concurrent clients.</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#2DD4BF]">▹</span>
-                    <span><strong className="text-[#B0E4CC]">Asynchronous Automation:</strong> Built scheduled background cron jobs, task orchestration, and automated alert dispatchers.</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#2DD4BF]">▹</span>
-                    <span><strong className="text-[#B0E4CC]">Safeguarded Operator Workflows:</strong> Implemented human-in-the-loop review queues and validation gates for sensitive operational actions.</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#2DD4BF]">▹</span>
-                    <span><strong className="text-[#B0E4CC]">Production Reliability:</strong> Engineered type-safe interfaces, structured error boundaries, and robust data integrity checks.</span>
-                  </li>
-                </ul>
+                <div>
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className="text-xs font-mono px-2 py-0.5 rounded-md bg-[#061211] text-[#2DD4BF] border border-[#2DD4BF]/40">CURRENT LIA</span>
+                    <strong className="text-white text-base">Brand About Me (BAM)</strong>
+                  </div>
+                  <p className="text-xs sm:text-sm text-[#F0F5F0]/85 font-mono mb-2">
+                    Full-Stack &amp; AI Developer // Digital Marketing Platform
+                  </p>
+                  <ul className="flex flex-col gap-2 text-xs sm:text-sm font-mono text-[#F0F5F0]/85 pl-1 mb-4">
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#2DD4BF]">▹</span>
+                      <span><strong className="text-[#B0E4CC]">Core AI Engine:</strong> Architected and built the centralized AI engine powering marketing automation, content intelligence, and platform decisions.</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#2DD4BF]">▹</span>
+                      <span><strong className="text-[#B0E4CC]">React &amp; TypeScript:</strong> Engineered modular, type-safe full-stack interfaces connecting operators directly to AI pipelines with high performance.</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="pt-3 border-t border-[#045757]/40">
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className="text-xs font-mono px-2 py-0.5 rounded-md bg-[#061211] text-[#B0E4CC]/80 border border-[#045757]/60">2026</span>
+                    <strong className="text-white text-base">Devotion Ventures</strong>
+                  </div>
+                  <p className="text-xs sm:text-sm text-[#F0F5F0]/85 font-mono mb-2">
+                    Full-Stack Developer // Internal Enterprise Platform
+                  </p>
+                  <ul className="flex flex-col gap-2 text-xs sm:text-sm font-mono text-[#F0F5F0]/85 pl-1">
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#2DD4BF]">▹</span>
+                      <span><strong className="text-[#B0E4CC]">Reactive Architecture:</strong> Engineered with React, TypeScript, and Convex for low-latency state synchronization across concurrent clients.</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#2DD4BF]">▹</span>
+                      <span><strong className="text-[#B0E4CC]">Asynchronous Automation:</strong> Built scheduled background cron jobs, task orchestration, and human-in-the-loop review gates.</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
             )}
 

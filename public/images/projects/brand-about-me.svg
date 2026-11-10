@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgBAM" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#041412" />
+      <stop offset="50%" stop-color="#08221d" />
+      <stop offset="100%" stop-color="#020a08" />
+    </linearGradient>
+    <linearGradient id="bamAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2DD4BF" />
+      <stop offset="100%" stop-color="#408A71" />
+    </linearGradient>
+    <radialGradient id="bamAiGlow" cx="60%" cy="30%" r="55%">
+      <stop offset="0%" stop-color="#2DD4BF" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#2DD4BF" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="purpleGlow" cx="20%" cy="70%" r="45%">
+      <stop offset="0%" stop-color="#045757" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#045757" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bgBAM)" />
+  <circle cx="500" cy="140" r="230" fill="url(#bamAiGlow)" />
+  <circle cx="160" cy="300" r="190" fill="url(#purpleGlow)" />
+
+  <!-- Subtle Cyber Grid -->
+  <g stroke="#045757" stroke-opacity="0.25" stroke-width="1">
+    <line x1="0" y1="90" x2="800" y2="90" />
+    <line x1="0" y1="180" x2="800" y2="180" />
+    <line x1="0" y1="270" x2="800" y2="270" />
+    <line x1="0" y1="360" x2="800" y2="360" />
+    <line x1="160" y1="0" x2="160" y2="450" />
+    <line x1="320" y1="0" x2="320" y2="450" />
+    <line x1="480" y1="0" x2="480" y2="450" />
+    <line x1="640" y1="0" x2="640" y2="450" />
+  </g>
+
+  <!-- Main Window Frame -->
+  <rect x="65" y="45" width="670" height="360" rx="16" fill="#071b18" stroke="#045757" stroke-width="1.5" opacity="0.96" />
+  
+  <!-- Window Header Bar -->
+  <rect x="65" y="45" width="670" height="42" rx="16" fill="#0b2823" />
+  <circle cx="95" cy="66" r="5" fill="#EF4444" opacity="0.8" />
+  <circle cx="113" cy="66" r="5" fill="#F59E0B" opacity="0.8" />
+  <circle cx="131" cy="66" r="5" fill="#10B981" opacity="0.8" />
+  <text x="400" y="71" fill="#B0E4CC" font-family="monospace" font-size="12" text-anchor="middle" font-weight="600">BRAND ABOUT ME (BAM) // MARKETING AI ENGINE &amp; PLATFORM</text>
+  <rect x="600" y="55" width="115" height="22" rx="11" fill="#051412" stroke="#2DD4BF" stroke-width="1" stroke-opacity="0.5" />
+  <text x="657" y="69" fill="#2DD4BF" font-family="monospace" font-size="9" text-anchor="middle" font-weight="bold">ACTIVE LIA</text>
+
+  <!-- Left: Marketing Campaign & Input Signals -->
+  <g transform="translate(95, 105)">
+    <!-- Box 1: Marketing Ingestion -->
+    <rect x="0" y="0" width="185" height="80" rx="10" fill="#051613" stroke="#045757" stroke-width="1" />
+    <text x="15" y="24" fill="#2DD4BF" font-family="monospace" font-size="10" font-weight="bold">CAMPAIGN INPUT // CLIENT DATA</text>
+    <text x="15" y="48" fill="#FFFFFF" font-family="sans-serif" font-weight="bold" font-size="13">Digital Marketing Flow</text>
+    <text x="15" y="66" fill="#B0E4CC" font-family="monospace" font-size="9" opacity="0.8">Brand Voice &amp; Strategy Sync</text>
+
+    <!-- Box 2: Full-Stack React & TS Client -->
+    <rect x="0" y="95" width="185" height="90" rx="10" fill="#051613" stroke="#2DD4BF" stroke-width="1" stroke-opacity="0.4" />
+    <text x="15" y="118" fill="#2DD4BF" font-family="monospace" font-size="10" font-weight="bold">REACT &amp; TYPESCRIPT UI</text>
+    <text x="15" y="140" fill="#FFFFFF" font-family="sans-serif" font-weight="bold" font-size="12">Interactive Operator Portal</text>
+    <text x="15" y="158" fill="#B0E4CC" font-family="monospace" font-size="9" opacity="0.75">Deterministic State &amp; Type Safety</text>
+    <text x="15" y="173" fill="#408A71" font-family="monospace" font-size="8">Real-time Marketing Feedback</text>
+
+    <!-- Box 3: API Orchestration -->
+    <rect x="0" y="200" width="185" height="80" rx="10" fill="#051613" stroke="#045757" stroke-width="1" />
+    <text x="15" y="224" fill="#2DD4BF" font-family="monospace" font-size="10" font-weight="bold">PLATFORM INTEGRATION</text>
+    <text x="15" y="248" fill="#FFFFFF" font-family="sans-serif" font-weight="bold" font-size="13">REST &amp; Event Handlers</text>
+    <text x="15" y="266" fill="#B0E4CC" font-family="monospace" font-size="9" opacity="0.8">Modular Backend Connectors</text>
+  </g>
+
+  <!-- Center Arrow / Connection Pipes -->
+  <g stroke="#2DD4BF" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.6">
+    <line x1="290" y1="145" x2="340" y2="145" />
+    <line x1="290" y1="240" x2="340" y2="240" />
+    <line x1="535" y1="195" x2="575" y2="195" />
+  </g>
+
+  <!-- Center: Core AI Engine Architecture -->
+  <g transform="translate(345, 105)">
+    <rect x="0" y="0" width="185" height="280" rx="12" fill="#09241f" stroke="#2DD4BF" stroke-width="1.5" />
+    
+    <!-- Engine Header -->
+    <rect x="0" y="0" width="185" height="38" rx="12" fill="#0d352e" />
+    <text x="92" y="24" fill="#2DD4BF" font-family="monospace" font-size="11" font-weight="bold" text-anchor="middle">CORE AI ENGINE</text>
+
+    <!-- Node 1: Context & Prompt Ingestion -->
+    <rect x="15" y="52" width="155" height="52" rx="8" fill="#051613" stroke="#045757" stroke-width="1" />
+    <text x="25" y="72" fill="#B0E4CC" font-family="monospace" font-size="9" font-weight="bold">1. Context &amp; Intent</text>
+    <text x="25" y="90" fill="#FFFFFF" font-family="sans-serif" font-size="10">Target Audience Analysis</text>
+
+    <!-- Node 2: AI Processing & Logic -->
+    <rect x="15" y="115" width="155" height="54" rx="8" fill="#061c17" stroke="#2DD4BF" stroke-width="1" stroke-opacity="0.6" />
+    <text x="25" y="135" fill="#2DD4BF" font-family="monospace" font-size="9" font-weight="bold">2. LLM Engine Core</text>
+    <text x="25" y="153" fill="#FFFFFF" font-family="sans-serif" font-size="10">Marketing Intelligence</text>
+
+    <!-- Node 3: Content Synthesis -->
+    <rect x="15" y="180" width="155" height="52" rx="8" fill="#051613" stroke="#045757" stroke-width="1" />
+    <text x="25" y="200" fill="#B0E4CC" font-family="monospace" font-size="9" font-weight="bold">3. Verification &amp; Filter</text>
+    <text x="25" y="218" fill="#FFFFFF" font-family="sans-serif" font-size="10">Brand Tone Validation</text>
+
+    <!-- Status Indicator -->
+    <circle cx="35" cy="254" r="4" fill="#2DD4BF" />
+    <text x="46" y="258" fill="#2DD4BF" font-family="monospace" font-size="9">ENGINE STATUS: ONLINE</text>
+  </g>
+
+  <!-- Right: Generated Output & Analytics Dashboard -->
+  <g transform="translate(580, 105)">
+    <!-- Card 1: Production Output -->
+    <rect x="0" y="0" width="135" height="135" rx="10" fill="#051613" stroke="#045757" stroke-width="1" />
+    <text x="12" y="22" fill="#2DD4BF" font-family="monospace" font-size="9" font-weight="bold">GENERATED ASSETS</text>
+    
+    <rect x="12" y="32" width="110" height="20" rx="4" fill="#09241f" />
+    <text x="20" y="46" fill="#B0E4CC" font-family="sans-serif" font-size="9">Ad Copy &amp; Creatives</text>
+
+    <rect x="12" y="58" width="110" height="20" rx="4" fill="#09241f" />
+    <text x="20" y="72" fill="#B0E4CC" font-family="sans-serif" font-size="9">Target Audience Segs</text>
+
+    <rect x="12" y="84" width="110" height="20" rx="4" fill="#09241f" />
+    <text x="20" y="98" fill="#B0E4CC" font-family="sans-serif" font-size="9">Strategy Insights</text>
+
+    <text x="12" y="122" fill="#408A71" font-family="monospace" font-size="8">AUTOMATED PIPELINE</text>
+
+    <!-- Card 2: Metrics / Performance -->
+    <rect x="0" y="148" width="135" height="132" rx="10" fill="#051613" stroke="#2DD4BF" stroke-width="1" stroke-opacity="0.4" />
+    <text x="12" y="170" fill="#2DD4BF" font-family="monospace" font-size="9" font-weight="bold">AI VELOCITY</text>
+
+    <text x="12" y="202" fill="#FFFFFF" font-family="sans-serif" font-weight="bold" font-size="22">10x</text>
+    <text x="12" y="218" fill="#B0E4CC" font-family="monospace" font-size="8">Campaign Turnaround</text>
+
+    <line x1="12" y1="230" x2="122" y2="230" stroke="#045757" stroke-width="1" />
+    <text x="12" y="248" fill="#2DD4BF" font-family="monospace" font-size="8">REACT + TS + AI</text>
+    <text x="12" y="264" fill="#F0F5F0" font-family="monospace" font-size="8" opacity="0.7">Enterprise-Grade</text>
+  </g>
+</svg>

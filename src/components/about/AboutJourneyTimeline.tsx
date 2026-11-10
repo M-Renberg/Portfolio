@@ -3,7 +3,16 @@ import { Link } from 'react-router-dom';
 export default function AboutJourneyTimeline() {
   const milestones = [
     {
-      period: '2025',
+      period: '2026 - Present',
+      role: 'Full-Stack & AI Developer',
+      organization: 'Brand About Me (BAM)',
+      badge: 'ACTIVE_LIA',
+      badgeColor: 'text-[#2DD4BF] border-[#2DD4BF]/40 bg-[#061211]',
+      desc: 'Full-stack engineering and applied AI implementations for a digital marketing company. Architecting and integrating the core AI engine powering intelligent marketing workflows on their platform using React and TypeScript.',
+      skills: ['React', 'TypeScript', 'AI Engine', 'Full-Stack', 'Applied AI', 'Marketing Tech'],
+    },
+    {
+      period: '2026',
       role: 'Full-Stack Developer',
       organization: 'Devotion Ventures',
       badge: 'COMMERCIAL_EXPERIENCE',
@@ -76,6 +85,18 @@ export default function AboutJourneyTimeline() {
               <p className="text-sm text-[#F0F5F0]/85 leading-relaxed mb-4 font-sans">
                 {item.desc}
               </p>
+
+              {item.organization === 'Brand About Me (BAM)' && (
+                <div className="mb-4">
+                  <Link
+                    to="/work/brand-about-me"
+                    className="inline-flex items-center gap-1.5 text-xs font-mono text-[#2DD4BF] hover:underline"
+                  >
+                    <span>View Architecture Case Study</span>
+                    <span>&rarr;</span>
+                  </Link>
+                </div>
+              )}
 
               {item.organization === 'Devotion Ventures' && (
                 <div className="mb-4">

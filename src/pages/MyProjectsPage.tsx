@@ -125,18 +125,20 @@ export default function MyProjects() {
   ];
 
   const aiMlProjects = allProjects.filter((p) =>
+    p.id === 'brand-about-me' ||
     p.id === 'project-telco-churn' ||
     p.id === 'orcale-llm' ||
     p.id === 'ats-devotion-ventures' ||
     p.id === 'slime-helper-desktop' ||
     p.badges.some((b) =>
-      ['machine learning', 'pytorch', 'transformers', 'fastapi', 'scikit-learn', 'ai', 'gemini', 'claude'].includes(b.toLowerCase())
+      ['machine learning', 'pytorch', 'transformers', 'fastapi', 'scikit-learn', 'ai', 'ai engine', 'applied ai', 'gemini', 'claude'].includes(b.toLowerCase())
     )
   );
 
   const workProjects = employerWork || [];
 
   const fullstackProjects = allProjects.filter((p) =>
+    p.id === 'brand-about-me' ||
     p.id === 'ats-devotion-ventures' ||
     p.id === 'words-and-dice' ||
     p.id === 'filmvisarna' ||
