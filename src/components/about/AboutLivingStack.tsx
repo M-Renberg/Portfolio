@@ -13,18 +13,18 @@ const techItems: TechItem[] = [
   { name: 'Scikit-Learn', category: 'ai', proof: 'Telco Churn predictive classification', icon: '📈' },
   { name: 'Hugging Face (SmolLM2)', category: 'ai', proof: 'Local offline SLM inference in Oracle-LLM', icon: '🤗' },
   { name: 'FastAPI & Pydantic', category: 'ai', proof: 'Typed ML microservices & schema validation', icon: '⚡' },
-  { name: 'LLM Orchestration', category: 'ai', proof: 'Automated candidate screening workflows', icon: '🤖' },
+  { name: 'LLM Orchestration', category: 'ai', proof: 'Local SLM pipelines & structured outputs', icon: '🤖' },
   { name: 'Streamlit', category: 'ai', proof: 'Interactive ML exploration dashboards', icon: '📊' },
 
   // Frontend & UI
-  { name: 'React', category: 'frontend', proof: 'Devotion Ventures ATS & reactive SPAs', icon: '⚛️' },
+  { name: 'React', category: 'frontend', proof: 'Production SPAs & internal web platforms', icon: '⚛️' },
   { name: 'TypeScript', category: 'frontend', proof: 'Strict end-to-end typing across portfolio', icon: '🔷' },
   { name: 'Tailwind CSS v4', category: 'frontend', proof: 'Cyberpunk HUD & frosted-glass styling', icon: '🎨' },
   { name: 'Vite', category: 'frontend', proof: 'Fast modern build tooling & bundling', icon: '⚡' },
   { name: 'XAML & XML', category: 'frontend', proof: 'WPF & desktop interfaces in Slime Helper', icon: '🪟' },
 
   // Backend & Cloud Systems
-  { name: 'Convex', category: 'backend', proof: 'Reactive cloud DB & crons in Devotion ATS', icon: '🌐' },
+  { name: 'Convex', category: 'backend', proof: 'Reactive cloud DB & scheduled crons in production', icon: '🌐' },
   { name: 'C# & .NET', category: 'backend', proof: 'Slime Helper Desktop & Minimal APIs', icon: '🟣' },
   { name: 'Python', category: 'backend', proof: 'Data pipelines, FastAPI services & ML', icon: '🐍' },
   { name: 'PostgreSQL & Supabase', category: 'backend', proof: 'Words and Di(c)e multiplayer state', icon: '🐘' },

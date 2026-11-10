@@ -3,13 +3,13 @@ import { Link } from 'react-router-dom';
 export default function AboutJourneyTimeline() {
   const milestones = [
     {
-      period: '2025 - Present',
-      role: 'Full-Stack & AI Developer (Internship)',
+      period: '2025',
+      role: 'Full-Stack Developer',
       organization: 'Devotion Ventures',
       badge: 'COMMERCIAL_EXPERIENCE',
       badgeColor: 'text-[#2DD4BF] border-[#2DD4BF]/40 bg-[#061211]',
-      desc: 'Engineered an internal Applicant Tracking System (ATS) platform. Implemented Convex reactive cloud databases, real-time candidate pipelines, automated AI qualification parsing, and human-in-the-loop email review queues.',
-      skills: ['React', 'TypeScript', 'Convex', 'Tailwind CSS', 'AI Pipelines'],
+      desc: 'Engineered a reactive full-stack internal platform with React, TypeScript, and Convex. Focused on real-time state synchronization, asynchronous worker pipelines, and safeguarded operator review queues.',
+      skills: ['React', 'TypeScript', 'Convex', 'Tailwind CSS', 'Cloud Architecture'],
     },
     {
       period: '2024 - 2026',
@@ -83,7 +83,7 @@ export default function AboutJourneyTimeline() {
                     to="/work/ats-devotion-ventures"
                     className="inline-flex items-center gap-1.5 text-xs font-mono text-[#2DD4BF] hover:underline"
                   >
-                    <span>View ATS Architecture Case Study</span>
+                    <span>View Architecture Case Study</span>
                     <span>&rarr;</span>
                   </Link>
                 </div>

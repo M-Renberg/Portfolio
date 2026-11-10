@@ -21,10 +21,10 @@ const THOUGHT_PHRASES = [
   'pydantic.validate_schema()',
   'token_stream: [0x4F, 0x8A]',
 
-  // Production Serving & Full-Stack Architecture (FastAPI, Convex, Devotion ATS)
+  // Production Serving & Full-Stack Architecture (FastAPI, Convex, Reactive DB)
   'fastapi.post("/api/v1/predict")',
   'uvicorn.workers: ACTIVE',
-  'convex.mutation: candidate_sync',
+  'convex.mutation: live_state_sync',
   'human_in_the_loop: APPROVED',
   'sqlite_3nf.constraint_check()',
   'type_safety: STRICT',

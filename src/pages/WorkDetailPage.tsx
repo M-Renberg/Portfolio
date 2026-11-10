@@ -241,7 +241,9 @@ export default function WorkDetailPage() {
                 <div className="p-6 rounded-2xl bg-[#061211]/90 border border-[#2DD4BF]/40 text-left flex flex-col gap-3 shadow-lg">
                   <h4 className="text-sm font-bold text-[#B0E4CC]">Interested in Learning More?</h4>
                   <p className="text-xs text-[#F0F5F0]/80">
-                    I would be happy to share more details about the implementation, architecture, and technology behind this work.
+                    {project.employer
+                      ? 'I would be happy to discuss high-level architecture, technology choices, and engineering patterns behind this work.'
+                      : 'I would be happy to share more details about the implementation, architecture, and technology behind this work.'}
                   </p>
                   <Link
                     to={`/contact?intent=${contactIntent}`}

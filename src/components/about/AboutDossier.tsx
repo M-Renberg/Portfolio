@@ -68,10 +68,6 @@ export default function AboutDossier() {
               {/* System Specs List */}
               <div className="flex flex-col gap-2 text-xs font-mono pt-3 border-t border-[#045757]/40 text-[#F0F5F0]/85">
                 <div className="flex justify-between items-center py-1 border-b border-white/5">
-                  <span className="text-[#408A71]">INTERNSHIP:</span>
-                  <span className="text-white font-medium">Devotion Ventures</span>
-                </div>
-                <div className="flex justify-between items-center py-1 border-b border-white/5">
                   <span className="text-[#408A71]">EDUCATION:</span>
                   <span className="text-white font-medium">NBI-Handelsakademin</span>
                 </div>
@@ -126,7 +122,7 @@ export default function AboutDossier() {
               }`}
             >
               <span>🏢</span>
-              <span>Production // Devotion Ventures</span>
+              <span>Production</span>
             </button>
 
             <button
@@ -149,8 +145,7 @@ export default function AboutDossier() {
               <div className="fade-in flex flex-col gap-4 text-[#F0F5F0]/90 text-sm sm:text-base leading-relaxed">
                 <p>
                   Hey! I'm <strong className="text-white font-semibold">Mikael Renberg</strong>, a software development and AI engineering student based in Malmö, Sweden, studying at{' '}
-                  <span className="text-[#2DD4BF] font-semibold">NBI-Handelsakademin</span> while interning at{' '}
-                  <span className="text-[#2DD4BF] font-semibold">Devotion Ventures</span>.
+                  <span className="text-[#2DD4BF] font-semibold">NBI-Handelsakademin</span>.
                 </p>
                 <p>
                   My focus is where <strong className="text-white">reactive full-stack architecture meets applied AI systems</strong>. Rather than relying on fragile prompt engineering or isolated scripts, I build deterministic software around machine learning models—with type-safe APIs, structured schema validation, and responsive user experiences.
@@ -169,27 +164,27 @@ export default function AboutDossier() {
             {activeTab === 'production' && (
               <div className="fade-in flex flex-col gap-4 text-[#F0F5F0]/90 text-sm sm:text-base leading-relaxed">
                 <div className="flex items-center gap-2 text-xs font-mono text-[#2DD4BF] uppercase tracking-wider mb-1">
-                  <span>ENTERPRISE CASE STUDY // INTERNAL ATS</span>
+                  <span>ENTERPRISE PRODUCTION // INTERNAL WORKFLOW PLATFORM</span>
                 </div>
                 <p>
-                  At <strong className="text-white">Devotion Ventures</strong>, I was tasked with engineering an automated, end-to-end <strong className="text-white">Applicant Tracking System (ATS)</strong> to streamline high-volume talent intake and candidate evaluation.
+                  For <strong className="text-white">Devotion Ventures</strong>, I developed a reactive full-stack internal platform engineered for real-time operational coordination and data orchestration across internal teams.
                 </p>
                 <ul className="flex flex-col gap-2.5 text-xs sm:text-sm font-mono text-[#F0F5F0]/85 pl-1">
                   <li className="flex items-start gap-2">
                     <span className="text-[#2DD4BF]">▹</span>
-                    <span><strong className="text-[#B0E4CC]">Reactive Architecture:</strong> Engineered using React, TypeScript, and Convex for real-time state synchronization without polling overhead.</span>
+                    <span><strong className="text-[#B0E4CC]">Reactive Architecture:</strong> Engineered with React, TypeScript, and Convex for low-latency state synchronization across concurrent clients.</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[#2DD4BF]">▹</span>
-                    <span><strong className="text-[#B0E4CC]">AI Candidate Screening:</strong> Integrated automated workflows that parse and evaluate candidate qualifications against structured criteria.</span>
+                    <span><strong className="text-[#B0E4CC]">Asynchronous Automation:</strong> Built scheduled background cron jobs, task orchestration, and automated alert dispatchers.</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[#2DD4BF]">▹</span>
-                    <span><strong className="text-[#B0E4CC]">Human-in-the-Loop Safeguards:</strong> High-stakes actions (such as outgoing communications) route through an approval queue before dispatch.</span>
+                    <span><strong className="text-[#B0E4CC]">Safeguarded Operator Workflows:</strong> Implemented human-in-the-loop review queues and validation gates for sensitive operational actions.</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[#2DD4BF]">▹</span>
-                    <span><strong className="text-[#B0E4CC]">Automated Background Pipelines:</strong> Scheduled cron jobs and notification systems for SLA tracking.</span>
+                    <span><strong className="text-[#B0E4CC]">Production Reliability:</strong> Engineered type-safe interfaces, structured error boundaries, and robust data integrity checks.</span>
                   </li>
                 </ul>
               </div>

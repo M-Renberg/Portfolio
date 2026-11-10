@@ -12,7 +12,7 @@ export default function AboutProductionFeature() {
           </h2>
         </div>
         <span className="hidden sm:inline-block text-xs font-mono text-[#408A71]">
-          ENTERPRISE_SYSTEM // ATS
+          ENTERPRISE_SYSTEM // PRODUCTION_WORK
         </span>
       </div>
 
@@ -29,19 +29,19 @@ export default function AboutProductionFeature() {
                 🏢 Devotion Ventures
               </span>
               <span className="px-2.5 py-0.5 rounded-md text-xs font-mono bg-[#061211] text-[#B0E4CC]/80 border border-[#045757]/60">
-                Full-Stack & AI Developer Intern
+                Full-Stack Developer
               </span>
-              <span className="px-2.5 py-0.5 rounded-md text-xs font-mono bg-[#061211] text-[#408A71]">
-                2025 - Present
+              <span className="px-2.5 py-0.5 rounded-md text-xs font-mono bg-[#061211] text-[#408A71] border border-[#045757]/40">
+                🔒 Private Internal Platform
               </span>
             </div>
 
             <h3 className="text-xl sm:text-2xl font-bold text-white group-hover:text-[#B0E4CC] transition-colors">
-              Applicant Tracking System (ATS) & Candidate Pipeline Platform
+              Internal Enterprise Workflow &amp; Operations Platform
             </h3>
 
             <p className="text-sm sm:text-base text-[#F0F5F0]/85 leading-relaxed">
-              Designed and implemented an automated candidate intake and evaluation platform for Devotion Ventures. Built with a reactive backend and modern UI to eliminate recruitment bottlenecks and streamline candidate evaluation.
+              Designed and implemented a reactive full-stack internal platform for Devotion Ventures to coordinate operational workflows. Built with a real-time cloud backend and modern web UI to automate task orchestration and data synchronization.
             </p>
 
             {/* Architecture Highlights Pill Grid */}
@@ -50,31 +50,31 @@ export default function AboutProductionFeature() {
                 <span className="text-[#2DD4BF]">⚡</span>
                 <div>
                   <strong className="text-white block">Reactive Cloud (Convex)</strong>
-                  <span className="text-[#F0F5F0]/70">Real-time state sync & background worker crons.</span>
+                  <span className="text-[#F0F5F0]/70">Real-time state synchronization &amp; reactive queries.</span>
                 </div>
               </div>
 
               <div className="p-2.5 rounded-xl bg-[#061211]/80 border border-[#045757]/60 flex items-start gap-2">
-                <span className="text-[#2DD4BF]">🤖</span>
+                <span className="text-[#2DD4BF]">🔄</span>
                 <div>
-                  <strong className="text-white block">Automated AI Screening</strong>
-                  <span className="text-[#F0F5F0]/70">Structured skill parsing & candidate evaluations.</span>
+                  <strong className="text-white block">Automated Pipelines</strong>
+                  <span className="text-[#F0F5F0]/70">Scheduled cron jobs &amp; asynchronous task processing.</span>
+                </div>
+              </div>
+
+              <div className="p-2.5 rounded-xl bg-[#061211]/80 border border-[#045757]/60 flex items-start gap-2">
+                <span className="text-[#2DD4BF]">🚦</span>
+                <div>
+                  <strong className="text-white block">Operator Review Gates</strong>
+                  <span className="text-[#F0F5F0]/70">Multi-step validation safeguards for sensitive actions.</span>
                 </div>
               </div>
 
               <div className="p-2.5 rounded-xl bg-[#061211]/80 border border-[#045757]/60 flex items-start gap-2">
                 <span className="text-[#2DD4BF]">🛡️</span>
                 <div>
-                  <strong className="text-white block">Human-in-the-Loop (HITL)</strong>
-                  <span className="text-[#F0F5F0]/70">Approval gate for outgoing correspondence.</span>
-                </div>
-              </div>
-
-              <div className="p-2.5 rounded-xl bg-[#061211]/80 border border-[#045757]/60 flex items-start gap-2">
-                <span className="text-[#2DD4BF]">⏱️</span>
-                <div>
-                  <strong className="text-white block">SLA Monitoring & Sync</strong>
-                  <span className="text-[#F0F5F0]/70">Automated candidate response timers & alerts.</span>
+                  <strong className="text-white block">Type-Safe Architecture</strong>
+                  <span className="text-[#F0F5F0]/70">Strict schema validation &amp; deterministic state models.</span>
                 </div>
               </div>
             </div>
@@ -98,7 +98,7 @@ export default function AboutProductionFeature() {
               </div>
 
               <p className="text-xs text-[#F0F5F0]/75 leading-relaxed mb-6 font-mono">
-                "Proves hands-on commercial experience building the exact software talent acquisition teams use every single day."
+                "Demonstrates hands-on commercial experience building scalable, reactive enterprise platforms and mission-critical internal tools."
               </p>
             </div>
 
@@ -106,7 +106,7 @@ export default function AboutProductionFeature() {
               to="/work/ats-devotion-ventures"
               className="w-full py-2.5 px-4 rounded-xl bg-[#045757]/60 text-xs font-mono font-bold text-[#2DD4BF] border border-[#2DD4BF]/50 hover:bg-[#2DD4BF] hover:text-[#091413] transition-all text-center flex items-center justify-center gap-2 cursor-pointer shadow-sm"
             >
-              <span>Inspect Full ATS Case Study</span>
+              <span>Inspect Architecture Case Study</span>
               <span>&rarr;</span>
             </Link>
           </div>
