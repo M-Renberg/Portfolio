@@ -150,6 +150,7 @@ export default function MyProjects() {
   const systemsProjects = allProjects.filter((p) =>
     p.id === 'restaurang-db' ||
     p.id === 'slime-helper-desktop' ||
+    p.id === 'slime-helper' ||
     p.id === 'chill-night-mode' ||
     p.id === 'chill-night-obsidian' ||
     p.id === 'chill-night-starship' ||
@@ -158,7 +159,7 @@ export default function MyProjects() {
     p.id === 'trading-system' ||
     p.id === 'school-management' ||
     p.id === 'restaurang' ||
-    p.id === 'christmas-game'
+    p.id === 'christmas-gift-game'
   );
 
   const folders = [

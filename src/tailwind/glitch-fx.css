@@ -1,6 +1,3 @@
-@import "tailwindcss";
-
-
 @keyframes glitch-anim {
   0% { clip-path: inset(50% 0 30% 0); transform: translate(-5px, -5px); }
   2% { clip-path: inset(10% 0 80% 0); transform: translate(10px, 0px); }
@@ -141,5 +138,22 @@
 
 .float-row-4 {
   animation: floatRow4 6.6s ease-in-out 0.8s infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .glitch-text::after,
+  .center-fade-in,
+  .fade-in-delayed-1,
+  .fade-in-delayed-2,
+  .animate-black-fade,
+  .float-row-1,
+  .float-row-2,
+  .float-row-3,
+  .float-row-4 {
+    animation: none !important;
+    clip-path: none !important;
+    filter: none !important;
+    transform: none !important;
+  }
 }
 

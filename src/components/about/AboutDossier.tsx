@@ -109,7 +109,7 @@ export default function AboutDossier() {
               }`}
             >
               <span className="text-[#2DD4BF] font-mono">//</span>
-              <span>Overview // The Pitch</span>
+              <span>The Pitch</span>
             </button>
 
             <button
@@ -135,7 +135,7 @@ export default function AboutDossier() {
               }`}
             >
               <span className="text-[#2DD4BF] font-mono">&lt;&gt;</span>
-              <span>Beyond Code // Ergonomics</span>
+              <span>Beyond Code</span>
             </button>
           </div>
 
@@ -144,17 +144,17 @@ export default function AboutDossier() {
             {activeTab === 'overview' && (
               <div className="fade-in flex flex-col gap-4 text-[#F0F5F0]/90 text-sm sm:text-base leading-relaxed">
                 <p>
-                  Hey! I'm <strong className="text-white font-semibold">Mikael Renberg</strong>, a software development and AI engineering student based in Malmö, Sweden, studying at{' '}
+                  Hey! I&apos;m <strong className="text-white font-semibold">Mikael Renberg</strong>, a software development and AI engineering student based in Malmö, Sweden, studying at{' '}
                   <span className="text-[#2DD4BF] font-semibold">NBI-Handelsakademin</span>.
                 </p>
                 <p>
                   My focus is where <strong className="text-white">reactive full-stack architecture meets applied AI systems</strong>. Rather than relying on fragile prompt engineering or isolated scripts, I build deterministic software around machine learning models—with type-safe APIs, structured schema validation, and responsive user experiences.
                 </p>
                 <p>
-                  My toolkit spans both modern web ecosystems (<span className="text-[#2DD4BF] font-mono text-sm">React, TypeScript, Tailwind, Convex</span>) and structured backend systems (<span className="text-[#2DD4BF] font-mono text-sm">C#, .NET, Python, FastAPI, SQL</span>). Across 20+ shipped projects, I've tackled everything from local quantized LLMs on CPU to relational 3NF databases and TDD multiplayer games.
+                  My toolkit spans both modern web ecosystems (<span className="text-[#2DD4BF] font-mono text-sm">React, TypeScript, Tailwind, Convex</span>) and structured backend systems (<span className="text-[#2DD4BF] font-mono text-sm">C#, .NET, Python, FastAPI, SQL</span>). Across 20+ shipped projects, I&apos;ve tackled everything from local quantized LLMs on CPU to relational 3NF databases and TDD multiplayer games.
                 </p>
 
-                <div className="mt-2 p-3.5 rounded-xl bg-[#061211]/70 border border-[#045757]/60 flex items-center justify-between text-xs font-mono text-[#B0E4CC]">
+                <div className="mt-2 p-3.5 rounded-xl bg-[#061211]/80 border border-[#045757]/60 flex items-center justify-between text-xs font-mono text-[#B0E4CC]">
                   <span className="text-[#2DD4BF] font-semibold">[AXIOM] Core Belief:</span>
                   <span className="text-white/80">An AI model is only as valuable as the software architecture wrapped around it.</span>
                 </div>
@@ -211,10 +211,10 @@ export default function AboutDossier() {
             {activeTab === 'beyond' && (
               <div className="fade-in flex flex-col gap-4 text-[#F0F5F0]/90 text-sm sm:text-base leading-relaxed">
                 <p>
-                  Great software engineering isn't just about code compiling—it's about <strong className="text-white">developer ergonomics, empathy for users, and team collaboration</strong>.
+                  Great software engineering isn&apos;t just about code compiling—it&apos;s about <strong className="text-white">developer ergonomics, empathy for users, and team collaboration</strong>.
                 </p>
                 <p>
-                  I'm passionate about developer tools and workspaces. I created and published{' '}
+                  I&apos;m passionate about developer tools and workspaces. I created and published{' '}
                   <span className="text-[#2DD4BF] font-semibold">Chill Night Mode</span> on the VS Code Marketplace to minimize eye fatigue during late-night coding sessions, built a custom version for Obsidian, and engineered{' '}
                   <span className="text-[#2DD4BF] font-semibold">Slime Helper</span> (an animated desktop companion in WPF that monitors git churn and reminds developers to take breaks).
                 </p>

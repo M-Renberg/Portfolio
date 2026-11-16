@@ -44,7 +44,7 @@ export default function useProjectDetail(id: string | undefined) {
         }
       } catch (err) {
         if (isMounted) {
-          setError(err instanceof Error ? err.message : 'Kunde inte läsa in projektet.');
+          setError(err instanceof Error ? err.message : 'Failed to load project details.');
           setLoading(false);
         }
       }

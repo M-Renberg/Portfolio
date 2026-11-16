@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Chonburi&family=Courgette&family=Gelasio:ital,wght@0,400..700;1,400..700&family=Iceberg&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Iceberg&family=Inter:wght@400;500;600;700&display=swap');
 
 
 @theme {
@@ -23,29 +23,23 @@
 
 :root {
   background-color: #000000;
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   line-height: 1.5;
 
-  @layer base{
-
-    h1{
-        color: var(--color-primary-font);
-        font-family: Iceberg;
-  
+  @layer base {
+    h1 {
+      color: var(--color-primary-font);
+      font-family: 'Iceberg', sans-serif;
     }
-    h2,h3{
-        color: var(--color-third-bg);
-        font-family: Courgette;
-  
+    h2, h3 {
+      color: var(--color-third-bg);
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
     }
-    p, span, label{
+    p, span, label {
       color: #F0F5F0;
-      font-family: Gelasio;
-  
     }
-    h4{
+    h4 {
       color: #2DD4BF;
-      font-family: Chonburi;
     }
   }
 }
@@ -61,7 +55,7 @@ body {
 
 #root {
   width: 100%;
-  max-width: 1126px;
+  max-width: 1280px;
   margin: 0 auto;
   min-height: 100vh;
 }

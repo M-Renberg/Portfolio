@@ -37,6 +37,10 @@
     "role": "Full-Stack Developer",
     "period": "2026",
     "image": "/images/projects/work-automation.svg",
+    "images": [
+      "/images/projects/work-automation.svg",
+      "/images/projects/work-portal.svg"
+    ],
     "title": "Internal Enterprise Workflow Platform",
     "subtitle": "Reactive Full-Stack Web Platform & Background Automation",
     "description": "A full-stack internal enterprise platform built for Devotion Ventures to streamline operational workflows with real-time data synchronization, background job automation, and operator review gates.",

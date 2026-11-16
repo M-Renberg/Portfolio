@@ -55,8 +55,11 @@ const badgeConfigs: Record<string, { name: string; color: string; icon: string }
   'agile/scrum': { name: 'Agile/Scrum', color: '0052CC', icon: 'jira' },
   'database design': { name: 'Database Design', color: '4479A1', icon: 'mysql' },
   'oop': { name: 'OOP', color: '239120', icon: 'dotnet' },
-  'ai': { name: 'AI', color: '2DD4BF', icon: 'openai' },
-  'ai integration': { name: 'AI Integration', color: '2DD4BF', icon: 'openai' }
+  'ai': { name: 'AI', color: '2DD4BF', icon: 'googlegemini' },
+  'ai engine': { name: 'AI Engine', color: '2DD4BF', icon: 'googlegemini' },
+  'applied ai': { name: 'Applied AI', color: '2DD4BF', icon: 'googlegemini' },
+  'ai integration': { name: 'AI Integration', color: '2DD4BF', icon: 'googlegemini' },
+  'digital marketing': { name: 'Digital Marketing', color: '2DD4BF', icon: 'googleanalytics' }
 };
 
 export function Badge({ tech }: { tech: string }) {
