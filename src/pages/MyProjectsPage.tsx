@@ -361,7 +361,7 @@ export default function MyProjects() {
               {/* Explorer Header */}
               <div className="flex items-center justify-between pb-3 mb-3 border-b border-[#045757]/60">
                 <span className="text-xs font-mono font-bold tracking-wider text-[#2DD4BF] flex items-center gap-2">
-                  <span>📂</span>
+                  <span className="text-xs font-mono text-[#2DD4BF]">[DIR]</span>
                   <span>FILESYSTEM</span>
                 </span>
                 <span className="w-2 h-2 rounded-full bg-[#2DD4BF] animate-pulse" />

@@ -86,7 +86,7 @@ function HudCard({
                 {/* Bottom CTA - appears smoothly on hover */}
                 <div className="flex items-center gap-2 text-xs font-mono font-semibold text-[#2DD4BF] group-hover:text-teal-200 transition-all duration-300 pt-3 border-t border-white/5 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0">
                     <span>{cta}</span>
-                    <span className="transition-transform duration-300 group-hover:translate-x-1.5">➔</span>
+                    <span className="transition-transform duration-300 group-hover:translate-x-1.5">&rarr;</span>
                 </div>
             </div>
         </Link>

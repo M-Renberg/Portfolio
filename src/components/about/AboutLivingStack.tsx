@@ -4,39 +4,38 @@ interface TechItem {
   name: string;
   category: 'ai' | 'frontend' | 'backend' | 'craft';
   proof: string;
-  icon: string;
 }
 
 const techItems: TechItem[] = [
   // Applied AI & ML
-  { name: 'PyTorch', category: 'ai', proof: 'Neural network training & academic pipelines', icon: '🔥' },
-  { name: 'Scikit-Learn', category: 'ai', proof: 'Telco Churn predictive classification', icon: '📈' },
-  { name: 'Hugging Face (SmolLM2)', category: 'ai', proof: 'Local offline SLM inference in Oracle-LLM', icon: '🤗' },
-  { name: 'FastAPI & Pydantic', category: 'ai', proof: 'Typed ML microservices & schema validation', icon: '⚡' },
-  { name: 'LLM Orchestration', category: 'ai', proof: 'AI engine at BAM & local SLM pipelines', icon: '🤖' },
-  { name: 'Streamlit', category: 'ai', proof: 'Interactive ML exploration dashboards', icon: '📊' },
+  { name: 'PyTorch', category: 'ai', proof: 'Neural network training & academic pipelines' },
+  { name: 'Scikit-Learn', category: 'ai', proof: 'Telco Churn predictive classification' },
+  { name: 'Hugging Face (SmolLM2)', category: 'ai', proof: 'Local offline SLM inference in Oracle-LLM' },
+  { name: 'FastAPI & Pydantic', category: 'ai', proof: 'Typed ML microservices & schema validation' },
+  { name: 'LLM Orchestration', category: 'ai', proof: 'AI engine at BAM & local SLM pipelines' },
+  { name: 'Streamlit', category: 'ai', proof: 'Interactive ML exploration dashboards' },
 
   // Frontend & UI
-  { name: 'React', category: 'frontend', proof: 'Production SPAs & marketing platform at BAM', icon: '⚛️' },
-  { name: 'TypeScript', category: 'frontend', proof: 'Strict typing across BAM & enterprise tools', icon: '🔷' },
-  { name: 'Tailwind CSS v4', category: 'frontend', proof: 'Cyberpunk HUD & frosted-glass styling', icon: '🎨' },
-  { name: 'Vite', category: 'frontend', proof: 'Fast modern build tooling & bundling', icon: '⚡' },
-  { name: 'XAML & XML', category: 'frontend', proof: 'WPF & desktop interfaces in Slime Helper', icon: '🪟' },
+  { name: 'React', category: 'frontend', proof: 'Production SPAs & marketing platform at BAM' },
+  { name: 'TypeScript', category: 'frontend', proof: 'Strict typing across BAM & enterprise tools' },
+  { name: 'Tailwind CSS v4', category: 'frontend', proof: 'Cyberpunk HUD & frosted-glass styling' },
+  { name: 'Vite', category: 'frontend', proof: 'Fast modern build tooling & bundling' },
+  { name: 'XAML & XML', category: 'frontend', proof: 'WPF & desktop interfaces in Slime Helper' },
 
   // Backend & Cloud Systems
-  { name: 'Convex', category: 'backend', proof: 'Reactive cloud DB & scheduled crons in production', icon: '🌐' },
-  { name: 'C# & .NET', category: 'backend', proof: 'Slime Helper Desktop & Minimal APIs', icon: '🟣' },
-  { name: 'Python', category: 'backend', proof: 'Data pipelines, FastAPI services & ML', icon: '🐍' },
-  { name: 'PostgreSQL & Supabase', category: 'backend', proof: 'Words and Di(c)e multiplayer state', icon: '🐘' },
-  { name: 'MySQL & 3NF Design', category: 'backend', proof: 'Relational normalization in RestaurangDB', icon: '🐬' },
-  { name: 'REST APIs & OpenAPI', category: 'backend', proof: 'Swagger documentation & clean endpoints', icon: '🔌' },
+  { name: 'Convex', category: 'backend', proof: 'Reactive cloud DB & scheduled crons in production' },
+  { name: 'C# & .NET', category: 'backend', proof: 'Slime Helper Desktop & Minimal APIs' },
+  { name: 'Python', category: 'backend', proof: 'Data pipelines, FastAPI services & ML' },
+  { name: 'PostgreSQL & Supabase', category: 'backend', proof: 'Words and Di(c)e multiplayer state' },
+  { name: 'MySQL & 3NF Design', category: 'backend', proof: 'Relational normalization in RestaurangDB' },
+  { name: 'REST APIs & OpenAPI', category: 'backend', proof: 'Swagger documentation & clean endpoints' },
 
   // Engineering Craft & Developer Tooling
-  { name: 'TDD & Automated CI/CD', category: 'craft', proof: 'GitHub Actions test suites in Words and Di(c)e', icon: '🧪' },
-  { name: 'Git & GitHub Workflows', category: 'craft', proof: '20+ version-controlled repositories', icon: '🐙' },
-  { name: 'VS Code & JetBrains Rider', category: 'craft', proof: 'Creator of Chill Night Mode theme on Marketplace', icon: '🛠️' },
-  { name: 'Starship & PowerShell', category: 'craft', proof: 'Customized terminal & developer ergonomics', icon: '💻' },
-  { name: 'WPF & OS Hooks', category: 'craft', proof: 'Slime Helper global hooks & git churn detection', icon: '👾' },
+  { name: 'TDD & Automated CI/CD', category: 'craft', proof: 'GitHub Actions test suites in Words and Di(c)e' },
+  { name: 'Git & GitHub Workflows', category: 'craft', proof: '20+ version-controlled repositories' },
+  { name: 'VS Code & JetBrains Rider', category: 'craft', proof: 'Creator of Chill Night Mode theme on Marketplace' },
+  { name: 'Starship & PowerShell', category: 'craft', proof: 'Customized terminal & developer ergonomics' },
+  { name: 'WPF & OS Hooks', category: 'craft', proof: 'Slime Helper global hooks & git churn detection' },
 ];
 
 export default function AboutLivingStack() {
@@ -62,13 +61,13 @@ export default function AboutLivingStack() {
       </div>
 
       {/* Filter Tabs */}
-      <div className="flex flex-wrap items-center gap-2 mb-6 font-mono text-xs">
+      <div className="flex flex-wrap gap-2 mb-6 font-mono text-xs">
         {[
-          { id: 'all' as const, label: 'All Stacks (22)' },
-          { id: 'ai' as const, label: 'Applied AI & ML (6)' },
-          { id: 'frontend' as const, label: 'Frontend & UI (5)' },
-          { id: 'backend' as const, label: 'Backend & Cloud (6)' },
-          { id: 'craft' as const, label: 'Engineering Craft (5)' },
+          { id: 'all' as const, label: 'All Capabilities' },
+          { id: 'ai' as const, label: 'Applied AI & ML' },
+          { id: 'frontend' as const, label: 'Frontend & UI' },
+          { id: 'backend' as const, label: 'Backend & Cloud' },
+          { id: 'craft' as const, label: 'Craft & Tooling' },
         ].map((tab) => {
           const isActive = filter === tab.id;
           return (
@@ -76,10 +75,10 @@ export default function AboutLivingStack() {
               key={tab.id}
               type="button"
               onClick={() => setFilter(tab.id)}
-              className={`px-3 py-1.5 rounded-xl transition-all cursor-pointer ${
+              className={`px-3.5 py-1.5 rounded-lg border transition-all cursor-pointer ${
                 isActive
                   ? 'bg-[#2DD4BF] text-[#091413] font-bold shadow-[0_0_15px_rgba(45,212,191,0.3)]'
-                  : 'bg-[#0b1a18]/70 text-[#B0E4CC]/80 hover:text-white hover:bg-[#061211] border border-[#045757]/60'
+                  : 'bg-[#0b1a18]/70 text-[#B0E4CC]/80 hover:text-white hover:bg-[#061211] border-[#045757]/60'
               }`}
             >
               {tab.label}
@@ -105,7 +104,7 @@ export default function AboutLivingStack() {
             >
               <div className="flex items-center justify-between mb-2">
                 <div className="flex items-center gap-2">
-                  <span className="text-base">{item.icon}</span>
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#2DD4BF] group-hover:scale-125 transition-transform" />
                   <span className="text-sm font-bold font-mono text-[#F0F5F0] group-hover:text-[#2DD4BF] transition-colors">
                     {item.name}
                   </span>
@@ -117,7 +116,7 @@ export default function AboutLivingStack() {
 
               {/* Context / Proof tooltip box */}
               <div className="mt-2 pt-2 border-t border-white/5 flex items-start gap-1.5 text-xs font-mono text-[#B0E4CC]/85">
-                <span className="text-[#2DD4BF] shrink-0 font-bold">↳</span>
+                <span className="text-[#2DD4BF] shrink-0 font-bold">&rarr;</span>
                 <span className="leading-snug text-[#F0F5F0]/80">
                   {item.proof}
                 </span>
@@ -128,7 +127,7 @@ export default function AboutLivingStack() {
       </div>
 
       <div className="mt-4 text-right text-[11px] font-mono text-[#408A71]">
-        💡 Hover or inspect skills to view tangible project implementations
+        // Hover or inspect skills to view tangible project implementations
       </div>
     </section>
   );

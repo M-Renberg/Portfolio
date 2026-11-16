@@ -1,6 +1,6 @@
 <div align="center">
 
-# ⚡ Mikael Renberg — Developer Portfolio
+# Mikael Renberg — Developer Portfolio
 
 [![React](https://img.shields.io/badge/React-19.2-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.9-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
@@ -12,13 +12,13 @@
   <strong>A high-performance cyberpunk HUD portfolio showcasing applied AI systems, reactive full-stack architecture, and commercial engineering work.</strong>
 </p>
 
-[Explore Projects](#-featured-projects) • [Tech Matrix](#-tech-matrix) • [Architecture](#-architecture--features) • [Getting Started](#-getting-started) • [Contact](#-contact)
+[Explore Projects](#featured-projects) &bull; [Tech Matrix](#tech-matrix) &bull; [Architecture](#architecture--features) &bull; [Getting Started](#getting-started) &bull; [Contact](#contact--connections)
 
 ---
 
 </div>
 
-## 🌌 Overview
+## Overview
 
 This repository powers the personal developer portfolio for **Mikael Renberg** — a Full-Stack & Applied AI Developer based in Malmö, Sweden.
 
@@ -26,18 +26,18 @@ Designed with a cyber-industrial HUD aesthetic, the application bridges determin
 
 ---
 
-## 🚀 Key Highlights
+## Key Highlights
 
-- **🏢 Brand About Me (BAM) [2026 – Present]:** Featured case study on architecting and integrating the centralized **Core AI Engine** powering intelligent digital marketing workflows on BAM's platform using React and TypeScript.
-- **🏢 Devotion Ventures [2026]:** Architecture breakdown of a reactive, real-time enterprise operational platform engineered with React, TypeScript, and Convex.
-- **🤖 Applied AI & Local SLMs:** Highlights hands-on implementations including offline CPU inference via SmolLM2, predictive machine learning pipelines (Scikit-Learn), and PyTorch model architectures.
-- **🎨 Bespoke Cyberpunk HUD:** Frosted-glass morphism, mouse-responsive spotlight gradients, matrix scramble text resolving effects, and ambient background AI telemetry streams.
+- **Brand About Me (BAM) [2026 – Present]:** Featured case study on architecting and integrating the centralized **Core AI Engine** powering intelligent digital marketing workflows on BAM's platform using React and TypeScript.
+- **Devotion Ventures [2026]:** Architecture breakdown of a reactive, real-time enterprise operational platform engineered with React, TypeScript, and Convex.
+- **Applied AI & Local SLMs:** Highlights hands-on implementations including offline CPU inference via SmolLM2, predictive machine learning pipelines (Scikit-Learn), and PyTorch model architectures.
+- **Bespoke Cyberpunk HUD:** Frosted-glass morphism, mouse-responsive spotlight gradients, matrix scramble text resolving effects, and ambient background AI telemetry streams.
 
 ---
 
-## 🛠️ Architecture & Features
+## Architecture & Features
 
-### 🖥️ Interactive HUD Navigation & Modules
+### Interactive HUD Navigation & Modules
 | Module | Path | Description |
 |---|---|---|
 | **Landing Hub** | `/` | Cyber HUD dashboard with dynamic mouse spotlight cards and ambient AI thought streams. |
@@ -48,7 +48,7 @@ Designed with a cyber-industrial HUD aesthetic, the application bridges determin
 
 ---
 
-## ⚡ Tech Matrix
+## Tech Matrix
 
 <div align="center">
 
@@ -64,7 +64,7 @@ Designed with a cyber-industrial HUD aesthetic, the application bridges determin
 
 ---
 
-## 📂 Project Directory Structure
+## Project Directory Structure
 
 ```plaintext
 portfolio-react/
@@ -93,7 +93,7 @@ portfolio-react/
 
 ---
 
-## 💻 Getting Started
+## Getting Started
 
 ### Prerequisites
 - **Node.js** >= 18.0.0
@@ -130,7 +130,7 @@ npm run preview
 
 ---
 
-## 📬 Contact & Connections
+## Contact & Connections
 
 - **Developer:** Mikael Renberg
 - **Role:** Full-Stack & Applied AI Developer

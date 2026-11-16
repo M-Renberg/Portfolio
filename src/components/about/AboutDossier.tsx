@@ -108,7 +108,7 @@ export default function AboutDossier() {
                   : 'text-[#B0E4CC]/75 hover:text-white hover:bg-[#061211]/80 border border-transparent'
               }`}
             >
-              <span>⚡</span>
+              <span className="text-[#2DD4BF] font-mono">//</span>
               <span>Overview // The Pitch</span>
             </button>
 
@@ -121,7 +121,7 @@ export default function AboutDossier() {
                   : 'text-[#B0E4CC]/75 hover:text-white hover:bg-[#061211]/80 border border-transparent'
               }`}
             >
-              <span>🏢</span>
+              <span className="text-[#2DD4BF] font-mono">::</span>
               <span>Production</span>
             </button>
 
@@ -134,7 +134,7 @@ export default function AboutDossier() {
                   : 'text-[#B0E4CC]/75 hover:text-white hover:bg-[#061211]/80 border border-transparent'
               }`}
             >
-              <span>☕</span>
+              <span className="text-[#2DD4BF] font-mono">&lt;&gt;</span>
               <span>Beyond Code // Ergonomics</span>
             </button>
           </div>
@@ -155,7 +155,7 @@ export default function AboutDossier() {
                 </p>
 
                 <div className="mt-2 p-3.5 rounded-xl bg-[#061211]/70 border border-[#045757]/60 flex items-center justify-between text-xs font-mono text-[#B0E4CC]">
-                  <span>💡 Core Belief:</span>
+                  <span className="text-[#2DD4BF] font-semibold">[AXIOM] Core Belief:</span>
                   <span className="text-white/80">An AI model is only as valuable as the software architecture wrapped around it.</span>
                 </div>
               </div>
@@ -224,16 +224,16 @@ export default function AboutDossier() {
 
                 <div className="flex flex-wrap gap-2 pt-2">
                   <span className="px-2.5 py-1 rounded-lg text-xs font-mono bg-[#061211] text-[#2DD4BF] border border-[#045757]">
-                    ☕ Specialty Coffee
+                    Specialty Coffee
                   </span>
                   <span className="px-2.5 py-1 rounded-lg text-xs font-mono bg-[#061211] text-[#2DD4BF] border border-[#045757]">
-                    🎨 VS Code Themes
+                    VS Code Themes
                   </span>
                   <span className="px-2.5 py-1 rounded-lg text-xs font-mono bg-[#061211] text-[#2DD4BF] border border-[#045757]">
-                    🧠 Local LLMs & Agents
+                    Local LLMs &amp; Agents
                   </span>
                   <span className="px-2.5 py-1 rounded-lg text-xs font-mono bg-[#061211] text-[#2DD4BF] border border-[#045757]">
-                    🤝 Swedish Fika & Team Culture
+                    Team Culture &amp; Collaboration
                   </span>
                 </div>
               </div>

@@ -61,7 +61,7 @@ export default function WorkDetailPage() {
         {/* Error / Not Found State */}
         {!loading && (error || !project) && (
           <div className="w-full p-10 sm:p-14 rounded-2xl bg-[#0b1a18]/80 border border-[#045757]/80 backdrop-blur-md text-center flex flex-col items-center gap-4 my-10">
-            <span className="text-4xl">⚠️</span>
+            <span className="text-xs font-mono text-amber-400 border border-amber-400/50 px-3 py-1 rounded-md">[404 // NOT_FOUND]</span>
             <h2 className="text-2xl font-bold text-[#B0E4CC]">Project Not Found</h2>
             <p className="text-sm text-[#F0F5F0]/80 max-w-md">
               Could not find the requested project or work experience. It may have been moved or removed.
@@ -85,7 +85,7 @@ export default function WorkDetailPage() {
                 <div className="flex flex-wrap items-center gap-3 text-xs sm:text-sm font-mono text-[#2DD4BF]">
                   {project.employer && (
                     <span className="flex items-center gap-1.5 px-3 py-1 rounded-md bg-[#061211] border border-[#2DD4BF]/40 text-[#2DD4BF]">
-                      🏢 {project.employer}
+                      [ORG] {project.employer}
                     </span>
                   )}
                   {project.role && (
@@ -124,7 +124,7 @@ export default function WorkDetailPage() {
                     {project.link.includes('github') ? (
                       <Icon name="github" className="w-4 h-4 m-0" />
                     ) : (
-                      <span className="text-sm">🌐</span>
+                      <span className="text-xs font-mono font-bold text-[#2DD4BF]">[WEB]</span>
                     )}
                     <span>{project.link.includes('github') ? 'View Repository' : 'Open Live Application'}</span>
                     <span>&rarr;</span>
@@ -133,7 +133,7 @@ export default function WorkDetailPage() {
               ) : (
                 <div className="pt-2">
                   <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-[#061211]/80 border border-[#045757]/60 text-xs font-mono text-[#B0E4CC]/80">
-                    <span>🔒</span>
+                    <span className="text-xs font-mono font-bold text-[#2DD4BF]">[RESTRICTED]</span>
                     <span>Private Enterprise Tool // Proprietary to {project.employer || 'Employer'}</span>
                   </span>
                 </div>

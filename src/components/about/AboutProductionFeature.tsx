@@ -43,7 +43,7 @@ export default function AboutProductionFeature() {
               : 'text-[#B0E4CC]/75 hover:text-white hover:bg-[#061211]/80 border border-[#045757]/50'
           }`}
         >
-          <span>🏢</span>
+          <span className="text-[#2DD4BF] font-mono">::</span>
           <span>Devotion Ventures // Enterprise Platform</span>
         </button>
       </div>
@@ -59,13 +59,13 @@ export default function AboutProductionFeature() {
             <div className="lg:col-span-8 flex flex-col gap-3">
               <div className="flex flex-wrap items-center gap-2 mb-1">
                 <span className="px-2.5 py-0.5 rounded-md text-xs font-mono bg-[#061211] text-[#2DD4BF] border border-[#2DD4BF]/40">
-                  ⚡ Brand About Me (BAM)
+                  [LIA] Brand About Me (BAM)
                 </span>
                 <span className="px-2.5 py-0.5 rounded-md text-xs font-mono bg-[#061211] text-[#B0E4CC]/80 border border-[#045757]/60">
                   Full-Stack &amp; AI Developer
                 </span>
                 <span className="px-2.5 py-0.5 rounded-md text-xs font-mono bg-[#061211] text-[#408A71] border border-[#045757]/40">
-                  🟢 Active LIA Internship
+                  ACTIVE // LIA INTERNSHIP
                 </span>
               </div>
 
@@ -80,7 +80,7 @@ export default function AboutProductionFeature() {
               {/* Architecture Highlights Pill Grid */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-xs font-mono">
                 <div className="p-2.5 rounded-xl bg-[#061211]/80 border border-[#045757]/60 flex items-start gap-2">
-                  <span className="text-[#2DD4BF]">🧠</span>
+                  <span className="text-[#2DD4BF] font-mono font-bold">[AI]</span>
                   <div>
                     <strong className="text-white block">Core AI Engine</strong>
                     <span className="text-[#F0F5F0]/70">Engineered modular AI processing pipelines for platform marketing flows.</span>
@@ -88,7 +88,7 @@ export default function AboutProductionFeature() {
                 </div>
 
                 <div className="p-2.5 rounded-xl bg-[#061211]/80 border border-[#045757]/60 flex items-start gap-2">
-                  <span className="text-[#2DD4BF]">⚡</span>
+                  <span className="text-[#2DD4BF] font-mono font-bold">[UI]</span>
                   <div>
                     <strong className="text-white block">React &amp; TypeScript UI</strong>
                     <span className="text-[#F0F5F0]/70">Strict type safety, responsive operator interfaces, and reusable components.</span>
@@ -96,7 +96,7 @@ export default function AboutProductionFeature() {
                 </div>
 
                 <div className="p-2.5 rounded-xl bg-[#061211]/80 border border-[#045757]/60 flex items-start gap-2">
-                  <span className="text-[#2DD4BF]">🔄</span>
+                  <span className="text-[#2DD4BF] font-mono font-bold">[OPS]</span>
                   <div>
                     <strong className="text-white block">Automated Workflows</strong>
                     <span className="text-[#F0F5F0]/70">Accelerating marketing campaign turnaround and content intelligence.</span>
@@ -104,7 +104,7 @@ export default function AboutProductionFeature() {
                 </div>
 
                 <div className="p-2.5 rounded-xl bg-[#061211]/80 border border-[#045757]/60 flex items-start gap-2">
-                  <span className="text-[#2DD4BF]">🛡️</span>
+                  <span className="text-[#2DD4BF] font-mono font-bold">[SEC]</span>
                   <div>
                     <strong className="text-white block">Full-Stack Reliability</strong>
                     <span className="text-[#F0F5F0]/70">Clean API integration, modular architecture, and deterministic validation.</span>
@@ -150,13 +150,13 @@ export default function AboutProductionFeature() {
             <div className="lg:col-span-8 flex flex-col gap-3">
               <div className="flex flex-wrap items-center gap-2 mb-1">
                 <span className="px-2.5 py-0.5 rounded-md text-xs font-mono bg-[#061211] text-[#2DD4BF] border border-[#2DD4BF]/40">
-                  🏢 Devotion Ventures
+                  [WORK] Devotion Ventures
                 </span>
                 <span className="px-2.5 py-0.5 rounded-md text-xs font-mono bg-[#061211] text-[#B0E4CC]/80 border border-[#045757]/60">
                   Full-Stack Developer
                 </span>
                 <span className="px-2.5 py-0.5 rounded-md text-xs font-mono bg-[#061211] text-[#408A71] border border-[#045757]/40">
-                  🔒 Private Internal Platform
+                  CONFIDENTIAL // INTERNAL TOOL
                 </span>
               </div>
 
@@ -171,7 +171,7 @@ export default function AboutProductionFeature() {
               {/* Architecture Highlights Pill Grid */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-xs font-mono">
                 <div className="p-2.5 rounded-xl bg-[#061211]/80 border border-[#045757]/60 flex items-start gap-2">
-                  <span className="text-[#2DD4BF]">⚡</span>
+                  <span className="text-[#2DD4BF] font-mono font-bold">[RT]</span>
                   <div>
                     <strong className="text-white block">Reactive Cloud (Convex)</strong>
                     <span className="text-[#F0F5F0]/70">Real-time state synchronization &amp; reactive queries.</span>
@@ -179,7 +179,7 @@ export default function AboutProductionFeature() {
                 </div>
 
                 <div className="p-2.5 rounded-xl bg-[#061211]/80 border border-[#045757]/60 flex items-start gap-2">
-                  <span className="text-[#2DD4BF]">🔄</span>
+                  <span className="text-[#2DD4BF] font-mono font-bold">[JOB]</span>
                   <div>
                     <strong className="text-white block">Automated Pipelines</strong>
                     <span className="text-[#F0F5F0]/70">Scheduled cron jobs &amp; asynchronous task processing.</span>
@@ -187,7 +187,7 @@ export default function AboutProductionFeature() {
                 </div>
 
                 <div className="p-2.5 rounded-xl bg-[#061211]/80 border border-[#045757]/60 flex items-start gap-2">
-                  <span className="text-[#2DD4BF]">🚦</span>
+                  <span className="text-[#2DD4BF] font-mono font-bold">[HITL]</span>
                   <div>
                     <strong className="text-white block">Operator Review Gates</strong>
                     <span className="text-[#F0F5F0]/70">Multi-step validation safeguards for sensitive actions.</span>
@@ -195,7 +195,7 @@ export default function AboutProductionFeature() {
                 </div>
 
                 <div className="p-2.5 rounded-xl bg-[#061211]/80 border border-[#045757]/60 flex items-start gap-2">
-                  <span className="text-[#2DD4BF]">🛡️</span>
+                  <span className="text-[#2DD4BF] font-mono font-bold">[TYPE]</span>
                   <div>
                     <strong className="text-white block">Type-Safe Architecture</strong>
                     <span className="text-[#F0F5F0]/70">Strict schema validation &amp; deterministic state models.</span>

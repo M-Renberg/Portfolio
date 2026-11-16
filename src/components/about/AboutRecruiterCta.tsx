@@ -25,7 +25,7 @@ export default function AboutRecruiterCta() {
             to="/contact?intent=lia"
             className="flex-1 min-w-44 py-3 px-6 rounded-xl bg-[#2DD4BF] text-[#091413] font-bold font-mono text-sm hover:bg-[#B0E4CC] transition-all shadow-[0_0_20px_rgba(45,212,191,0.35)] flex items-center justify-center gap-2 cursor-pointer"
           >
-            <span>✉️</span>
+            <Icon name="email" className="w-4 h-4 m-0" />
             <span>Send Direct Message</span>
           </Link>
 

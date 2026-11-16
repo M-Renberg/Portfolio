@@ -2,7 +2,6 @@ import AboutHero from '../components/about/AboutHero';
 import AboutDossier from '../components/about/AboutDossier';
 import AboutProductionFeature from '../components/about/AboutProductionFeature';
 import AboutLivingStack from '../components/about/AboutLivingStack';
-import AboutEngineeringEthos from '../components/about/AboutEngineeringEthos';
 import AboutJourneyTimeline from '../components/about/AboutJourneyTimeline';
 import AboutRecruiterCta from '../components/about/AboutRecruiterCta';
 import '../tailwind/glitch-fx.css';
@@ -24,7 +23,6 @@ export default function AboutMe() {
         <AboutDossier />
         <AboutProductionFeature />
         <AboutLivingStack />
-        <AboutEngineeringEthos />
         <AboutJourneyTimeline />
         <AboutRecruiterCta />
       </div>

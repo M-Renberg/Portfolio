@@ -27,30 +27,30 @@ const intentConfigs: IntentConfig[] = [
   {
     id: 'lia',
     label: 'LIA Internship',
-    icon: '💼',
+    icon: '[LIA]',
     placeholder: 'Tell me about the team, tech stack, and your target LIA internship period...',
     subjectPrefix: '[LIA Internship Inquiry]',
   },
   {
     id: 'ai',
     label: 'Applied AI & LLM',
-    icon: '🤖',
+    icon: '[AI]',
     placeholder: 'Describe your machine learning use-case, privacy/offline needs, or architecture challenges...',
     subjectPrefix: '[Applied AI Inquiry]',
   },
   {
     id: 'fullstack',
     label: 'Full-Stack Project',
-    icon: '⚡',
+    icon: '[DEV]',
     placeholder: 'Tell me about your application scope, reactive DB / backend requirements, or timeline...',
     subjectPrefix: '[Full-Stack Inquiry]',
   },
   {
     id: 'chat',
-    label: 'Tech Chat & Fika',
-    icon: '☕',
+    label: 'Tech Chat & Collaboration',
+    icon: '[MSG]',
     placeholder: 'What would you like to discuss? (Local SLMs, developer ergonomics, software patterns...)',
-    subjectPrefix: '[Tech Chat / Fika]',
+    subjectPrefix: '[Tech Chat / Collaboration]',
   },
 ];
 
@@ -282,8 +282,7 @@ export default function Contact() {
                       }`}
                       title="Copy to clipboard"
                     >
-                      <span>{copiedEmail ? '✓' : '📋'}</span>
-                      <span>{copiedEmail ? 'Copied!' : 'Copy'}</span>
+                      <span>{copiedEmail ? 'OK' : 'COPY'}</span>
                     </button>
                   </div>
                 </div>
@@ -333,7 +332,7 @@ export default function Contact() {
                   <span className="text-[#2DD4BF] font-semibold">&lt; 24h on weekdays</span>
                 </div>
                 <div className="mt-2 pt-2 border-t border-white/5 text-[11px] text-[#B0E4CC]/80">
-                  🇸🇪 <span className="italic">Skriv gärna på svenska eller engelska — båda fungerar lika bra!</span>
+                  <span className="text-[#2DD4BF] font-mono">[SE/EN]</span> <span className="italic">Skriv gärna på svenska eller engelska — båda fungerar lika bra!</span>
                 </div>
               </div>
             </div>
@@ -406,7 +405,7 @@ export default function Contact() {
                 {/* SUCCESS RECEIPT STATE */}
                 {status === 'success' ? (
                   <div className="p-7 rounded-2xl bg-[#061211]/90 border border-[#2DD4BF]/60 text-center flex flex-col items-center gap-4 my-4 fade-in">
-                    <span className="text-4xl animate-bounce">✨</span>
+                    <span className="text-sm font-mono text-[#2DD4BF] border border-[#2DD4BF] rounded-full px-3 py-1 animate-pulse">[OK // CONFIRMED]</span>
                     <h3 className="text-xl font-bold text-[#B0E4CC] font-mono">
                       TRANSMISSION CONFIRMED
                     </h3>
@@ -515,7 +514,7 @@ export default function Contact() {
                     {/* Error State Banner with Fallback */}
                     {status === 'error' && (
                       <div className="p-3.5 rounded-xl bg-red-950/40 border border-red-500/50 text-xs font-mono text-red-200 flex flex-col sm:flex-row items-center justify-between gap-2">
-                        <span>⚠️ {errorMessage}</span>
+                        <span>[ERR] {errorMessage}</span>
                         <a
                           href={getFallbackMailto()}
                           className="px-3 py-1 rounded-lg bg-red-500 text-white font-bold hover:bg-red-400 transition-colors shrink-0"
